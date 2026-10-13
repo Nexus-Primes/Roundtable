@@ -84,7 +84,7 @@ Co-op only works when **everyone has the same mod versions, the same Seamless Co
 
 - **Play with friends → Ready to play?** on a mod's page shows a checklist (Seamless version, password, your own save file, me3, game version) and a ready-to-send **invite** you can copy or post to Discord.
 - **Add Seamless Co-op...** (on the mod's *Components* tab) puts Seamless into a mod for you, with its own save file so characters never get mixed up.
-- Friends who have the manager can use **Tools → Mods → Install mods from a friend's code** - paste your code and it lists what they need and installs the Nexus mods.
+- Friends who have the manager can use **Tools → Mods → Install a friend's setup** - paste the setup you made with **Share my setup** and it downloads the same mod versions, adds your add-on DLLs, sets up Seamless Co-op, and switches the same DLLs on in the same order. The co-op password and settings files are only included if you tick them.
 - **Play with friends → Compare setups** finds out exactly *why* two people can't connect.
 
 ### Your DLL preset, without duplicates
