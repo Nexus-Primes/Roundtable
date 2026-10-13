@@ -117,9 +117,15 @@ The **Characters** page (top of the list) shows every save file and the characte
 
 ## Make it yours
 
-Open **Settings → Appearance**: pick an **accent colour**, a **colour scheme**, a bigger or smaller **text size** and the **width of the mod list**. Changes show up live while you move the controls, and **Cancel** puts things back.
+Open **Tools → This program → Appearance...** and pick a theme. Each one is a complete colour scheme named after something from the Lands Between:
 
-![The same mod page in the Frost accent with the Midnight colour scheme](docs/images/mod-page-frost.png)
+![The Appearance window with twelve themes to choose from](docs/images/appearance.png)
+
+Click a theme and the whole manager changes straight away - **Cancel** puts everything back, **Save** keeps it.
+
+![The manager in each of the twelve themes](docs/images/themes.png)
+
+Prefer to mix your own? Choose **Custom mix** and pick any accent colour (or your own) and one of four colour schemes. You can also change the **text size**, the **font**, how **rounded** the corners are, the **width of the mod list**, turn the window fade-in off, switch on a **high-contrast** mode, or use **colour-blind friendly status colours** (blue / yellow / orange instead of green / amber / red).
 
 Everything else lives in the **Tools** menu, grouped by topic:
 
