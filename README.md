@@ -87,6 +87,10 @@ Co-op only works when **everyone has the same mod versions, the same Seamless Co
 - Friends who have the manager can use **Tools → Mods → Install mods from a friend's code** - paste your code and it lists what they need and installs the Nexus mods.
 - **Play with friends → Compare setups** finds out exactly *why* two people can't connect.
 
+### Your DLL preset, without duplicates
+
+Save the DLL mods you use everywhere as a **DLL preset** (*Tools → Mods → DLL presets...*) and add it to any mod in one click. If a mod already has one of the same DLLs, Roundtable asks which copy to use - the mod's or yours - so nothing is ever loaded twice, and undoing it puts everything back.
+
 ### All your passwords and save files in one place
 
 ![One window listing every Seamless Co-op instance with its password and save extension](docs/images/co-op-passwords.png)
