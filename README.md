@@ -1,4 +1,6 @@
-# ER Mod Manager
+# Roundtable
+
+*(formerly "ER Mod Manager")*
 
 **A friendly way to install, organise and play Elden Ring mods - and to play co-op with your friends - without digging through folders.**
 
@@ -31,11 +33,11 @@ Open the **[Releases page](../../releases/latest)** and download the file ending
 
 ### 2. Unzip it somewhere permanent
 
-Right-click the zip and choose **Extract All...** into a simple folder such as `C:\Tools\ER Mod Manager`.
+Right-click the zip and choose **Extract All...** into a simple folder such as `C:\Tools\Roundtable`.
 
 > **Please don't** run it from inside the zip, from your *Downloads* or *Desktop*, from a **OneDrive** folder, or from inside the Elden Ring folder. Windows and OneDrive can lock or hide files there, which causes confusing errors.
 
-### 3. Open `ER Mod Manager.exe`
+### 3. Open `Roundtable.exe`
 
 The first time, Windows may say **"Windows protected your PC"**. That's because the program isn't signed with a paid certificate. Click **More info**, then **Run anyway**.
 
@@ -165,7 +167,7 @@ The character is still in the old save file. In **Tools → Seamless Co-op → P
 <details>
 <summary><b>Where does the manager keep my information? How do I uninstall it?</b></summary>
 
-Your settings, Nexus key and backups are in the **`data`** folder next to `ER Mod Manager.exe`. Nothing is uploaded. To uninstall, close the manager and delete its folder - your mods and saves are not touched. (me3 can be removed from Windows' *Installed apps*.)
+Your settings, Nexus key and backups are in the **`data`** folder next to `Roundtable.exe`. Nothing is uploaded. To uninstall, close the manager and delete its folder - your mods and saves are not touched. (me3 can be removed from Windows' *Installed apps*.)
 </details>
 
 <details>
