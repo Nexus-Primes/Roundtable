@@ -122,6 +122,7 @@ The **Characters** page (top of the list) shows every save file and the characte
 - **Mods:** *Tools → Check all for updates* compares your mods with their Nexus or GitHub pages. *Update this mod* downloads and applies a new version safely, and *Undo last update* reverses it.
 - **me3:** the manager checks about once a day and tells you when a newer one is out - *Tools → This program → Update me3...*.
 - **The manager itself:** when a new version is published, a banner appears in the sidebar. Click it and the manager downloads the update, restarts, and keeps all your settings and backups.
+  **Friends' setups** (Tools → Mods) keeps your friends' setup links in one list and shows at a glance whether you match each of them. **Back up saves while playing** (Settings) copies your saves every few minutes while the game runs.
   **Handy extras:** drop a mod's .zip or folder on the window to install it; press **F1** for the keyboard shortcuts (Ctrl+K jumps to any mod or tool); the 🔔 in the footer keeps messages you missed; **Tools → This program → Report a problem** opens a pre-filled issue on GitHub.
   On a new PC a **Getting started** checklist walks you through finding the game, installing me3 and adding your first mod. Before you play, the manager also warns you if two enabled mods replace the same game files (once for each distinct set).
   If a new version ever misbehaves, **Tools → This program → Go back to an earlier version...** returns to the one you had before (it's saved on your PC automatically) or to any older release - your data stays as it is.
