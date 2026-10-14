@@ -1,3 +1,5 @@
+<p align="center"><img src="docs/images/logo.png" alt="Roundtable - Elden Ring mod manager" width="260"></p>
+
 # Roundtable
 
 *(formerly "ER Mod Manager")*
