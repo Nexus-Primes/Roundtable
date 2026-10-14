@@ -1,7 +1,5 @@
 # Roundtable
 
-*(formerly "ER Mod Manager")*
-
 **A friendly way to install, organise and play Elden Ring mods - and to play co-op with your friends - without digging through folders.**
 
 ![The manager showing a mod, with a big PLAY button](docs/images/mod-page.png)
