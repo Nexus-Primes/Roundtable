@@ -122,6 +122,7 @@ The **Characters** page (top of the list) shows every save file and the characte
 - **Mods:** *Tools → Check all for updates* compares your mods with their Nexus or GitHub pages. *Update this mod* downloads and applies a new version safely, and *Undo last update* reverses it.
 - **me3:** the manager checks about once a day and tells you when a newer one is out - *Tools → This program → Update me3...*.
 - **The manager itself:** when a new version is published, a banner appears in the sidebar. Click it and the manager downloads the update, restarts, and keeps all your settings and backups.
+  **Search:** *All tools* has a search box for tools, settings and appearance options.
   **Tools:** the Tools button is a short menu; *All tools...* lists everything on tabs, and any window opened from another replaces it with a *Back* link, so only one is in front.
   **Look:** pages dissolve into each other, the mod list's gold plate slides, and the wheel scrolls smoothly. *Appearance → Motion* sets how much glides and fades (Off, Calm, Fluid, Lavish); the colour-blind option recolours every status mark at once.
   **Before you install:** *Install a mod* shows the highlighted mod's picture, tags, description and recent changes next to the results, with buttons for its comments, bug reports and images on Nexus.
