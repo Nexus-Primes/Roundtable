@@ -122,6 +122,7 @@ The **Characters** page (top of the list) shows every save file and the characte
 - **Mods:** *Tools → Check all for updates* compares your mods with their Nexus or GitHub pages. *Update this mod* downloads and applies a new version safely, and *Undo last update* reverses it.
 - **me3:** the manager checks about once a day and tells you when a newer one is out - *Tools → This program → Update me3...*.
 - **The manager itself:** when a new version is published, a banner appears in the sidebar. Click it and the manager downloads the update, restarts, and keeps all your settings and backups.
+  **Game library:** *All games...* in the game box shows every supported game as a card; games you install through Steam are found by themselves. Dark Souls 1 and 2 are launched through Steam with save backups and restore (mods for them aren't loaded by the manager).
   **Bloodborne (Windows port):** choose it in the same box for Play, a health check, graphics settings, controller tools and save backups - without touching the game files.
   **More than one game:** the box at the top of the sidebar switches between Elden Ring, Elden Ring Nightreign and Dark Souls III - each keeps its own mods folder, profiles and save backups, and the manager launches the right game through me3.
   **Friends' setups** (Tools → Mods) keeps your friends' setup links in one list and shows at a glance whether you match each of them. **Back up saves while playing** (Settings) copies your saves every few minutes while the game runs.
