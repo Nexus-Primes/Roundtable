@@ -122,6 +122,7 @@ The **Characters** page (top of the list) shows every save file and the characte
 - **Mods:** *Tools → Check all for updates* compares your mods with their Nexus or GitHub pages. *Update this mod* downloads and applies a new version safely, and *Undo last update* reverses it.
 - **me3:** the manager checks about once a day and tells you when a newer one is out - *Tools → This program → Update me3...*.
 - **The manager itself:** when a new version is published, a banner appears in the sidebar. Click it and the manager downloads the update, restarts, and keeps all your settings and backups.
+  **When something breaks:** the **Why won't it start?** button on a mod's Overview tab collects every clue (including files Windows Defender removed) and lists the likely cause first; the conflict check can switch one of two clashing mods off or swap their order.
   **Look and learning:** a guided tour lights up the real buttons the first time you open the manager, and Appearance now has an **Ivory** light theme. Bloodborne gets a guided controller check.
   **Overview:** the second row in the sidebar shows how your mods are doing - counts, the updates waiting, and every mod as a sortable table or a card gallery.
   **Game library:** *All games...* in the game box shows every supported game as a card; games you install through Steam are found by themselves. Dark Souls 1 and 2 are launched through Steam with save backups and restore (mods for them aren't loaded by the manager).
