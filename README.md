@@ -68,7 +68,7 @@ The key stays on your PC and is only ever sent to nexusmods.com.
 ## Installing and playing your first mod
 
 1. Press **＋ Install a mod** (bottom-left).
-2. Either **search Nexus** and pick a mod, or choose a `.zip`, `.7z` or `.rar` you already downloaded.
+2. Either **search Nexus** and pick a mod, or choose a `.zip`, `.7z` or `.rar` you already downloaded. (`.zip` works on its own; `.7z` and `.rar` need **[7-Zip](https://www.7-zip.org/)** installed - the manager tells you if it can't find it.)
 3. Look over what the manager found, press **Install**. It repairs common problems for you and says what it did.
 4. Click the mod in the list on the left and press **PLAY**.
 
@@ -209,16 +209,23 @@ Modded **online** play can get an account banned. The manager never switches onl
 
 ## Privacy and safety
 
-- Your Nexus key stays on your PC and is only sent to nexusmods.com.
-- The manager contacts GitHub (to check for its own updates and for me3), Nexus Mods, and - only if you set one up - the Discord webhook you choose. It does not send your files or saves anywhere.
+- Your Nexus key and Discord webhook stay on your PC, are stored **encrypted with Windows' own protection** (tied to your Windows account, so a copy of `settings.json` is unreadable elsewhere), and are only sent to nexusmods.com / discord.com. Setup backups leave them out unless you tick the box.
+- **Updates are signed.** Each release carries a signature made with the publisher's private key; the manager has the matching public key built in and refuses to install an update whose signature doesn't check out - a swapped or tampered download is stopped before anything is unpacked.
+- The manager contacts GitHub (to check for its own updates and for me3), Nexus Mods, **Microsoft** (only if you ask it to install the Visual C++ runtime, from `aka.ms`), the **Bloodborne port's community server** (only when you press *Test connection* on the Bloodborne page) and - only if you set one up - the Discord webhook you choose. It does not send your files or saves anywhere.
 - Mods are always downloaded from the author's own page. This project never hosts or re-shares mod files.
 - Nothing that touches your saves or your mods is done without a backup, and the common ones can be undone from inside the app.
+- **Where your data lives:** settings, notes and backups are in the `data` folder next to `Roundtable.exe`, so deleting the program folder deletes them too. *Settings -> Updates and safety* shows the folder and has *Open folder*, and *Back up saves* can keep a second copy on another drive. To keep the data somewhere else, set the `ER_MOD_MANAGER_DATA` environment variable to a folder before starting the manager.
+- Mod downloads from Nexus and GitHub are only fetched from those sites; neither publishes a checksum for a mod file, so they can't be verified beyond that.
 
 ## Credits and notes
 
 This is an unofficial fan tool. It is not affiliated with FromSoftware, Bandai Namco, Nexus Mods, or the authors of me3 or Seamless Co-op - please support the mod authors whose work you install.
 
 Thanks to **me3 / ModEngine 3** (garyttierney), **Seamless Co-op** (LukeYui), and the open-source **ER-Save-Editor** (ClayAmore, Apache-2.0), whose documentation of the save format made the character tools possible.
+
+The Bloodborne page reads and writes the settings of a community Windows port; the list of its launcher settings follows that launcher's public source (GPL-2.0-or-later). The manager downloads nothing for Bloodborne and doesn't include the game or the port.
+
+Third-party software in the program is listed in `THIRD-PARTY-NOTICES.txt` (Qt for Python / PySide6 under the LGPL, and others).
 
 *Elden Ring* is a trademark of FromSoftware / Bandai Namco.
 
