@@ -9,7 +9,7 @@
 <p align="center">
   <a href="https://github.com/Nexus-Primes/Roundtable/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/Nexus-Primes/Roundtable?style=flat-square&color=c9a45c&labelColor=2a2218"></a>
   <img alt="Windows" src="https://img.shields.io/badge/platform-Windows-c9a45c?style=flat-square&labelColor=2a2218">
-  <a href="https://github.com/Nexus-Primes/Roundtable/releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/Nexus-Primes/Roundtable/total?style=flat-square&color=c9a45c&labelColor=2a2218"></a>
+  <img alt="Signed updates" src="https://img.shields.io/badge/updates-signed-c9a45c?style=flat-square&labelColor=2a2218">
 </p>
 
 <p align="center">
@@ -54,11 +54,20 @@
 
 ## Start in three steps
 
-| | |
-|:-:|---|
-| **1** | **Download** the file ending in `-windows.zip` from the [latest release](https://github.com/Nexus-Primes/Roundtable/releases/latest). |
-| **2** | **Unzip it** into a simple folder such as `C:\Tools\Roundtable` - not Downloads, Desktop or OneDrive. |
-| **3** | **Open `Roundtable.exe`.** If Windows says *"Windows protected your PC"*, click **More info**, then **Run anyway**. Roundtable then tells you what's missing and offers to install it. |
+<table>
+  <tr>
+    <td width="8%" align="center"><h2>1</h2></td>
+    <td><b>Download</b> the file ending in <code>-windows.zip</code> from the <a href="https://github.com/Nexus-Primes/Roundtable/releases/latest">latest release</a>.</td>
+  </tr>
+  <tr>
+    <td align="center"><h2>2</h2></td>
+    <td><b>Unzip it</b> into a simple folder such as <code>C:\Tools\Roundtable</code> - not Downloads, Desktop or OneDrive.</td>
+  </tr>
+  <tr>
+    <td align="center"><h2>3</h2></td>
+    <td><b>Open <code>Roundtable.exe</code>.</b> If Windows says <i>"Windows protected your PC"</i>, click <b>More info</b>, then <b>Run anyway</b>. Roundtable then tells you what's missing and offers to install it.</td>
+  </tr>
+</table>
 
 > New to mods? The [guide](docs/GUIDE.md) walks through your first mod, co-op, and what to do when something goes wrong.
 
