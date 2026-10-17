@@ -33,24 +33,55 @@
 
 <br>
 
-## A closer look
+## How it works
 
-<table>
-  <tr>
-    <td width="50%" valign="top" align="center"><img src="docs/images/card-needs.png" alt="A pack's page listing what it still needs"><br><b>Knows what each mod needs</b><br><sub>A checklist for your PC, with a button for each missing piece.</sub></td>
-    <td width="50%" valign="top" align="center"><img src="docs/images/card-dependencies.png" alt="The Install the dependencies window"><br><b>Packs built from other mods</b><br><sub>The exact files, in the right order, layered in for you.</sub></td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top" align="center"><img src="docs/images/card-friends.png" alt="The Play with friends window with a green checklist"><br><b>Play with friends</b><br><sub>A green checklist and a ready-to-send invite.</sub></td>
-    <td width="50%" valign="top" align="center"><img src="docs/images/card-characters.png" alt="The Characters page listing the characters in each save"><br><b>Characters and saves</b><br><sub>See every character, back them up, copy them between saves.</sub></td>
-  </tr>
-  <tr>
-    <td width="50%" valign="top" align="center"><img src="docs/images/card-cleanup.png" alt="The Clean up downloads window"><br><b>Tidy disk space</b><br><sub>See which old downloads can go. Nothing is removed until you tick it.</sub></td>
-    <td width="50%" valign="top" align="center"><img src="docs/images/card-themes.png" alt="Twelve colour themes"><br><b>Make it yours</b><br><sub>Twelve themes, and an animation level you can turn down.</sub></td>
-  </tr>
-</table>
+### 1. Install a mod and press PLAY
 
-<br>
+<p align="center"><img src="docs/images/feat-play.png" alt="A mod's page with the big PLAY button" width="830"></p>
+
+Press **Install a mod** (bottom left). Search Nexus, or pick a `.zip`, `.7z` or `.rar` you already downloaded, look over what Roundtable found, and press **Install**. Then click the mod in the list and press **PLAY**.
+
+Before the game starts, Roundtable looks the mod over and tells you in plain words if something is likely to go wrong. If a mod won't start, **Why won't it start?** explains what happened.
+
+### 2. See what each mod needs
+
+<p align="center"><img src="docs/images/feat-needs.png" alt="The What this mod needs card with a checklist" width="830"></p>
+
+Open a mod's **Overview** tab. The **What this mod needs** card checks your PC against what that mod asks for - me3, the DLC, ray tracing, the game version - and puts a button next to anything that's missing. Press the button, or follow the one-line advice. **About this mod** lists the author's own warnings and how to update it.
+
+### 3. Packs built from other mods
+
+<p align="center"><img src="docs/images/feat-dependencies.png" alt="The Install the dependencies window" width="830"></p>
+
+Some packs, like FRZN's Merge Modpack, are built from other mods that you download yourself. After you install one, the **Install the dependencies** window opens (or press the button on the pack's *What this mod needs* card).
+
+Press **Get it** on each mod: a Premium Nexus account downloads it for you; a free account opens the Nexus page, and the *Mod Manager Download* button there sends the file back. Already downloaded it? Roundtable spots it in your Downloads folder. When all are ready, press **Build it** - the files are layered in the right order for you.
+
+### 4. Play with friends
+
+<p align="center"><img src="docs/images/feat-friends.png" alt="The Play with friends window with a green checklist" width="830"></p>
+
+On a mod's page press **Play with friends**. Everything should be green: the same Seamless Co-op version for everyone, a co-op password, and a save file of its own. Press **Copy the invite** and send it to your friends.
+
+If someone can't join, use **Compare setups** on both PCs - it lists exactly what differs.
+
+### 5. Keep your characters safe
+
+<p align="center"><img src="docs/images/feat-characters.png" alt="The Characters page listing the characters in each save" width="830"></p>
+
+Click **Characters** in the list on the left. You see every save file, which mod uses it, and the characters inside. Press **Back up now** at any time (backups also happen automatically before each launch), or copy a character into another save.
+
+### 6. Clear out old downloads
+
+<p align="center"><img src="docs/images/feat-cleanup.png" alt="The Clean up downloads window" width="830"></p>
+
+Open **Tools** and choose **Storage...**, then **Choose downloads to delete...**. Each download says why it can go - the mod is already installed, or it's an older copy. Older copies are ticked for you; tick any others you like and press **Delete ticked**. Nothing is removed until you confirm, and installed mods are never touched.
+
+### 7. Make it yours
+
+<p align="center"><img src="docs/images/feat-themes.png" alt="Twelve colour themes" width="830"></p>
+
+Open **Tools** and choose **Appearance...**. Pick one of twelve themes, change the text size, and choose how much animation you want - or turn it off.
 
 ## Start in three steps
 
