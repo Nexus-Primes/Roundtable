@@ -1,80 +1,100 @@
-<p align="center"><img src="docs/images/logo.png" alt="Roundtable" width="200"></p>
-
-<h1 align="center">Roundtable</h1>
-
-<p align="center"><b>Install, organise and play Elden Ring mods - and play co-op with friends - without digging through folders.</b></p>
-
 <p align="center">
-  <a href="https://github.com/Nexus-Primes/Roundtable/releases/latest"><b>Download for Windows</b></a>
-  &nbsp;·&nbsp; <a href="docs/GUIDE.md">Step-by-step guide</a>
-  &nbsp;·&nbsp; <a href="docs/FEATURES.md">Everything it can do</a>
+  <img src="docs/images/banner.png" alt="Roundtable - install, organise and play Elden Ring mods, and play co-op with friends, without digging through folders" width="100%">
 </p>
 
-<p align="center"><img src="docs/images/mod-page.png" alt="Roundtable showing a mod with a big PLAY button" width="860"></p>
+<p align="center">
+  <a href="https://github.com/Nexus-Primes/Roundtable/releases/latest"><img src="docs/images/download.png" alt="Download for Windows" width="300"></a>
+</p>
 
-## What you get
+<p align="center">
+  <a href="https://github.com/Nexus-Primes/Roundtable/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/Nexus-Primes/Roundtable?style=flat-square&color=c9a45c&labelColor=2a2218"></a>
+  <img alt="Windows" src="https://img.shields.io/badge/platform-Windows-c9a45c?style=flat-square&labelColor=2a2218">
+  <a href="https://github.com/Nexus-Primes/Roundtable/releases"><img alt="Downloads" src="https://img.shields.io/github/downloads/Nexus-Primes/Roundtable/total?style=flat-square&color=c9a45c&labelColor=2a2218"></a>
+</p>
 
-- **One PLAY button.** Pick a mod and press it. Roundtable looks the mod over first, tells you in plain words if something will go wrong, and checks afterwards that your mod really loaded.
-- **Big mod packs, set up for you.** It knows what the major overhauls need (me3, the DLC, the right game version) and walks you through the rest - even packs built from five other mods.
-- **Co-op without the guesswork.** Matching versions, passwords and save files for you and your friends, in one place.
-- **Your characters stay safe.** Automatic save backups, and nothing is deleted without asking.
+<p align="center">
+  <a href="docs/GUIDE.md"><b>Step-by-step guide</b></a> &nbsp;·&nbsp;
+  <a href="docs/FEATURES.md"><b>Everything it can do</b></a> &nbsp;·&nbsp;
+  <a href="https://github.com/Nexus-Primes/Roundtable/issues"><b>Report a problem</b></a>
+</p>
 
-> Windows only · needs Elden Ring on Steam · no programming knowledge required.
+<br>
+
+## Why Roundtable
+
+<table>
+  <tr>
+    <td width="25%" valign="top"><h4>One PLAY button</h4>Pick a mod and press it. Roundtable checks the mod first and tells you in plain words if something will go wrong.</td>
+    <td width="25%" valign="top"><h4>Big packs, set up for you</h4>It knows what the major overhauls need, and layers in the other mods a pack is built from.</td>
+    <td width="25%" valign="top"><h4>Co-op, sorted</h4>Matching versions, passwords and save files for you and your friends, in one place.</td>
+    <td width="25%" valign="top"><h4>Saves stay safe</h4>Automatic backups, and nothing is deleted without asking. Most changes can be undone.</td>
+  </tr>
+</table>
+
+<br>
 
 ## A closer look
 
 <table>
   <tr>
-    <td width="50%" valign="top"><img src="docs/images/needs.png" alt="A pack's page listing what it still needs"><br><b>Knows what each mod needs.</b><br>A clear checklist for your PC, with a button for each thing that's missing.</td>
-    <td width="50%" valign="top"><img src="docs/images/dependencies.png" alt="The Install the dependencies window"><br><b>Packs built from other mods.</b><br>The exact files, in the right order, layered in for you.</td>
+    <td width="50%" valign="top" align="center"><img src="docs/images/card-needs.png" alt="A pack's page listing what it still needs"><br><b>Knows what each mod needs</b><br><sub>A checklist for your PC, with a button for each missing piece.</sub></td>
+    <td width="50%" valign="top" align="center"><img src="docs/images/card-dependencies.png" alt="The Install the dependencies window"><br><b>Packs built from other mods</b><br><sub>The exact files, in the right order, layered in for you.</sub></td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><img src="docs/images/play-with-friends.png" alt="The Play with friends window with a green checklist"><br><b>Play with friends.</b><br>A green checklist and a ready-to-send invite.</td>
-    <td width="50%" valign="top"><img src="docs/images/characters.png" alt="The Characters page listing the characters in each save"><br><b>Characters and saves.</b><br>See every character, back them up, copy them between saves.</td>
+    <td width="50%" valign="top" align="center"><img src="docs/images/card-friends.png" alt="The Play with friends window with a green checklist"><br><b>Play with friends</b><br><sub>A green checklist and a ready-to-send invite.</sub></td>
+    <td width="50%" valign="top" align="center"><img src="docs/images/card-characters.png" alt="The Characters page listing the characters in each save"><br><b>Characters and saves</b><br><sub>See every character, back them up, copy them between saves.</sub></td>
   </tr>
   <tr>
-    <td width="50%" valign="top"><img src="docs/images/cleanup.png" alt="The Clean up downloads window"><br><b>Tidy disk space.</b><br>See which old downloads can go. Nothing is removed until you tick it.</td>
-    <td width="50%" valign="top"><img src="docs/images/themes.png" alt="Twelve colour themes"><br><b>Make it yours.</b><br>Twelve themes and an animation level you can turn down.</td>
+    <td width="50%" valign="top" align="center"><img src="docs/images/card-cleanup.png" alt="The Clean up downloads window"><br><b>Tidy disk space</b><br><sub>See which old downloads can go. Nothing is removed until you tick it.</sub></td>
+    <td width="50%" valign="top" align="center"><img src="docs/images/card-themes.png" alt="Twelve colour themes"><br><b>Make it yours</b><br><sub>Twelve themes, and an animation level you can turn down.</sub></td>
   </tr>
 </table>
 
+<br>
+
 ## Start in three steps
 
-1. **Download** the file ending in `-windows.zip` from the [latest release](https://github.com/Nexus-Primes/Roundtable/releases/latest).
-2. **Unzip it** into a simple folder such as `C:\Tools\Roundtable` (not Downloads, Desktop or OneDrive).
-3. **Open `Roundtable.exe`.** The first time, Windows may say *"Windows protected your PC"* - click **More info**, then **Run anyway**. Roundtable then tells you what's missing and offers to install it.
+| | |
+|:-:|---|
+| **1** | **Download** the file ending in `-windows.zip` from the [latest release](https://github.com/Nexus-Primes/Roundtable/releases/latest). |
+| **2** | **Unzip it** into a simple folder such as `C:\Tools\Roundtable` - not Downloads, Desktop or OneDrive. |
+| **3** | **Open `Roundtable.exe`.** If Windows says *"Windows protected your PC"*, click **More info**, then **Run anyway**. Roundtable then tells you what's missing and offers to install it. |
 
-New to mods? The [guide](docs/GUIDE.md) covers installing your first mod, co-op, and what to do when something goes wrong.
+> New to mods? The [guide](docs/GUIDE.md) walks through your first mod, co-op, and what to do when something goes wrong.
+
+<br>
 
 ## Questions
 
 <details>
 <summary><b>Do I need Nexus Premium?</b></summary>
-
-No. A free account works: turn on *Nexus download buttons* in Settings and the *Mod Manager Download* button on a mod page sends the file here. Premium adds fully automatic downloads.
+<br>
+No. A free account works: turn on <i>Nexus download buttons</i> in Settings and the <i>Mod Manager Download</i> button on a mod page sends the file here. Premium adds fully automatic downloads.
 </details>
 
 <details>
 <summary><b>Can I get banned?</b></summary>
-
-Modded **online** play can get an account banned. Roundtable never turns online mode on and warns you if a profile has it. Play offline, or use Seamless Co-op, which is its own network.
+<br>
+Modded <b>online</b> play can get an account banned. Roundtable never turns online mode on and warns you if a profile has it. Play offline, or use Seamless Co-op, which is its own network.
 </details>
 
 <details>
 <summary><b>The game started but my mod isn't there</b></summary>
-
-On the mod's page press **Why won't it start?**, or open **Tools -> PC check**. They list what's wrong in plain words and fix the common causes. The [guide](docs/GUIDE.md) has more.
+<br>
+On the mod's page press <b>Why won't it start?</b>, or open <b>Tools -> PC check</b>. They list what's wrong in plain words and fix the common causes. The <a href="docs/GUIDE.md">guide</a> has more.
 </details>
 
-## Safety and privacy
+<details>
+<summary><b>Is it safe? What does it send?</b></summary>
+<br>
+Your Nexus key stays on your PC, encrypted with Windows' own protection, and is only sent to nexusmods.com. Updates are <b>signed</b>, and Roundtable refuses one whose signature doesn't check out. Mods are always downloaded from the author's own page - this project never hosts or shares mod files.
+</details>
 
-- Your Nexus key stays on your PC, encrypted with Windows' own protection, and is only sent to nexusmods.com.
-- Updates are **signed**; Roundtable refuses an update whose signature doesn't check out.
-- Nothing that touches your saves or mods happens without a backup, and most changes can be undone from inside the app.
-- Mods are always downloaded from the author's own page. This project never hosts or shares mod files.
-
-Found a bug or have an idea? Open an [issue](https://github.com/Nexus-Primes/Roundtable/issues) and, if you can, paste the text from the *Copy report* button.
+<br>
 
 ---
 
-<sub>An unofficial fan tool, not affiliated with FromSoftware, Bandai Namco, Nexus Mods, or the authors of me3 or Seamless Co-op - please support the mod authors whose work you install. Thanks to me3 / ModEngine 3 (garyttierney), Seamless Co-op (LukeYui) and ER-Save-Editor (ClayAmore). *Elden Ring* is a trademark of FromSoftware / Bandai Namco. Third-party software is listed in `THIRD-PARTY-NOTICES.txt`.</sub>
+<p align="center"><sub>
+An unofficial fan tool, not affiliated with FromSoftware, Bandai Namco, Nexus Mods, or the authors of me3 or Seamless Co-op - please support the mod authors whose work you install.<br>
+Thanks to me3 / ModEngine 3 (garyttierney), Seamless Co-op (LukeYui) and ER-Save-Editor (ClayAmore). <i>Elden Ring</i> is a trademark of FromSoftware / Bandai Namco.
+</sub></p>
