@@ -1,160 +1,228 @@
+<p align="center"><a href="../README.md">Overview</a> &nbsp;·&nbsp; <b>Guide</b> &nbsp;·&nbsp; <a href="FEATURES.md">Everything it can do</a></p>
+
 # Roundtable guide
 
-[Back to the overview](../README.md) · [Everything it can do](FEATURES.md)
+A step-by-step walk through Roundtable, with a picture for every step. You don't need to know anything about programming - if you've ever downloaded a mod and wondered which folder it goes in, this is for you.
 
-*(formerly "ER Mod Manager")*
+> **Windows only.** Needs Elden Ring on Steam.
 
-**A friendly way to install, organise and play Elden Ring mods - and to play co-op with your friends - without digging through folders.**
-
-![The manager showing a mod, with a big PLAY button](images/mod-page.png)
-
-If you've ever unzipped a mod, wondered which folder it goes in, and then watched the game start without it - this is for you. You pick a mod, press **PLAY**, and the manager takes care of the awkward parts: putting files in the right place, checking for problems *before* the game starts, keeping your saves safe, and keeping everything up to date.
-
-> **Windows only.** Needs Elden Ring on Steam. You do **not** need to know anything about programming.
+**On this page:** [Get started](#get-started) · [Install a mod](#install-a-mod) · [A mod's page](#a-mods-page) · [Press PLAY](#press-play) · [When something goes wrong](#when-something-goes-wrong) · [Packs built from other mods](#packs-built-from-other-mods) · [Play with friends](#play-with-friends) · [Your saves](#your-saves) · [Keeping up to date](#keeping-up-to-date) · [Finding things](#finding-things) · [Tidying up](#tidying-up) · [Make it yours](#make-it-yours) · [More games](#more-games) · [Privacy](#privacy-and-safety)
 
 ---
 
-## What it does for you
+## Get started
 
-| You want to... | The manager... |
-|---|---|
-| **Install a mod** | Searches Nexus Mods or opens the file you downloaded, shows you what's inside, installs it, and fixes the usual profile mistakes automatically. |
-| **Play it** | One **PLAY** button. It looks the mod over first and tells you in plain words if something will go wrong - then watches the game start and tells you if your mod didn't load. |
-| **Play with friends** | Checks your co-op setup, helps everyone use the same password and versions, and writes you an invite to send. |
-| **Keep your characters safe** | Backs up your saves automatically, can keep a second copy somewhere else, and asks twice before anything involving a save is deleted. |
-| **Stay up to date** | Tells you when a mod, me3 or the manager itself has a new version - and updates without you leaving the app. |
-| **Undo mistakes** | Almost everything it does is backed up and can be undone. |
+### 1. Download and unzip
 
----
+Open the **[Releases page](https://github.com/Nexus-Primes/Roundtable/releases/latest)** and download the file ending in **`-windows.zip`** (it's under *Assets*). Right-click it, choose **Extract All...**, and put it in a simple folder such as `C:\Tools\Roundtable`.
 
-## Get started (about 5 minutes)
+> **Please don't** run it from inside the zip, from *Downloads* or *Desktop*, from a **OneDrive** folder, or from inside the Elden Ring folder. Windows and OneDrive can lock or hide files there, which causes confusing errors.
 
-### 1. Download
+### 2. Open `Roundtable.exe`
 
-Open the **[Releases page](https://github.com/Nexus-Primes/Roundtable/releases/latest)** and download the file ending in **`-windows.zip`** (it's listed under *Assets*).
+The first time, Windows may say **"Windows protected your PC"**. That's only because the program isn't signed with a paid certificate. Click **More info**, then **Run anyway**.
 
-### 2. Unzip it somewhere permanent
+### 3. Let it set itself up
 
-Right-click the zip and choose **Extract All...** into a simple folder such as `C:\Tools\Roundtable`.
+<p align="center"><img src="images/guide-welcome.png" alt="The Welcome window listing the three things to set up" width="640"></p>
 
-> **Please don't** run it from inside the zip, from your *Downloads* or *Desktop*, from a **OneDrive** folder, or from inside the Elden Ring folder. Windows and OneDrive can lock or hide files there, which causes confusing errors.
+On the first start Roundtable checks three things: your **Elden Ring game folder**, **me3** (ModEngine 3 - the small program that actually loads mods into the game) and your **Mods folder**. Press **Open Settings** to fix whatever it flags.
 
-### 3. Open `Roundtable.exe`
+- **me3:** choose **Tools → This program → Install or update me3...** and follow the installer like any other. When it closes, Roundtable finds it by itself. If a Microsoft Visual C++ runtime is missing, the same window offers to install it.
+- **Mods folder:** an empty folder is fine - Roundtable fills it.
 
-The first time, Windows may say **"Windows protected your PC"**. That's because the program isn't signed with a paid certificate. Click **More info**, then **Run anyway**.
+<p align="center"><img src="images/guide-settings-folders.png" alt="The Folders tab of Settings with the me3, Mods and game folders" width="830"></p>
 
-### 4. Let it set itself up
+### 4. (Optional, but handy) Add your Nexus key
 
-On the first start the manager tells you what's missing. The two things it needs are:
+A free Nexus Mods account lets Roundtable search for mods, show their pictures, and check for updates. On nexusmods.com open your account's **API Keys** page, copy the **Personal API Key**, and paste it into **Settings → Online → Nexus API key**, then press **Test key**. The key stays on your PC, is stored encrypted, and is only ever sent to nexusmods.com.
 
-- **me3** (ModEngine 3) - the small program that actually loads mods into the game.
-  In the manager choose **Tools → This program → Install or update me3...** and follow the installer's window like any other installer. When it closes, the manager finds it by itself.
-- **The Microsoft Visual C++ runtime** - almost every DLL mod needs it. If it's missing, the same window offers to install it for you.
+Also on this tab: **Nexus download buttons** - turn it on and the *Mod Manager Download* button on a Nexus mod page sends the file straight to Roundtable. This works with free accounts.
 
-Then open **Settings** and make sure the **Mods folder** is the folder where your mods will live (an empty folder is fine - the manager will fill it).
-
-### 5. (Optional but handy) Add your Nexus Mods key
-
-A free Nexus Mods account lets the manager search for mods, show their pictures, and check for updates.
-
-1. Log in at nexusmods.com and open your account's **API Keys** page.
-2. Copy the **Personal API Key**.
-3. Paste it into **Settings → Nexus API key** and press **Test key**.
-
-The key stays on your PC and is only ever sent to nexusmods.com.
+<p align="center"><img src="images/guide-nexus-key.png" alt="The Online tab of Settings with the Nexus API key and download buttons" width="830"></p>
 
 ---
 
-## Installing and playing your first mod
+## Install a mod
 
-1. Press **＋ Install a mod** (bottom-left).
-2. Either **search Nexus** and pick a mod, or choose a `.zip`, `.7z` or `.rar` you already downloaded. (`.zip` works on its own; `.7z` and `.rar` need **[7-Zip](https://www.7-zip.org/)** installed - the manager tells you if it can't find it.)
-3. Look over what the manager found, press **Install**. It repairs common problems for you and says what it did.
-4. Click the mod in the list on the left and press **PLAY**.
+Press **＋ Install a mod** (bottom left). There are two ways in:
 
-**Tip - the "Mod Manager Download" button.** In **Settings**, turn on **Nexus download buttons**. After that, the *Mod Manager Download* button on a Nexus mod page sends the file straight here. This works with free Nexus accounts, too.
+- **Search Nexus Mods** - type a name, pick a result, and read its description, pictures and recent changes before you install. Buttons open its comments and bug reports on Nexus.
+- **From a file or folder** - choose a `.zip`, `.7z` or `.rar` you already downloaded (`.7z` and `.rar` need [7-Zip](https://www.7-zip.org/) installed; Roundtable tells you if it can't find it). You can also just drag the file onto the window.
 
-**Some mods are "add-ons"** (small DLL files like free-camera or UI tweaks). When you install one, the manager offers to add it to the mods you already play instead of making it a separate mod.
+<p align="center"><img src="images/guide-install.png" alt="The Install a mod window on its From a file or folder tab" width="830"></p>
 
----
+Roundtable unpacks the mod, shows what it found (DLL files and asset folders, and which to switch on), and installs it only when you press **Install**. Common profile mistakes are repaired as it goes, and the whole install can be undone.
 
-## Playing co-op with friends (Seamless Co-op)
+**Add-ons:** small DLL mods (free camera, UI tweaks) are offered as an add-on to a mod you already play, instead of a separate mod.
 
-Co-op only works when **everyone has the same mod versions, the same Seamless Co-op version, and the same password.** The manager makes that much less painful.
+### Some mods need one more step
 
-![The Play with friends window with a green checklist and an invite](images/play-with-friends.png)
+If a mod's author says something must be run once before the first launch - an install `.bat`, a *Setup UI images* shortcut, a zip of DLLs meant for the game folder - Roundtable offers to do it right after the install. **Nothing runs until you press a button.** Each item opens in its own window, Roundtable waits for it to finish, checks that it succeeded, and lets you retry if it didn't.
 
-- **Play with friends → Ready to play?** on a mod's page shows a checklist (Seamless version, password, your own save file, me3, game version) and a ready-to-send **invite** you can copy or post to Discord.
-- **Add Seamless Co-op...** (on the mod's *Components* tab) puts Seamless into a mod for you, with its own save file so characters never get mixed up.
-- Friends who have the manager can use **Tools → Mods → Install a friend's setup** - paste the setup (or a link to it) you made with **Share my setup** and it downloads the same mod versions, adds your add-on DLLs, sets up Seamless Co-op, and switches the same DLLs on in the same order. The co-op password and settings files are only included if you tick them.
-  ![The Share my setup window with a list of mods and tick boxes](images/share-setup.png)
-  Before it changes anything, the friend sees a plain list of what will change and can go back; **Tools → Backups and undo → Undo last friend's setup** reverses it. Tip: put your setup in a GitHub gist and send friends the link - when you change your setup you update the gist, and they just open *Install a friend's setup* and press *Read it* again.
-- **Play with friends → Compare setups** finds out exactly *why* two people can't connect.
-
-### Your DLL preset, without duplicates
-
-Save the DLL mods you use everywhere as a **DLL preset** (*Tools → Mods → DLL presets...*) and add it to any mod in one click. If a mod already has one of the same DLLs, Roundtable asks which copy to use - the mod's or yours - so nothing is ever loaded twice, and undoing it puts everything back.
-
-### All your passwords and save files in one place
-
-![One window listing every Seamless Co-op instance with its password and save extension](images/co-op-passwords.png)
-
-**Tools → Seamless Co-op → Passwords and save files...** lists every co-op setup on your PC. Change passwords and save-file endings there (even set one password for everything), see which ones clash, and let the manager give each mod its own. If you change a save ending, it can copy your existing save across so your character comes with you.
+<p align="center"><img src="images/guide-postinstall.png" alt="The Finish setting up window offering to run a mod's install script" width="640"></p>
 
 ---
 
-## Your saves are protected
+## A mod's page
 
-![The Characters page listing the characters inside each save](images/characters.png)
+Click a mod in the list on the left. The top shows its version, where it's published and whether it's ready. Under the **PLAY** button are four tabs.
 
-The **Characters** page (top of the list) shows every save file and the characters inside it.
+**Overview** - the health check (*"All good - everything this mod points to is there"*), any setup steps, and what happened on the last launch.
 
-- **Backups happen automatically** before you launch, and before anything that touches a save. Unchanged saves share space, so keeping many costs little.
-- **A second copy** can be sent to another drive, a NAS or a cloud-synced folder (*Backups → Second copy*).
-- **Copy a character** from one save to another - for example from your normal game into your co-op save - with *Copy this character to another save...*. It only works between saves from the same Steam account, checks everything first, and makes a backup first.
-- **Deleting is guarded.** Deleting a character or a whole save file makes a protected backup first, shows you exactly what will go, and makes you **type the name** before it does anything. Deleted save files are moved aside, not erased, and *Backups → Restore* brings them back.
-- Please **play offline** with copied or edited characters. Online play with mods can get an account banned, and the manager never turns online mode on by itself.
+<p align="center"><img src="images/guide-modpage.png" alt="A mod's Overview tab with the health check and PLAY button" width="830"></p>
+
+**Components** - every DLL and asset folder the mod loads. Tick to switch one on, untick to switch it off; drag or use the arrows to change the load order; **Add DLL...** and **Add asset folder...** add your own; **Loadouts** saves named combinations you can switch between; **Check conflicts** finds two mods replacing the same files.
+
+<p align="center"><img src="images/guide-components.png" alt="The Components tab listing a mod's DLLs with on/off ticks" width="830"></p>
+
+**Configuration** - the mod's settings files shown as a tidy form (or raw text), with *Revert*, *Save changes* and *Open in editor*. Edited files are backed up first, and the author's original is always kept.
+
+**Updates** - covered [below](#keeping-up-to-date).
+
+---
+
+## Press PLAY
+
+Pick the mod, pick a profile if it has several, and press **PLAY**. Before the game starts, Roundtable looks the profile over and, if something is likely to go wrong, tells you in plain words and lets you decide.
+
+<p align="center"><img src="images/guide-prelaunch.png" alt="The Before you play window listing a missing DLL and an out-of-date Seamless Co-op" width="640"></p>
+
+While the game runs, the button shows **RUNNING** (and blocks a second launch), and playtime is tracked per mod. Afterwards Roundtable reads the logs and tells you if your mod didn't load and why.
+
+Vanilla Elden Ring starts through Steam with Easy Anti-Cheat. Mods start through me3. Modded **online** play can get an account banned - Roundtable never turns online mode on and warns you if a profile has it.
+
+---
+
+## When something goes wrong
+
+Start with the buttons on the mod's **Overview** tab:
+
+- **Why won't it start?** collects every clue (including files Windows Defender removed) and lists the likely cause first.
+- **Doctor** checks your whole PC: game folder, me3, the Visual C++ runtime.
+- **Fix problems...** scans the mod and offers repairs you tick one by one - re-linking moved files, copying in a missing shared DLL, switching off files that can't work. Everything is backed up and can be undone.
+
+<p align="center"><img src="images/guide-health.png" alt="A mod whose health check reports a missing DLL, with Why won't it start, Doctor and Fix problems buttons" width="830"></p>
+
+<p align="center"><img src="images/guide-why.png" alt="The Why won't it start window listing likely causes" width="640"></p>
+
+**The game crashes at start?** Roundtable reads Windows' own crash records and, if one DLL is to blame, offers to switch it off. If it can't tell, **Find the cause** switches half of a mod's DLLs and folders off, asks you whether it still crashes, and narrows it down to the one that matters.
+
+**Needs and requirements:** the **What this mod needs** card on a known mod's Overview checks your PC - me3, the DLC, ray tracing, the game version - and puts a button next to anything missing. If you need to share a problem, **Copy report** gathers everything (personal paths removed).
+
+---
+
+## Packs built from other mods
+
+Some packs, like **FRZN's Merge Modpack**, are made by layering several other mods you download yourself. After you install one, the **Install the dependencies** window opens (or press the button on the pack's *What this mod needs* card):
+
+1. Press **Get it** on each mod. A Premium Nexus account downloads it for you; a free account opens that file's Nexus page and the *Mod Manager Download* button there hands the file back. Already downloaded it? Roundtable spots it in your Downloads folder.
+2. When all are ready, press **Build it**. Each is unpacked and layered in the order the author's instructions give, with the right old version where needed (FRZN needs McKenyu's 1.3.11, not the newest).
+
+<p align="center"><img src="images/feat-dependencies.png" alt="The Install the dependencies window" width="830"></p>
+
+If a build stops, press **Build it** again - finished steps are remembered.
+
+---
+
+## Play with friends
+
+Co-op only works when **everyone has the same mod versions, the same Seamless Co-op version and the same password.** Roundtable makes that much less painful.
+
+On a mod's page press **Play with friends**. A green checklist covers the Seamless version, a password, your own save file, me3 and the game version, and you can copy a ready-to-send **invite** or post it to Discord. **Compare setups** finds out exactly *why* two people can't connect.
+
+<p align="center"><img src="images/feat-friends.png" alt="The Play with friends window with a green checklist and an invite" width="720"></p>
+
+- **Add Seamless Co-op...** (on the *Components* tab) puts Seamless into a mod with its own save file, so characters never get mixed up.
+- **Share my setup / Install a friend's setup** (in *Tools*): a friend pastes your setup (or a link to it) and Roundtable fetches the same mod versions, adds your add-on DLLs, sets up Seamless and switches the same DLLs on in the same order. The password and settings files are only included if you tick them, and your friend sees a plain list of changes first and can undo them.
+
+<p align="center"><img src="images/guide-share.png" alt="The Share my setup window with a list of mods and tick boxes" width="640"></p>
+
+**All your passwords and save files in one place:** *Tools → Seamless Co-op → Passwords and save files...* lists every co-op setup on your PC. Change passwords and save-file endings (even set one password for everything), spot clashes, and let Roundtable give each mod its own. Changing an ending can copy your existing save across so your character comes with you.
+
+<p align="center"><img src="images/guide-passwords.png" alt="One window listing every Seamless Co-op instance with its password and save extension" width="830"></p>
+
+**Seamless versions:** Seamless refuses to start when its DLL is out of date. *Tools → Seamless Co-op → Seamless versions...* lists every copy on your PC and updates the older ones from the newest.
+
+<p align="center"><img src="images/guide-seamless-versions.png" alt="Every copy of ersc.dll with its version and status" width="830"></p>
+
+**DLL presets:** save the DLL mods you use everywhere as a preset (*Tools → Mods → DLL presets...*) and add it to any mod in one click. If a mod already has one of the same DLLs, Roundtable asks which copy to use, so nothing is loaded twice.
+
+---
+
+## Your saves
+
+<p align="center"><img src="images/feat-characters.png" alt="The Characters page listing the characters in each save" width="830"></p>
+
+Click **Characters** in the list. You see every save file, which mod uses it, and the characters inside.
+
+- **Backups happen automatically** before each launch and before anything that touches a save. Unchanged saves share space, so keeping many costs little. *Back up now* takes one on demand, and a second copy can go to another drive or a synced folder.
+- **Copy a character** from one save to another (for example into your co-op save) with *Copy this character to another save...*. It only works between saves from the same Steam account, checks everything first and backs up first.
+- **Deleting is guarded.** Deleting a character or a whole save makes a protected backup, shows exactly what will go, and makes you **type the name**. Deleted saves are moved aside, not erased, and *Restore* brings them back.
+
+Please **play offline** with copied or edited characters - modded online play can get an account banned.
 
 ---
 
 ## Keeping up to date
 
-- **Mods:** *Tools → Check all for updates* compares your mods with their Nexus or GitHub pages. *Update this mod* downloads and applies a new version safely, and *Undo last update* reverses it.
-- **me3:** the manager checks about once a day and tells you when a newer one is out - *Tools → This program → Update me3...*.
-- **The manager itself:** when a new version is published, a banner appears in the sidebar. Click it and the manager downloads the update, restarts, and keeps all your settings and backups.
-  **Search:** *All tools* has a search box for tools, settings and appearance options.
-  **Tools:** the Tools button is a short menu; *All tools...* lists everything on tabs, and any window opened from another replaces it with a *Back* link, so only one is in front.
-  **Look:** pages dissolve into each other, the mod list's gold plate slides, and the wheel scrolls smoothly. *Appearance → Motion* sets how much glides and fades (Off, Calm, Fluid, Lavish); the colour-blind option recolours every status mark at once.
-  **Before you install:** *Install a mod* shows the highlighted mod's picture, tags, description and recent changes next to the results, with buttons for its comments, bug reports and images on Nexus.
-  **Quick launches and the room:** Overview has *Quick launches* (a named mod + profile + on/off combination you start in one click), and *Friends' setups -> Room view* lines up everyone's mods with a ready light per friend.
-  **When something breaks:** the **Why won't it start?** button on a mod's Overview tab collects every clue (including files Windows Defender removed) and lists the likely cause first; the conflict check can switch one of two clashing mods off or swap their order.
-  **Look and learning:** a guided tour lights up the real buttons the first time you open the manager, and Appearance now has an **Ivory** light theme. Bloodborne gets a guided controller check.
-  **Overview:** the second row in the sidebar shows how your mods are doing - counts, the updates waiting, and every mod as a sortable table or a card gallery.
-  **Game library:** *All games...* in the game box shows every supported game as a card; games you install through Steam are found by themselves. Dark Souls 1 and 2 are launched through Steam with save backups and restore (mods for them aren't loaded by the manager).
-  **Bloodborne (Windows port):** choose it in the same box for Play, a health check, every setting of the port's launcher (including online co-op), controller tools and save backups - without touching the game files.
-  **More than one game:** the box at the top of the sidebar switches between Elden Ring, Elden Ring Nightreign and Dark Souls III - each keeps its own mods folder, profiles and save backups, and the manager launches the right game through me3.
-  **Friends' setups** (Tools → Mods) keeps your friends' setup links in one list and shows at a glance whether you match each of them. **Back up saves while playing** (Settings) copies your saves every few minutes while the game runs.
-  **Handy extras:** drop a mod's .zip or folder on the window to install it; press **F1** for the keyboard shortcuts (Ctrl+K jumps to any mod or tool); the 🔔 in the footer keeps messages you missed; **Tools → This program → Report a problem** opens a pre-filled issue on GitHub.
-  On a new PC a **Getting started** checklist walks you through finding the game, installing me3 and adding your first mod. Before you play, the manager also warns you if two enabled mods replace the same game files (once for each distinct set).
-  If a new version ever misbehaves, **Tools → This program → Go back to an earlier version...** returns to the one you had before (it's saved on your PC automatically) or to any older release - your data stays as it is.
+**Mods.** Open a mod's **Updates** tab. Roundtable compares your version with the mod's Nexus or GitHub page; when a new one is out, a badge appears in the list and **Update to ...** downloads and applies it safely. **Undo last update** reverses it.
+
+<p align="center"><img src="images/guide-updates.png" alt="The Updates tab with an update available, release notes and Update, Undo and Check buttons" width="830"></p>
+
+- **Patches are found and applied safely.** Some mods publish a small patch for the previous version as well as the full download. Roundtable tells them apart and offers the patch only when it was made for exactly the version you have.
+- **The author's instructions are read.** If an update comes with a README that explains how to apply it, Roundtable shows those steps before changing anything.
+- **Update from file...** applies a download you made yourself.
+
+**me3:** Roundtable checks about once a day. *Tools → This program → Update me3...*.
+
+**The manager itself:** when a new version is published, a banner appears in the sidebar. Click it and Roundtable downloads the update, checks its signature, restarts, and keeps all your settings and backups. If a new version ever misbehaves, *Tools → This program → Go back to an earlier version...* returns to the one you had.
+
+**The game:** Roundtable remembers your `eldenring.exe` version. When a game patch changes it, you're told, offered an update check, and mods whose logs show they don't support the new version are marked.
+
+---
+
+## Finding things
+
+Press **Ctrl+K** to jump to any mod or tool by typing a few letters. **F1** lists the keyboard shortcuts.
+
+<p align="center"><img src="images/guide-palette.png" alt="The Go to window with a search box and a list of mods and tools" width="640"></p>
+
+Everything else lives under the **Tools** button, grouped by topic. **All tools...** lists every tool, setting and appearance option on tabs, with a search box. Opening a window from another replaces it with a *Back* link, so only one is in front at a time.
+
+<p align="center"><img src="images/guide-tools-menu.png" alt="The Tools menu, grouped, with the Seamless Co-op group open" width="500"></p>
+
+The sidebar has search and **All / ★ / Updates / Issues** filters, and the **Overview** page shows how all your mods are doing - counts, the updates waiting, and every mod as a sortable table or a card gallery. A bell in the footer keeps messages you missed.
+
+---
+
+## Tidying up
+
+<p align="center"><img src="images/feat-cleanup.png" alt="The Clean up downloads window" width="640"></p>
+
+*Tools → Storage... → Choose downloads to delete...* lists every downloaded archive with why it can go: the mod is already installed, it's an older copy, or it was used to build a layered pack (kept unless you tick it, because a rebuild needs it again). Older copies are ticked for you, and **nothing is deleted until you confirm**. Installed mods are never touched.
+
+In **Settings → Updates and safety** you can also keep only the newest few archives per mod and trim old backups automatically - both are off by default.
+
+Deleted mods wait in *Tools → Deleted mods* until you restore them or remove them for good. **Back up manager setup...** zips your settings, links and profiles so you can move to a new PC.
 
 ---
 
 ## Make it yours
 
-Open **Tools → This program → Appearance...** and pick a theme. Each one is a complete colour scheme named after something from the Lands Between:
+Open **Tools → This program → Appearance...** and pick a theme. Each is a complete colour scheme named after something from the Lands Between, and the whole manager changes straight away - **Cancel** puts everything back, **Save** keeps it.
 
-![The Appearance window with twelve themes to choose from](images/appearance.png)
+<p align="center"><img src="images/guide-appearance.png" alt="The Appearance window with twelve themes to choose from" width="830"></p>
 
-Click a theme and the whole manager changes straight away - **Cancel** puts everything back, **Save** keeps it.
+<p align="center"><img src="images/feat-themes.png" alt="The manager in each of the twelve themes" width="830"></p>
 
-![The manager in each of the twelve themes](images/themes.png)
+You can also change the **text size**, the **font**, how **rounded** the corners are, the **width of the mod list**, how much **animation** you want (Off, Calm, Fluid, Lavish), switch on **high contrast**, or use **colour-blind friendly status colours**.
 
-Prefer to mix your own? Choose **Custom mix** and pick any accent colour (or your own) and one of four colour schemes. You can also change the **text size**, the **font**, how **rounded** the corners are, the **width of the mod list**, turn the window fade-in off, switch on a **high-contrast** mode, or use **colour-blind friendly status colours** (blue / yellow / orange instead of green / amber / red).
+---
 
-Everything else lives in the **Tools** menu, grouped by topic:
+## More games
 
-![The Tools menu, grouped, with the Seamless Co-op group open](images/tools-menu.png)
+The box at the top of the sidebar switches between **Elden Ring**, **Elden Ring Nightreign** and **Dark Souls III** - each keeps its own mods folder, profiles and save backups. *All games...* shows every supported game as a card; games you install through Steam are found by themselves. Dark Souls 1 and 2 are launched through Steam with save backups. **Bloodborne** (the community Windows port) gets Play, a health check, every launcher setting and a controller check - without touching the game files.
 
 ---
 
@@ -162,71 +230,49 @@ Everything else lives in the **Tools** menu, grouped by topic:
 
 <details>
 <summary><b>The game started but my mod isn't there / "ModEngine3 failed to load"</b></summary>
-
-1. Open **Tools → Health and storage → PC check (Doctor)**. It lists exactly what's wrong in plain words and has buttons for the common fixes (install me3, install the Visual C++ runtime, find me3).
-2. On the mod's page press **Fix problems...** - it repairs moved files, switches off mod files that can't work, and so on.
-3. Make sure the mod is **not** inside a OneDrive folder, and that the manager and your mods aren't inside the Elden Ring game folder.
-4. Still stuck? On the mod's page press **Check last launch**, then **Copy report**, and send it to whoever is helping you (personal paths are removed from the report).
-</details>
-
-<details>
-<summary><b>Windows says "Windows protected your PC"</b></summary>
-
-Click **More info → Run anyway**. The program isn't signed with a paid certificate, which is all this warning means.
+<br>
+1. Press <b>Why won't it start?</b> on the mod's page, or open <b>Tools → PC check (Doctor)</b>. They list what's wrong in plain words and have buttons for the common fixes.<br>
+2. Press <b>Fix problems...</b> on the mod's page.<br>
+3. Make sure the mod is <b>not</b> inside a OneDrive folder, and that Roundtable and your mods aren't inside the Elden Ring game folder.<br>
+4. Still stuck? Press <b>Check last launch</b>, then <b>Copy report</b>, and send it to whoever is helping you.
 </details>
 
 <details>
 <summary><b>My friend can't join my game</b></summary>
-
-Use **Play with friends → Compare setups** on both PCs. It lists what differs - Seamless version, DLLs, settings, password. The most common cause is a different Seamless Co-op version or a different password.
+<br>
+Use <b>Play with friends → Compare setups</b> on both PCs. It lists what differs - Seamless version, DLLs, settings, password. The most common cause is a different Seamless Co-op version or password.
 </details>
 
 <details>
 <summary><b>I changed a save-file ending and my character "disappeared"</b></summary>
-
-The character is still in the old save file. In **Tools → Seamless Co-op → Passwords and save files...** tick *copy the existing save to the new name* when you change an ending - or use the **Characters** page to copy it across afterwards.
-</details>
-
-<details>
-<summary><b>Where does the manager keep my information? How do I uninstall it?</b></summary>
-
-Your settings, Nexus key and backups are in the **`data`** folder next to `Roundtable.exe`. Nothing is uploaded. To uninstall, close the manager and delete its folder - your mods and saves are not touched. (me3 can be removed from Windows' *Installed apps*.)
+<br>
+The character is still in the old save file. In <b>Passwords and save files...</b> tick <i>copy the existing save to the new name</i> when you change an ending - or use the <b>Characters</b> page to copy it across afterwards.
 </details>
 
 <details>
 <summary><b>Do I need Nexus Premium?</b></summary>
-
-No. Free accounts work: use the *Mod Manager Download* button on a mod page (see above). Premium accounts additionally get fully automatic downloads.
+<br>
+No. Free accounts work: use the <i>Mod Manager Download</i> button on a mod page. Premium adds fully automatic downloads.
 </details>
 
 <details>
-<summary><b>Can I get banned?</b></summary>
-
-Modded **online** play can get an account banned. The manager never switches online mode on by itself, and warns you if a profile has it enabled. Play offline, or use Seamless Co-op, which is its own separate network.
+<summary><b>Where does Roundtable keep my information? How do I uninstall it?</b></summary>
+<br>
+Your settings, Nexus key and backups are in the <code>data</code> folder next to <code>Roundtable.exe</code>. Nothing is uploaded. To uninstall, close Roundtable and delete its folder - your mods and saves are not touched. (me3 can be removed from Windows' <i>Installed apps</i>.)
 </details>
 
 ---
 
 ## Privacy and safety
 
-- Your Nexus key and Discord webhook stay on your PC, are stored **encrypted with Windows' own protection** (tied to your Windows account, so a copy of `settings.json` is unreadable elsewhere), and are only sent to nexusmods.com / discord.com. Setup backups leave them out unless you tick the box.
-- **Updates are signed.** Each release carries a signature made with the publisher's private key; the manager has the matching public key built in and refuses to install an update whose signature doesn't check out - a swapped or tampered download is stopped before anything is unpacked.
-- The manager contacts GitHub (to check for its own updates and for me3), Nexus Mods, **Microsoft** (only if you ask it to install the Visual C++ runtime, from `aka.ms`), the **Bloodborne port's community server** (only when you press *Test connection* on the Bloodborne page) and - only if you set one up - the Discord webhook you choose. It does not send your files or saves anywhere.
+- Your Nexus key and Discord webhook stay on your PC, stored **encrypted with Windows' own protection** (tied to your Windows account), and are only sent to nexusmods.com / discord.com.
+- **Updates are signed.** Each release carries a signature; Roundtable has the matching public key built in and refuses an update whose signature doesn't check out.
+- Roundtable contacts GitHub (its own updates and me3), Nexus Mods, Microsoft (only if you ask it to install the Visual C++ runtime) and - only if you set one up - your Discord webhook.
 - Mods are always downloaded from the author's own page. This project never hosts or re-shares mod files.
-- Nothing that touches your saves or your mods is done without a backup, and the common ones can be undone from inside the app.
-- **Where your data lives:** settings, notes and backups are in the `data` folder next to `Roundtable.exe`, so deleting the program folder deletes them too. *Settings -> Updates and safety* shows the folder and has *Open folder*, and *Back up saves* can keep a second copy on another drive. To keep the data somewhere else, set the `ER_MOD_MANAGER_DATA` environment variable to a folder before starting the manager.
-- Mod downloads from Nexus and GitHub are only fetched from those sites; neither publishes a checksum for a mod file, so they can't be verified beyond that.
+- Nothing that touches your saves or mods is done without a backup, and the common ones can be undone from inside the app.
 
-## Credits and notes
+## Credits
 
-This is an unofficial fan tool. It is not affiliated with FromSoftware, Bandai Namco, Nexus Mods, or the authors of me3 or Seamless Co-op - please support the mod authors whose work you install.
+An unofficial fan tool, not affiliated with FromSoftware, Bandai Namco, Nexus Mods, or the authors of me3 or Seamless Co-op - please support the mod authors whose work you install. Thanks to **me3 / ModEngine 3** (garyttierney), **Seamless Co-op** (LukeYui) and **ER-Save-Editor** (ClayAmore). *Elden Ring* is a trademark of FromSoftware / Bandai Namco. Third-party software is listed in `THIRD-PARTY-NOTICES.txt`.
 
-Thanks to **me3 / ModEngine 3** (garyttierney), **Seamless Co-op** (LukeYui), and the open-source **ER-Save-Editor** (ClayAmore, Apache-2.0), whose documentation of the save format made the character tools possible.
-
-The Bloodborne page reads and writes the settings of a community Windows port; the list of its launcher settings follows that launcher's public source (GPL-2.0-or-later). The manager downloads nothing for Bloodborne and doesn't include the game or the port.
-
-Third-party software in the program is listed in `THIRD-PARTY-NOTICES.txt` (Qt for Python / PySide6 under the LGPL, and others).
-
-*Elden Ring* is a trademark of FromSoftware / Bandai Namco.
-
-**Found a bug or have an idea?** Open an **[Issue](https://github.com/Nexus-Primes/Roundtable/issues)** and, if you can, paste the text from the manager's *Copy report* button.
+**Found a bug or have an idea?** Open an [issue](https://github.com/Nexus-Primes/Roundtable/issues) and, if you can, paste the text from the *Copy report* button.
