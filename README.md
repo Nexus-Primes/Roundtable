@@ -1,60 +1,34 @@
-<p align="center">
-  <img src="docs/images/logo.png" alt="Roundtable" width="300">
-</p>
+<p align="center"><img src="docs/images/logo.png" alt="Roundtable - Elden Ring mod manager" width="260"></p>
 
-<h1 align="center">Roundtable</h1>
+# Roundtable
 
-<p align="center">
-  <b>Install, organise and play Elden Ring mods - and play co-op with friends - without digging through folders.</b>
-</p>
+**A friendly way to install, organise and play Elden Ring mods - and to play co-op with your friends - without digging through folders.**
 
-<p align="center">
-  <a href="https://github.com/Nexus-Primes/Roundtable/releases/latest"><img src="docs/images/download.png" alt="Download for Windows" width="300"></a>
-</p>
+![The manager showing a mod, with a big PLAY button](docs/images/p-modpage.png)
 
-<p align="center">
-  <a href="https://github.com/Nexus-Primes/Roundtable/releases/latest"><img alt="Latest release" src="https://img.shields.io/github/v/release/Nexus-Primes/Roundtable?style=flat-square&color=c9a45c&labelColor=2a2218"></a>
-  <img alt="Windows" src="https://img.shields.io/badge/platform-Windows-c9a45c?style=flat-square&labelColor=2a2218">
-  <img alt="Signed updates" src="https://img.shields.io/badge/updates-signed-c9a45c?style=flat-square&labelColor=2a2218">
-  <img alt="Free" src="https://img.shields.io/badge/price-free-c9a45c?style=flat-square&labelColor=2a2218">
-</p>
+If you've ever unzipped a mod, wondered which folder it goes in, and then watched the game start without it - this is for you. You pick a mod, press **PLAY**, and the manager takes care of the awkward parts: putting files in the right place, checking for problems *before* the game starts, keeping your saves safe, and keeping everything up to date.
 
-<p align="center">
-  <img src="docs/images/banner.png" alt="Roundtable showing a mod with a big PLAY button" width="100%">
-</p>
+> **Windows only.** Needs Elden Ring on Steam. You do **not** need to know anything about programming.
 
-<p align="center">
-  <a href="#why-roundtable">Why</a> &nbsp;·&nbsp;
-  <a href="#get-started">Get started</a> &nbsp;·&nbsp;
-  <a href="#install-a-mod">Install</a> &nbsp;·&nbsp;
-  <a href="#press-play">Play</a> &nbsp;·&nbsp;
-  <a href="#when-something-goes-wrong">Fix problems</a> &nbsp;·&nbsp;
-  <a href="#play-with-friends">Co-op</a> &nbsp;·&nbsp;
-  <a href="#your-saves">Saves</a> &nbsp;·&nbsp;
-  <a href="#keeping-up-to-date">Updates</a> &nbsp;·&nbsp;
-  <a href="#make-it-yours">Themes</a> &nbsp;·&nbsp;
-  <a href="#everything-it-can-do">Everything</a> &nbsp;·&nbsp;
-  <a href="#questions">FAQ</a>
-</p>
+[**Download the latest version**](https://github.com/Nexus-Primes/Roundtable/releases/latest)
 
 ---
 
-## Why Roundtable
+## What it does for you
 
-<table>
-  <tr>
-    <td width="25%" valign="top"><h4>One PLAY button</h4>Pick a mod and press it. Roundtable checks the mod first and tells you in plain words if something will go wrong.</td>
-    <td width="25%" valign="top"><h4>Big packs, set up for you</h4>It knows what the major overhauls need, and layers in the other mods a pack is built from.</td>
-    <td width="25%" valign="top"><h4>Co-op, sorted</h4>Matching versions, passwords and save files for you and your friends, in one place.</td>
-    <td width="25%" valign="top"><h4>Saves stay safe</h4>Automatic backups, and nothing is deleted without asking. Most changes can be undone.</td>
-  </tr>
-</table>
+| You want to... | The manager... |
+|---|---|
+| **Install a mod** | Searches Nexus Mods or opens the file you downloaded, shows you what's inside, installs it, and fixes the usual profile mistakes automatically. |
+| **Play it** | One **PLAY** button. It looks the mod over first and tells you in plain words if something will go wrong - then watches the game start and tells you if your mod didn't load. |
+| **Fix what breaks** | Explains why a mod won't start, repairs what it can (with undo), and can find which DLL is crashing the game. |
+| **Set up big mod packs** | Knows what the major overhauls need, and layers in the other mods a pack like FRZN's Merge Modpack is built from. |
+| **Play with friends** | Checks your co-op setup, helps everyone use the same password and versions, and writes you an invite to send. |
+| **Keep your characters safe** | Backs up your saves automatically, can keep a second copy somewhere else, and asks twice before anything involving a save is deleted. |
+| **Stay up to date** | Tells you when a mod, me3 or the manager itself has a new version - and updates without you leaving the app. |
+| **Tidy up** | Shows which old downloads can go, and clears them only when you say so. |
+| **Undo mistakes** | Almost everything it does is backed up and can be undone. |
 
-### See it in action
-
-<p align="center"><img src="docs/images/clip-tour.png" alt="Animated tour: picking mods, switching tabs, spotting an update and a problem" width="830"></p>
-
-> **Windows only.** Needs Elden Ring on Steam. You do **not** need to know anything about programming - if you've ever downloaded a mod and wondered which folder it goes in, this is for you.
+![Animated tour: picking mods, switching tabs, spotting an update and a problem](docs/images/clip-tour.png)
 
 ---
 
@@ -72,14 +46,14 @@ The first time, Windows may say **"Windows protected your PC"**. That's only bec
 
 ### 3. Let it set itself up
 
-<p align="center"><img src="docs/images/p-welcome.png" alt="The Welcome window listing the three things to set up" width="680"></p>
+![The Welcome window listing the three things to set up](docs/images/p-welcome.png)
 
 On the first start Roundtable checks three things: your **Elden Ring game folder**, **me3** (ModEngine 3 - the small program that actually loads mods into the game) and your **Mods folder**. Press **Open Settings** to fix whatever it flags.
 
 - **me3:** choose **Tools → This program → Install or update me3...** and follow the installer like any other. When it closes, Roundtable finds it by itself. If a Microsoft Visual C++ runtime is missing, the same window offers to install it.
 - **Mods folder:** an empty folder is fine - Roundtable fills it.
 
-<p align="center"><img src="docs/images/p-settings-folders.png" alt="The Folders tab of Settings with the me3, Mods and game folders" width="830"></p>
+![The Folders tab of Settings with the me3, Mods and game folders](docs/images/p-settings-folders.png)
 
 ### 4. (Optional, but handy) Add your Nexus key
 
@@ -87,7 +61,7 @@ A free Nexus Mods account lets Roundtable search for mods, show their pictures, 
 
 Also on this tab: **Nexus download buttons** - turn it on and the *Mod Manager Download* button on a Nexus mod page sends the file straight to Roundtable. This works with free accounts.
 
-<p align="center"><img src="docs/images/p-settings-online.png" alt="The Online tab of Settings with the Nexus API key and download buttons" width="830"></p>
+![The Online tab of Settings with the Nexus API key and download buttons](docs/images/p-settings-online.png)
 
 ---
 
@@ -98,7 +72,7 @@ Press **＋ Install a mod** (bottom left). There are two ways in:
 - **Search Nexus Mods** - type a name, pick a result, and read its description, pictures and recent changes before you install. Buttons open its comments and bug reports on Nexus.
 - **From a file or folder** - choose a `.zip`, `.7z` or `.rar` you already downloaded (`.7z` and `.rar` need [7-Zip](https://www.7-zip.org/); Roundtable tells you if it can't find it). You can also just drag the file onto the window.
 
-<p align="center"><img src="docs/images/p-install.png" alt="The Install a mod window on its From a file or folder tab" width="830"></p>
+![The Install a mod window on its From a file or folder tab](docs/images/p-install.png)
 
 Roundtable unpacks the mod, shows what it found (DLL files and asset folders, and which to switch on), and installs it only when you press **Install**. Common profile mistakes are repaired as it goes, and the whole install can be undone. Small DLL mods (free camera, UI tweaks) are offered as an **add-on** to a mod you already play instead of a separate mod.
 
@@ -106,7 +80,7 @@ Roundtable unpacks the mod, shows what it found (DLL files and asset folders, an
 
 If a mod's author says something must be run once before the first launch - an install `.bat`, a *Setup UI images* shortcut, a zip of DLLs meant for the game folder - Roundtable offers to do it right after the install. **Nothing runs until you press a button.** Each item opens in its own window, Roundtable waits for it to finish, checks that it succeeded, and lets you retry if it didn't.
 
-<p align="center"><img src="docs/images/p-postinstall.png" alt="The Finish setting up window offering to run a mod's install script" width="680"></p>
+![The Finish setting up window offering to run a mod's install script](docs/images/p-postinstall.png)
 
 ### Packs built from other mods
 
@@ -115,7 +89,7 @@ Some packs, like **FRZN's Merge Modpack**, are made by layering several other mo
 1. Press **Get it** on each mod. A Premium Nexus account downloads it for you; a free account opens that file's Nexus page and the *Mod Manager Download* button there hands the file back. Already downloaded it? Roundtable spots it in your Downloads folder.
 2. When all are ready, press **Build it**. Each is unpacked and layered in the order the author's instructions give, using the right old version where needed (FRZN needs McKenyu's 1.3.11, not the newest).
 
-<p align="center"><img src="docs/images/p-dependencies.png" alt="The Install the dependencies window" width="830"></p>
+![The Install the dependencies window](docs/images/p-dependencies.png)
 
 If a build stops, press **Build it** again - finished steps are remembered. When the pack later publishes an update file, apply it from the pack's **Updates** tab (*Update from file...*); Roundtable shows the author's steps first, then offers to move the update's files on top of the layers, with a backup of everything it replaces.
 
@@ -127,19 +101,19 @@ Click a mod in the list on the left. The top shows its version, where it's publi
 
 **Overview** - the health check (*"All good - everything this mod points to is there"*), setup steps, and what happened on the last launch.
 
-<p align="center"><img src="docs/images/p-modpage.png" alt="A mod's Overview tab with the health check and PLAY button" width="830"></p>
+![A mod's Overview tab with the health check and PLAY button](docs/images/p-modpage.png)
 
 **What this mod needs** - on a known mod the Overview also shows a checklist for your PC - me3, the DLC, ray tracing, the game version - with a button next to anything that's missing, plus the author's own warnings and how to update.
 
-<p align="center"><img src="docs/images/p-needs.png" alt="The What this mod needs card with a checklist and the author's warnings" width="830"></p>
+![The What this mod needs card with a checklist and the author's warnings](docs/images/p-needs.png)
 
 **Components** - every DLL and asset folder the mod loads. Tick to switch one on, untick to switch it off; drag or use the arrows to change the load order; **Add DLL...** and **Add asset folder...** add your own; **Loadouts** saves named combinations you can switch between; **Check conflicts** finds two mods replacing the same files.
 
-<p align="center"><img src="docs/images/p-components.png" alt="The Components tab listing a mod's DLLs with on and off ticks" width="830"></p>
+![The Components tab listing a mod's DLLs with on and off ticks](docs/images/p-components.png)
 
 **Configuration** - the mod's settings files shown as a tidy form (or raw text), with *Revert*, *Save changes* and *Open in editor*. Only the value you change is rewritten, so the file's comments and layout stay. Edited files are backed up first and the author's original is always kept.
 
-<p align="center"><img src="docs/images/p-configuration.png" alt="The Configuration tab showing a settings file as a form" width="830"></p>
+![The Configuration tab showing a settings file as a form](docs/images/p-configuration.png)
 
 **Updates** - covered [below](#keeping-up-to-date).
 
@@ -149,7 +123,7 @@ Click a mod in the list on the left. The top shows its version, where it's publi
 
 Pick the mod, pick a profile if it has several, and press **PLAY**. Before the game starts, Roundtable looks the profile over and, if something is likely to go wrong, tells you in plain words and lets you decide.
 
-<p align="center"><img src="docs/images/p-prelaunch.png" alt="The Before you play window listing a missing DLL and an out-of-date Seamless Co-op" width="680"></p>
+![The Before you play window listing a missing DLL and an out-of-date Seamless Co-op](docs/images/p-prelaunch.png)
 
 While the game runs, the button shows **RUNNING** (and blocks a second launch) and playtime is tracked per mod. A minute after the game starts Roundtable reads me3's log and tells you at once if it started *without* your mod, and why.
 
@@ -165,17 +139,17 @@ Start with the buttons on the mod's **Overview** tab:
 - **Doctor** checks your whole PC: game folder, me3, the Visual C++ runtime, Steam, OneDrive and disk space.
 - **Fix problems...** scans the mod and offers repairs you tick one by one - re-linking moved files, copying in a missing shared DLL, switching off files that can't work. Everything is backed up and **Undo last fix** reverses it.
 
-<p align="center"><img src="docs/images/p-health.png" alt="A mod whose health check reports a missing DLL, with Why won't it start, Doctor and Fix problems buttons" width="830"></p>
+![A mod whose health check reports a missing DLL, with Why won't it start, Doctor and Fix problems buttons](docs/images/p-health.png)
 
-<p align="center"><img src="docs/images/p-why.png" alt="The Why won't it start window listing likely causes" width="680"></p>
+![The Why won't it start window listing likely causes](docs/images/p-why.png)
 
 **Fix problems** lists each repair with a tick box and says what will happen. Nothing is overwritten, and what can't be fixed automatically is explained underneath.
 
-<p align="center"><img src="docs/images/p-fix.png" alt="The Fix problems window with a repair to tick" width="680"></p>
+![The Fix problems window with a repair to tick](docs/images/p-fix.png)
 
 **The game crashes?** Roundtable reads Windows' own crash records and, if one DLL is to blame, offers to switch it off. If it can't tell, **Find the cause** switches half of a mod's DLLs and folders off, asks you whether it still crashes, and narrows it down to the one that matters. **Copy report** gathers everything for a help request, with personal paths removed.
 
-<p align="center"><img src="docs/images/p-bisect.png" alt="The Find the cause window with the mod's DLLs ticked" width="680"></p>
+![The Find the cause window with the mod's DLLs ticked](docs/images/p-bisect.png)
 
 ---
 
@@ -185,25 +159,25 @@ Co-op only works when **everyone has the same mod versions, the same Seamless Co
 
 On a mod's page press **Play with friends**. A green checklist covers the Seamless version, a password, your own save file, me3 and the game version, and you can copy a ready-to-send **invite** or post it to Discord. **Compare setups** finds out exactly *why* two people can't connect.
 
-<p align="center"><img src="docs/images/p-friends.png" alt="The Play with friends window with a green checklist and an invite" width="760"></p>
+![The Play with friends window with a green checklist and an invite](docs/images/p-friends.png)
 
 **Share my setup / Install a friend's setup** (in *Tools*): a friend pastes your setup (or a link to it) and Roundtable fetches the same mod versions, adds your add-on DLLs, sets up Seamless and switches the same DLLs on in the same order. The password and settings files are only included if you tick them. Your friend sees a plain list of changes first and can undo them.
 
-<p align="center"><img src="docs/images/p-share.png" alt="The Share my setup window with a list of mods and tick boxes" width="680"></p>
+![The Share my setup window with a list of mods and tick boxes](docs/images/p-share.png)
 
 **All your passwords and save files in one place:** *Tools → Seamless Co-op → Passwords and save files...* lists every co-op setup on your PC. Change passwords and save-file endings (even set one password for everything), spot clashes, and let Roundtable give each mod its own. Changing an ending can copy your existing save across so your character comes with you.
 
-<p align="center"><img src="docs/images/p-passwords.png" alt="One window listing every Seamless Co-op instance with its password and save extension" width="830"></p>
+![One window listing every Seamless Co-op instance with its password and save extension](docs/images/p-passwords.png)
 
 **Seamless versions:** Seamless refuses to start when its DLL is out of date. *Tools → Seamless Co-op → Seamless versions...* lists every copy on your PC and updates the older ones from the newest.
 
-<p align="center"><img src="docs/images/p-seamless.png" alt="Every copy of ersc.dll with its version and status" width="830"></p>
+![Every copy of ersc.dll with its version and status](docs/images/p-seamless.png)
 
 ---
 
 ## Your saves
 
-<p align="center"><img src="docs/images/p-characters.png" alt="The Characters page listing the characters in each save" width="830"></p>
+![The Characters page listing the characters in each save](docs/images/p-characters.png)
 
 Click **Characters** in the list. You see every save file, which mod uses it, and the characters inside.
 
@@ -219,7 +193,7 @@ Please **play offline** with copied or edited characters - modded online play ca
 
 **Mods.** Open a mod's **Updates** tab. Roundtable compares your version with the mod's Nexus or GitHub page; when a new one is out a badge appears in the list and **Update to ...** downloads and applies it safely. **Undo last update** reverses it.
 
-<p align="center"><img src="docs/images/p-updates.png" alt="The Updates tab with an update available, release notes and Update, Undo and Check buttons" width="830"></p>
+![The Updates tab with an update available, release notes and Update, Undo and Check buttons](docs/images/p-updates.png)
 
 - **Patches are found and applied safely.** Some mods publish a small patch for the previous version as well as the full download. Roundtable tells them apart and offers the patch only when it was made for exactly the version you have.
 - **The author's instructions are read.** If an update comes with a README that explains how to apply it, Roundtable shows those steps before changing anything.
@@ -231,15 +205,15 @@ Please **play offline** with copied or edited characters - modded online play ca
 
 Press **Ctrl+K** to jump to any mod or tool by typing a few letters; **F1** lists the shortcuts. **All tools...** lists every tool and setting on tabs, with a search box.
 
-<p align="center"><img src="docs/images/clip-search.png" alt="Animated: typing a few letters in the Go to window finds a tool" width="520"></p>
+![Animated: typing a few letters in the Go to window finds a tool](docs/images/clip-search.png)
 
-<p align="center"><img src="docs/images/p-alltools.png" alt="The All tools window with a search box and tools grouped on tabs" width="760"></p>
+![The All tools window with a search box and tools grouped on tabs](docs/images/p-alltools.png)
 
-<p align="center"><img src="docs/images/p-tools-menu.png" alt="The Tools menu, grouped, with the Seamless Co-op group open" width="520"></p>
+![The Tools menu, grouped, with the Seamless Co-op group open](docs/images/p-tools-menu.png)
 
 **Clean up downloads.** *Tools → Storage... → Choose downloads to delete...* lists every downloaded archive with why it can go: the mod is already installed, it's an older copy, or it was used to build a layered pack (kept unless you tick it, because a rebuild needs it again). Older copies are ticked for you, and **nothing is deleted until you confirm**. Installed mods are never touched. In *Settings → Updates and safety* you can also keep only the newest few archives per mod and trim old backups automatically - both are off by default.
 
-<p align="center"><img src="docs/images/p-cleanup.png" alt="The Clean up downloads window" width="760"></p>
+![The Clean up downloads window](docs/images/p-cleanup.png)
 
 ---
 
@@ -247,7 +221,7 @@ Press **Ctrl+K** to jump to any mod or tool by typing a few letters; **F1** list
 
 Open **Tools → This program → Appearance...** and pick a theme. Each is a complete colour scheme named after something from the Lands Between, and the whole manager changes straight away - **Cancel** puts everything back, **Save** keeps it.
 
-<p align="center"><img src="docs/images/p-appearance.png" alt="The Appearance window with twelve themes to choose from" width="830"></p>
+![The Appearance window with twelve themes to choose from](docs/images/p-appearance.png)
 
 ### The twelve themes
 
@@ -257,73 +231,73 @@ Every theme, shown on the plain Elden Ring page exactly as it looks in the manag
 
 *The classic: warm parchment and gold.*
 
-<p align="center"><a href="docs/images/theme-erdtree-full.png"><img src="docs/images/theme-erdtree.png" alt="Erdtree theme" width="830"></a></p>
+[![Erdtree theme](docs/images/theme-erdtree.png)](docs/images/theme-erdtree-full.png)
 
 #### Tree Sentinel
 
 *Gilded filigree plate over a dark ochre cape.*
 
-<p align="center"><a href="docs/images/theme-tree_sentinel-full.png"><img src="docs/images/theme-tree_sentinel.png" alt="Tree Sentinel theme" width="830"></a></p>
+[![Tree Sentinel theme](docs/images/theme-tree_sentinel.png)](docs/images/theme-tree_sentinel-full.png)
 
 #### Night's Cavalry
 
 *Jet-black armour, dried blood and a funeral steed.*
 
-<p align="center"><a href="docs/images/theme-nights_cavalry-full.png"><img src="docs/images/theme-nights_cavalry.png" alt="Night's Cavalry theme" width="830"></a></p>
+[![Night's Cavalry theme](docs/images/theme-nights_cavalry.png)](docs/images/theme-nights_cavalry-full.png)
 
 #### Carian Knight
 
 *Lapis-blue steel in the Lunar Queen's moonlight.*
 
-<p align="center"><a href="docs/images/theme-carian_knight-full.png"><img src="docs/images/theme-carian_knight.png" alt="Carian Knight theme" width="830"></a></p>
+[![Carian Knight theme](docs/images/theme-carian_knight.png)](docs/images/theme-carian_knight-full.png)
 
 #### Black Knife Assassin
 
 *Silent silver scale beneath a hooded black cloak.*
 
-<p align="center"><a href="docs/images/theme-black_knife-full.png"><img src="docs/images/theme-black_knife.png" alt="Black Knife Assassin theme" width="830"></a></p>
+[![Black Knife Assassin theme](docs/images/theme-black_knife.png)](docs/images/theme-black_knife-full.png)
 
 #### Crucible Knight
 
 *Reddish bronze plate with an old green patina.*
 
-<p align="center"><a href="docs/images/theme-crucible_knight-full.png"><img src="docs/images/theme-crucible_knight.png" alt="Crucible Knight theme" width="830"></a></p>
+[![Crucible Knight theme](docs/images/theme-crucible_knight.png)](docs/images/theme-crucible_knight-full.png)
 
 #### Starscourge Radahn
 
 *Amber starlight over a deep cosmic blue.*
 
-<p align="center"><a href="docs/images/theme-radahn-full.png"><img src="docs/images/theme-radahn.png" alt="Starscourge Radahn theme" width="830"></a></p>
+[![Starscourge Radahn theme](docs/images/theme-radahn.png)](docs/images/theme-radahn-full.png)
 
 #### Dark Moon Ranni
 
 *Cold teal under a midnight sky.*
 
-<p align="center"><a href="docs/images/theme-ranni-full.png"><img src="docs/images/theme-ranni.png" alt="Dark Moon Ranni theme" width="830"></a></p>
+[![Dark Moon Ranni theme](docs/images/theme-ranni.png)](docs/images/theme-ranni-full.png)
 
 #### Lord of Blood
 
 *Mohgwyn's blood-dark plum and crimson.*
 
-<p align="center"><a href="docs/images/theme-mohg-full.png"><img src="docs/images/theme-mohg.png" alt="Lord of Blood theme" width="830"></a></p>
+[![Lord of Blood theme](docs/images/theme-mohg.png)](docs/images/theme-mohg-full.png)
 
 #### Scarlet Rot
 
 *Rust-orange bloom over murky Caelid swamp.*
 
-<p align="center"><a href="docs/images/theme-scarlet_rot-full.png"><img src="docs/images/theme-scarlet_rot.png" alt="Scarlet Rot theme" width="830"></a></p>
+[![Scarlet Rot theme](docs/images/theme-scarlet_rot.png)](docs/images/theme-scarlet_rot-full.png)
 
 #### Haligtree
 
 *Pale green light in a quiet forest.*
 
-<p align="center"><a href="docs/images/theme-haligtree-full.png"><img src="docs/images/theme-haligtree.png" alt="Haligtree theme" width="830"></a></p>
+[![Haligtree theme](docs/images/theme-haligtree.png)](docs/images/theme-haligtree-full.png)
 
 #### St. Trina's Lily
 
 *Pale lily-white on a dreamy lilac dusk.*
 
-<p align="center"><a href="docs/images/theme-trina-full.png"><img src="docs/images/theme-trina.png" alt="St. Trina's Lily theme" width="830"></a></p>
+[![St. Trina's Lily theme](docs/images/theme-trina.png)](docs/images/theme-trina-full.png)
 
 Prefer to mix your own? Choose **Custom mix** and pick any accent colour (or your own) and one of four colour schemes. You can also change the **text size**, the **font**, how **rounded** the corners are, the **width of the mod list**, how much **animation** you want (Off, Calm, Fluid, Lavish), switch on **high contrast**, or use **colour-blind friendly status colours**.
 
