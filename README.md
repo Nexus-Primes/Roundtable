@@ -247,42 +247,83 @@ Press **Ctrl+K** to jump to any mod or tool by typing a few letters; **F1** list
 
 Open **Tools → This program → Appearance...** and pick a theme. Each is a complete colour scheme named after something from the Lands Between, and the whole manager changes straight away - **Cancel** puts everything back, **Save** keeps it.
 
-<p align="center"><img src="docs/images/clip-themes.png" alt="Animated: the whole manager changing through all twelve themes" width="830"></p>
-
-<p align="center"><a href="docs/images/theme-tree_sentinel-full.png"><img src="docs/images/p-theme-big.png" alt="Roundtable in the Tree Sentinel theme" width="830"></a></p>
-
 <p align="center"><img src="docs/images/p-appearance.png" alt="The Appearance window with twelve themes to choose from" width="830"></p>
 
 ### The twelve themes
 
-Click any picture to see that theme full size.
+Every theme, shown on the plain Elden Ring page exactly as it looks in the manager. Click a picture to open it at full size.
 
-<table>
-  <tr>
-    <td width="50%" align="center"><a href="docs/images/theme-erdtree-full.png"><img src="docs/images/theme-erdtree.png" alt="Erdtree theme" width="410"></a><br><b>Erdtree</b><br><sub>The classic: warm parchment and gold.</sub></td>
-    <td width="50%" align="center"><a href="docs/images/theme-tree_sentinel-full.png"><img src="docs/images/theme-tree_sentinel.png" alt="Tree Sentinel theme" width="410"></a><br><b>Tree Sentinel</b><br><sub>Gilded filigree plate over a dark ochre cape.</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="docs/images/theme-nights_cavalry-full.png"><img src="docs/images/theme-nights_cavalry.png" alt="Night's Cavalry theme" width="410"></a><br><b>Night's Cavalry</b><br><sub>Jet-black armour, dried blood and a funeral steed.</sub></td>
-    <td align="center"><a href="docs/images/theme-carian_knight-full.png"><img src="docs/images/theme-carian_knight.png" alt="Carian Knight theme" width="410"></a><br><b>Carian Knight</b><br><sub>Lapis-blue steel in the Lunar Queen's moonlight.</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="docs/images/theme-black_knife-full.png"><img src="docs/images/theme-black_knife.png" alt="Black Knife Assassin theme" width="410"></a><br><b>Black Knife Assassin</b><br><sub>Silent silver scale beneath a hooded black cloak.</sub></td>
-    <td align="center"><a href="docs/images/theme-crucible_knight-full.png"><img src="docs/images/theme-crucible_knight.png" alt="Crucible Knight theme" width="410"></a><br><b>Crucible Knight</b><br><sub>Reddish bronze plate with an old green patina.</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="docs/images/theme-radahn-full.png"><img src="docs/images/theme-radahn.png" alt="Starscourge Radahn theme" width="410"></a><br><b>Starscourge Radahn</b><br><sub>Amber starlight over a deep cosmic blue.</sub></td>
-    <td align="center"><a href="docs/images/theme-ranni-full.png"><img src="docs/images/theme-ranni.png" alt="Dark Moon Ranni theme" width="410"></a><br><b>Dark Moon Ranni</b><br><sub>Cold teal under a midnight sky.</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="docs/images/theme-mohg-full.png"><img src="docs/images/theme-mohg.png" alt="Lord of Blood theme" width="410"></a><br><b>Lord of Blood</b><br><sub>Mohgwyn's blood-dark plum and crimson.</sub></td>
-    <td align="center"><a href="docs/images/theme-scarlet_rot-full.png"><img src="docs/images/theme-scarlet_rot.png" alt="Scarlet Rot theme" width="410"></a><br><b>Scarlet Rot</b><br><sub>Rust-orange bloom over murky Caelid swamp.</sub></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="docs/images/theme-haligtree-full.png"><img src="docs/images/theme-haligtree.png" alt="Haligtree theme" width="410"></a><br><b>Haligtree</b><br><sub>Pale green light in a quiet forest.</sub></td>
-    <td align="center"><a href="docs/images/theme-trina-full.png"><img src="docs/images/theme-trina.png" alt="St. Trina's Lily theme" width="410"></a><br><b>St. Trina's Lily</b><br><sub>Pale lily-white on a dreamy lilac dusk.</sub></td>
-  </tr>
-</table>
+#### Erdtree
+
+*The classic: warm parchment and gold.*
+
+<p align="center"><a href="docs/images/theme-erdtree-full.png"><img src="docs/images/theme-erdtree.png" alt="Erdtree theme" width="830"></a></p>
+
+#### Tree Sentinel
+
+*Gilded filigree plate over a dark ochre cape.*
+
+<p align="center"><a href="docs/images/theme-tree_sentinel-full.png"><img src="docs/images/theme-tree_sentinel.png" alt="Tree Sentinel theme" width="830"></a></p>
+
+#### Night's Cavalry
+
+*Jet-black armour, dried blood and a funeral steed.*
+
+<p align="center"><a href="docs/images/theme-nights_cavalry-full.png"><img src="docs/images/theme-nights_cavalry.png" alt="Night's Cavalry theme" width="830"></a></p>
+
+#### Carian Knight
+
+*Lapis-blue steel in the Lunar Queen's moonlight.*
+
+<p align="center"><a href="docs/images/theme-carian_knight-full.png"><img src="docs/images/theme-carian_knight.png" alt="Carian Knight theme" width="830"></a></p>
+
+#### Black Knife Assassin
+
+*Silent silver scale beneath a hooded black cloak.*
+
+<p align="center"><a href="docs/images/theme-black_knife-full.png"><img src="docs/images/theme-black_knife.png" alt="Black Knife Assassin theme" width="830"></a></p>
+
+#### Crucible Knight
+
+*Reddish bronze plate with an old green patina.*
+
+<p align="center"><a href="docs/images/theme-crucible_knight-full.png"><img src="docs/images/theme-crucible_knight.png" alt="Crucible Knight theme" width="830"></a></p>
+
+#### Starscourge Radahn
+
+*Amber starlight over a deep cosmic blue.*
+
+<p align="center"><a href="docs/images/theme-radahn-full.png"><img src="docs/images/theme-radahn.png" alt="Starscourge Radahn theme" width="830"></a></p>
+
+#### Dark Moon Ranni
+
+*Cold teal under a midnight sky.*
+
+<p align="center"><a href="docs/images/theme-ranni-full.png"><img src="docs/images/theme-ranni.png" alt="Dark Moon Ranni theme" width="830"></a></p>
+
+#### Lord of Blood
+
+*Mohgwyn's blood-dark plum and crimson.*
+
+<p align="center"><a href="docs/images/theme-mohg-full.png"><img src="docs/images/theme-mohg.png" alt="Lord of Blood theme" width="830"></a></p>
+
+#### Scarlet Rot
+
+*Rust-orange bloom over murky Caelid swamp.*
+
+<p align="center"><a href="docs/images/theme-scarlet_rot-full.png"><img src="docs/images/theme-scarlet_rot.png" alt="Scarlet Rot theme" width="830"></a></p>
+
+#### Haligtree
+
+*Pale green light in a quiet forest.*
+
+<p align="center"><a href="docs/images/theme-haligtree-full.png"><img src="docs/images/theme-haligtree.png" alt="Haligtree theme" width="830"></a></p>
+
+#### St. Trina's Lily
+
+*Pale lily-white on a dreamy lilac dusk.*
+
+<p align="center"><a href="docs/images/theme-trina-full.png"><img src="docs/images/theme-trina.png" alt="St. Trina's Lily theme" width="830"></a></p>
 
 Prefer to mix your own? Choose **Custom mix** and pick any accent colour (or your own) and one of four colour schemes. You can also change the **text size**, the **font**, how **rounded** the corners are, the **width of the mod list**, how much **animation** you want (Off, Calm, Fluid, Lavish), switch on **high contrast**, or use **colour-blind friendly status colours**.
 
