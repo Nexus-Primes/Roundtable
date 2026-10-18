@@ -407,6 +407,6 @@ It contacts GitHub (its own updates and me3), Nexus Mods, Microsoft (only if you
 
 ## Credits
 
-An unofficial fan tool, not affiliated with FromSoftware, Bandai Namco, Nexus Mods, or the authors of me3 or Seamless Co-op - please support the mod authors whose work you install. Thanks to **me3 / ModEngine 3** (garyttierney), **Seamless Co-op** (LukeYui) and **ER-Save-Editor** (ClayAmore). *Elden Ring* is a trademark of FromSoftware / Bandai Namco. Third-party software is listed in `THIRD-PARTY-NOTICES.txt`.
+An unofficial fan tool, not affiliated with FromSoftware, Bandai Namco, Nexus Mods, or the authors of me3 or Seamless Co-op - please support the mod authors whose work you install. Thanks to **me3 / ModEngine 3** (garyttierney), **Seamless Co-op** (LukeYui) and **ER-Save-Editor** (ClayAmore). *Elden Ring* is a trademark of FromSoftware / Bandai Namco. Screenshots show the game's artwork and the pictures mod authors publish on their Nexus pages; those belong to their owners. Third-party software is listed in `THIRD-PARTY-NOTICES.txt`.
 
 **Found a bug or have an idea?** Open an [issue](https://github.com/Nexus-Primes/Roundtable/issues) and, if you can, paste the text from the *Copy report* button.
