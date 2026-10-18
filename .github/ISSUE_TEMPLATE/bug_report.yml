@@ -1,0 +1,49 @@
+name: Something isn't working
+description: A crash, a mod that won't start, a wrong message, a button that does nothing
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time. The more you can tell me, the faster this gets fixed.
+        **Quickest way:** on the mod's page press **Check last launch**, then **Copy report**, and paste the text below. Personal paths are removed from it.
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: What did you do, and what did you see?
+      placeholder: "I pressed PLAY on ... and ..."
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect instead?
+    validations:
+      required: false
+  - type: input
+    id: version
+    attributes:
+      label: Roundtable version
+      description: Shown at the bottom right of the window (for example v0.64.1).
+    validations:
+      required: true
+  - type: input
+    id: mod
+    attributes:
+      label: Game and mod
+      description: Which game, and which mod (and its version) if it's about one.
+      placeholder: "Elden Ring - Elden Ring Reforged 2.3.6.3"
+  - type: textarea
+    id: report
+    attributes:
+      label: Report text
+      description: Paste the text from "Copy report" here.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before sending
+      options:
+        - label: I'm on the latest release.
+        - label: I removed anything private from what I pasted (an API key, a co-op password).
