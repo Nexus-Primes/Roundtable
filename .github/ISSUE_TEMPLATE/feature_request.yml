@@ -1,0 +1,17 @@
+name: Idea or request
+description: Something Roundtable could do, or do better
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: What would you like?
+      description: Describe the problem you're running into first - what are you trying to do?
+    validations:
+      required: true
+  - type: textarea
+    id: how
+    attributes:
+      label: How do you imagine it working?
+    validations:
+      required: false
