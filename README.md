@@ -113,7 +113,7 @@ Some packs, like **FRZN's Merge Modpack**, are made by layering several other mo
 
 <p align="center"><img src="docs/images/p-dependencies.png" alt="The Install the dependencies window" width="830"></p>
 
-If a build stops, press **Build it** again - finished steps are remembered.
+If a build stops, press **Build it** again - finished steps are remembered. When the pack later publishes an update file, apply it from the pack's **Updates** tab (*Update from file...*); Roundtable shows the author's steps first, then offers to move the update's files on top of the layers, with a backup of everything it replaces.
 
 ---
 
@@ -165,7 +165,13 @@ Start with the buttons on the mod's **Overview** tab:
 
 <p align="center"><img src="docs/images/p-why.png" alt="The Why won't it start window listing likely causes" width="680"></p>
 
+**Fix problems** lists each repair with a tick box and says what will happen. Nothing is overwritten, and what can't be fixed automatically is explained underneath.
+
+<p align="center"><img src="docs/images/p-fix.png" alt="The Fix problems window with a repair to tick" width="680"></p>
+
 **The game crashes?** Roundtable reads Windows' own crash records and, if one DLL is to blame, offers to switch it off. If it can't tell, **Find the cause** switches half of a mod's DLLs and folders off, asks you whether it still crashes, and narrows it down to the one that matters. **Copy report** gathers everything for a help request, with personal paths removed.
+
+<p align="center"><img src="docs/images/p-bisect.png" alt="The Find the cause window with the mod's DLLs ticked" width="680"></p>
 
 ---
 
@@ -220,6 +226,8 @@ Please **play offline** with copied or edited characters - modded online play ca
 ### Finding things and tidying up
 
 Press **Ctrl+K** to jump to any mod or tool by typing a few letters; **F1** lists the shortcuts. **All tools...** lists every tool and setting on tabs, with a search box.
+
+<p align="center"><img src="docs/images/p-palette.png" alt="The Go to window: type a few letters to find any mod or tool" width="520"></p>
 
 <p align="center"><img src="docs/images/p-alltools.png" alt="The All tools window with a search box and tools grouped on tabs" width="760"></p>
 
