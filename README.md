@@ -50,6 +50,10 @@
   </tr>
 </table>
 
+### See it in action
+
+<p align="center"><img src="docs/images/clip-tour.png" alt="Animated tour: picking mods, switching tabs, spotting an update and a problem" width="830"></p>
+
 > **Windows only.** Needs Elden Ring on Steam. You do **not** need to know anything about programming - if you've ever downloaded a mod and wondered which folder it goes in, this is for you.
 
 ---
@@ -227,7 +231,7 @@ Please **play offline** with copied or edited characters - modded online play ca
 
 Press **Ctrl+K** to jump to any mod or tool by typing a few letters; **F1** lists the shortcuts. **All tools...** lists every tool and setting on tabs, with a search box.
 
-<p align="center"><img src="docs/images/p-palette.png" alt="The Go to window: type a few letters to find any mod or tool" width="520"></p>
+<p align="center"><img src="docs/images/clip-search.png" alt="Animated: typing a few letters in the Go to window finds a tool" width="520"></p>
 
 <p align="center"><img src="docs/images/p-alltools.png" alt="The All tools window with a search box and tools grouped on tabs" width="760"></p>
 
@@ -242,6 +246,8 @@ Press **Ctrl+K** to jump to any mod or tool by typing a few letters; **F1** list
 ## Make it yours
 
 Open **Tools → This program → Appearance...** and pick a theme. Each is a complete colour scheme named after something from the Lands Between, and the whole manager changes straight away - **Cancel** puts everything back, **Save** keeps it.
+
+<p align="center"><img src="docs/images/clip-themes.png" alt="Animated: the whole manager changing through all twelve themes" width="830"></p>
 
 <p align="center"><a href="docs/images/theme-tree_sentinel-full.png"><img src="docs/images/p-theme-big.png" alt="Roundtable in the Tree Sentinel theme" width="830"></a></p>
 
