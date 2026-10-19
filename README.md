@@ -185,7 +185,7 @@ Save the DLL mods you use everywhere as a **DLL preset** (*Tools → Mods → DL
 
 ![One window listing every Seamless Co-op instance with its password and save extension](docs/images/p-passwords.png)
 
-**Tools → Seamless Co-op → Passwords and save files...** lists every co-op setup on your PC. Change passwords and save-file endings there (even set one password for everything), see which ones clash, and let the manager give each mod its own. If you change a save ending, it can copy your existing save across so your character comes with you.
+**Tools → Seamless Co-op → Passwords and save files...** (also a button on the Overview page) lists every co-op setup on your PC. Change passwords and save-file endings there (even set one password for everything), see which ones clash, and let the manager give each mod its own. If you change a save ending, it can copy your existing save across so your character comes with you.
 
 ### Seamless versions
 
