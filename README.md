@@ -120,7 +120,7 @@ If a build stops, press **Build it** again - finished steps are remembered. When
 
 Click a mod in the list. The top shows its version, where it's published and whether it's ready. Under the **PLAY** button are four tabs:
 
-- **Overview** - the health check, setup steps, and what happened on the last launch. On a known mod it also shows **What this mod needs**: a checklist for your PC (me3, the DLC, ray tracing, the game version) with a button next to anything that's missing, plus the author's own warnings.
+- **Overview** - the health check, setup steps, and what happened on the last launch. On a known mod it also shows **What this mod needs**: a checklist for your PC (me3, the DLC, ray tracing, the game version) with a button next to anything that's missing, plus the author's own warnings. If the mod hasn't been updated since before your last game patch, it says so - the most common cause of a crash after a patch.
 - **Components** - every DLL and asset folder the mod loads. Tick to switch one on, untick to switch it off; drag or use the arrows to change the load order. **Loadouts** saves named combinations, and **Check conflicts** finds two mods replacing the same files.
 - **Configuration** - the mod's settings files as a tidy form (or raw text). Only the value you change is rewritten, so the file's comments and layout stay. Edited files are backed up first and the author's original is always kept.
 - **Updates** - see [Keeping up to date](#keeping-up-to-date).
@@ -337,7 +337,7 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 
 ### When something goes wrong
 
-- Health check, profile check, **Fix problems** (undoable), **Why won't it start?**, last-launch report, **Doctor**, a requirements card for known mods, conflict check and file verification.
+- A warning when a mod is older than your last game patch; health check, profile check, **Fix problems** (undoable), **Why won't it start?**, last-launch report, **Doctor**, a requirements card for known mods, conflict check and file verification.
 - Reads Windows crash records and offers to switch off the DLL to blame; **Find the cause** narrows a crash down by switching halves off.
 - **Copy report** for help requests (personal paths removed); an error log with a *Copy details* dialog; *Report a problem* opens a pre-filled GitHub issue.
 - **Go back to an earlier version** of Roundtable if an update misbehaves.
@@ -369,6 +369,7 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 
 ### Look and feel
 
+- Works from the keyboard (Tab, Enter, Escape, a visible focus outline) and names every setting for screen readers.
 - Twelve themes, a light theme, text size, fonts, corner style, motion levels, high contrast and colour-blind status colours; a first-run tour and a *Getting started* checklist; **Ctrl+K**, **Ctrl+F**, **Ctrl+N**, **Ctrl+Enter** and **F1**.
 
 ### Safety
