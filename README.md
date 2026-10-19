@@ -64,15 +64,21 @@ Then open **Settings** and make sure the **Mods folder** is the folder where you
 
 ### 5. (Optional but handy) Add your Nexus Mods key
 
-A free Nexus Mods account lets the manager search for mods, show their pictures, and check for updates.
+A free Nexus Mods account lets the manager search for mods, show their pictures, and check for updates. To connect it you give the manager your **Personal API Key** - a long password-like code that Nexus makes for you. Most people have never seen it, so here is exactly where it is:
 
-1. Log in at nexusmods.com and open your account's **API Keys** page.
-2. Copy the **Personal API Key**.
-3. Paste it into **Settings → Online → Nexus API key** and press **Test key**.
-
-The key stays on your PC, is stored encrypted, and is only ever sent to nexusmods.com.
+1. Go to [nexusmods.com](https://www.nexusmods.com) and **log in**. (No account yet? Sign-up is free.)
+2. Click your **profile picture** in the top-right corner of the page.
+3. Choose **Site preferences** (on some versions of the site the menu says *Account settings* or *Preferences*).
+4. In the menu on the left, click **API Keys** (older versions call this tab **API**).
+5. Scroll to the very bottom of that page to **Personal API Key**. If a key isn't shown yet, press the button there to **request / generate** one.
+6. **Copy** the whole key - it is a long mix of letters and numbers, often ending in `==`.
+7. In Roundtable open **Settings → Online**, paste it into **Nexus API key**, and press **Test key**. It tells you the account it belongs to and whether you have Premium.
 
 ![The Online tab of Settings with the Nexus API key and download buttons](docs/images/p-settings-online.png)
+
+- **Treat it like a password.** Don't post it in screenshots, Discord or issue reports. The manager stores it encrypted on your PC and only ever sends it to nexusmods.com. If it ever leaks, request a new one on the same Nexus page and the old one stops working.
+- **Free or Premium?** Both work. With a free account Roundtable opens the mod's Nexus page and you press Nexus's *Mod Manager Download* button (turn on **Nexus download buttons** in the same Settings tab); Premium accounts download fully automatically.
+- **Can't find it?** Nexus occasionally renames menus. Look for anything called *API* in your profile or site preferences, or search "Personal API Key" in Nexus's help pages.
 
 ---
 
@@ -244,79 +250,62 @@ Open **Tools → This program → Appearance...** and pick a theme. Each one is 
 
 ![The Appearance window with twelve themes to choose from](docs/images/p-appearance.png)
 
-Click a theme and the whole manager changes straight away - **Cancel** puts everything back, **Save** keeps it. Here is every theme, exactly as it looks in the manager (click a picture to open it at full size):
+Click a theme and the whole manager changes straight away - **Cancel** puts everything back, **Save** keeps it.
 
-#### Erdtree
+![The manager in each of the twelve themes](docs/images/themes.png)
 
-*The classic: warm parchment and gold.*
+<details>
+<summary><b>See every theme at full size</b></summary>
+
+**Erdtree**
 
 [![Erdtree theme](docs/images/theme-erdtree.png)](docs/images/theme-erdtree-full.png)
 
-#### Tree Sentinel
-
-*Gilded filigree plate over a dark ochre cape.*
+**Tree Sentinel**
 
 [![Tree Sentinel theme](docs/images/theme-tree_sentinel.png)](docs/images/theme-tree_sentinel-full.png)
 
-#### Night's Cavalry
-
-*Jet-black armour, dried blood and a funeral steed.*
+**Night's Cavalry**
 
 [![Night's Cavalry theme](docs/images/theme-nights_cavalry.png)](docs/images/theme-nights_cavalry-full.png)
 
-#### Carian Knight
-
-*Lapis-blue steel in the Lunar Queen's moonlight.*
+**Carian Knight**
 
 [![Carian Knight theme](docs/images/theme-carian_knight.png)](docs/images/theme-carian_knight-full.png)
 
-#### Black Knife Assassin
-
-*Silent silver scale beneath a hooded black cloak.*
+**Black Knife Assassin**
 
 [![Black Knife Assassin theme](docs/images/theme-black_knife.png)](docs/images/theme-black_knife-full.png)
 
-#### Crucible Knight
-
-*Reddish bronze plate with an old green patina.*
+**Crucible Knight**
 
 [![Crucible Knight theme](docs/images/theme-crucible_knight.png)](docs/images/theme-crucible_knight-full.png)
 
-#### Starscourge Radahn
-
-*Amber starlight over a deep cosmic blue.*
+**Starscourge Radahn**
 
 [![Starscourge Radahn theme](docs/images/theme-radahn.png)](docs/images/theme-radahn-full.png)
 
-#### Dark Moon Ranni
-
-*Cold teal under a midnight sky.*
+**Dark Moon Ranni**
 
 [![Dark Moon Ranni theme](docs/images/theme-ranni.png)](docs/images/theme-ranni-full.png)
 
-#### Lord of Blood
-
-*Mohgwyn's blood-dark plum and crimson.*
+**Lord of Blood**
 
 [![Lord of Blood theme](docs/images/theme-mohg.png)](docs/images/theme-mohg-full.png)
 
-#### Scarlet Rot
-
-*Rust-orange bloom over murky Caelid swamp.*
+**Scarlet Rot**
 
 [![Scarlet Rot theme](docs/images/theme-scarlet_rot.png)](docs/images/theme-scarlet_rot-full.png)
 
-#### Haligtree
-
-*Pale green light in a quiet forest.*
+**Haligtree**
 
 [![Haligtree theme](docs/images/theme-haligtree.png)](docs/images/theme-haligtree-full.png)
 
-#### St. Trina's Lily
-
-*Pale lily-white on a dreamy lilac dusk.*
+**St. Trina's Lily**
 
 [![St. Trina's Lily theme](docs/images/theme-trina.png)](docs/images/theme-trina-full.png)
+
+</details>
 
 Prefer to mix your own? Choose **Custom mix** and pick any accent colour (or your own) and one of four colour schemes. You can also change the **text size**, the **font**, how **rounded** the corners are, the **width of the mod list**, how much **animation** you want (Off, Calm, Fluid, Lavish), switch on a **high-contrast** mode, or use **colour-blind friendly status colours** (blue / yellow / orange instead of green / amber / red).
 
