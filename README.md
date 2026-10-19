@@ -179,7 +179,7 @@ Co-op only works when **everyone has the same mod versions, the same Seamless Co
 
 ### Your DLL preset, without duplicates
 
-Save the DLL mods you use everywhere as a **DLL preset** (*Tools → Mods → DLL presets...*) and add it to any mod in one click. If a mod already has one of the same DLLs, the manager asks which copy to use - the mod's or yours - so nothing is ever loaded twice, and undoing it puts everything back.
+Save the DLL mods you use everywhere as a **DLL preset** (*Tools → Mods → DLL presets...*) and add it to any mod in one click. Press **Edit...** on a preset to take DLLs out or add more, then overwrite it or save the result as a new preset. If a mod already has one of the same DLLs, the manager asks which copy to use - the mod's or yours - so nothing is ever loaded twice, and undoing it puts everything back.
 
 ### All your passwords and save files in one place
 
