@@ -24,7 +24,7 @@ If you've ever unzipped a mod, wondered which folder it goes in, and then watche
 | **Set up big mod packs** | Knows what the major overhauls need, and layers in the other mods a pack like FRZN's Merge Modpack is built from. |
 | **Play with friends** | Checks your co-op setup, helps everyone use the same password and versions, and writes you an invite to send. |
 | **Keep your characters safe** | Backs up your saves automatically, can keep a second copy somewhere else, and asks twice before anything involving a save is deleted. |
-| **Stay up to date** | Tells you when a mod, me3 or the manager itself has a new version - and updates without you leaving the app. |
+| **Stay up to date** | Tells you when a mod, a DLL add-on, me3 or the manager itself has a new version - and updates without you leaving the app, one at a time or all at once with a restore point. |
 | **Tidy up** | Shows which old downloads can go, and clears them only when you say so. |
 | **Undo mistakes** | Almost everything it does is backed up and can be undone. |
 
@@ -158,7 +158,7 @@ Start with the buttons on the mod's **Overview** tab:
 
 ![The Find the cause window with the mod's DLLs ticked](docs/images/p-bisect.png)
 
-**Copy report** gathers everything for a help request, with personal paths removed.
+**Copy report** gathers everything for a help request, with personal paths removed. **Save report as zip...** (in *Why won't it start?*) makes one zip for a mod author or a helper: the findings, the versions, the mod's profile files, a list of its files and the tail of the logs - text only, with your Windows user name removed, and no saves, settings or Nexus key.
 
 ---
 
@@ -179,13 +179,15 @@ Co-op only works when **everyone has the same mod versions, the same Seamless Co
 
 ### Your DLL preset, without duplicates
 
-Save the DLL mods you use everywhere as a **DLL preset** (*Tools → Mods → DLL presets...*) and add it to any mod in one click. Press **Edit...** on a preset to take DLLs out or add more, then overwrite it or save the result as a new preset; **Settings...** edits the settings files that come with it, so you can make a generic version to share. If a mod already has one of the same DLLs, the manager asks which copy to use - the mod's or yours - so nothing is ever loaded twice, and undoing it puts everything back.
+Save the DLL mods you use everywhere as a **DLL preset** (*Tools → Mods → DLL presets...*) and add it to any mod in one click. Press **Edit...** on a preset to take DLLs out or add more, then overwrite it or save the result as a new preset; **Settings...** edits the settings files that come with it, so you can make a generic version to share. **Export...** packs a preset - its DLLs, their settings and its description - into one zip, and **Import file...** brings one in (it asks you to trust the sender first, never overwrites a preset with the same name, and refuses a damaged or unsafe zip). If a mod already has one of the same DLLs, the manager asks which copy to use - the mod's or yours - so nothing is ever loaded twice, and undoing it puts everything back.
+
+![The DLL presets window: your presets on the left, the selected preset's DLLs and their settings on the right](docs/images/p-presets.png)
 
 ### All your passwords and save files in one place
 
 ![One window listing every Seamless Co-op instance with its password and save extension](docs/images/p-passwords.png)
 
-**Tools → Seamless Co-op → Passwords and save files...** (also a button on the Overview page) lists every co-op setup on your PC. Change passwords and save-file endings there (even set one password for everything), see which ones clash, and let the manager give each mod its own. If you change a save ending, it can copy your existing save across so your character comes with you.
+**Tools → Seamless Co-op → Passwords and save files...** (also a button on the Overview page) lists every co-op setup on your PC as a card: its password, its save extension, the save file that becomes, and a badge that says whether it is fine. Change passwords and save-file endings there (even set one password for everything), see which ones clash, and let the manager give each mod its own. If you change a save ending, it can copy your existing save across so your character comes with you.
 
 ### Seamless versions
 
@@ -214,11 +216,21 @@ The **Characters** page (top of the list) shows every save file and the characte
 ![The Updates tab with an update available, release notes and Update, Undo and Check buttons](docs/images/p-updates.png)
 
 - **Mods:** open a mod's **Updates** tab, or use *Tools → Check all for updates*. A badge appears in the list when a new version is out, and *Update to ...* downloads and applies it safely. *Undo last update* reverses it.
+- **DLL add-ons are checked too.** The DLLs you attached to your mods (when they came from a Nexus page) show up on the Overview page when a newer version is out. **Update...** can download and install it for you (Nexus Premium) in every mod that carries it, or open its Nexus page, or install a file you downloaded - with a backup first. An add-on that has no Nexus page (one made by a DLL preset) has a **Link to Nexus...** button so it can be checked as well.
+- **Update all.** The Overview page's **Update all...** updates every mod that has an update in one go (Premium). It only does the safe cases - a mod that is linked to Nexus and whose new files line up with the old ones - and tells you why it left any other mod for you. Each mod is backed up, your changed settings are kept, and **Undo all of these** (or *Tools → Backups and undo → Undo last 'Update all'*) puts every one back.
 - **Patches are found and applied safely.** Some mods publish a small patch for the previous version as well as the full download. The manager tells them apart and offers the patch only when it was made for exactly the version you have.
 - **The author's instructions are read.** If an update comes with a README that explains how to apply it, the manager shows those steps before changing anything. *Update from file...* applies a download you made yourself.
 - **me3:** the manager checks about once a day and tells you when a newer one is out - *Tools → This program → Update me3...*.
 - **The game:** the manager remembers your `eldenring.exe` version. When a patch changes it you're told, and mods whose logs show they don't support it are marked.
 - **The manager itself:** when a new version is published, a banner appears in the sidebar. Click it and the manager downloads the update, checks its signature, restarts, and keeps all your settings and backups. If a new version ever misbehaves, **Tools → This program → Go back to an earlier version...** returns to the one you had before.
+
+### The Overview page
+
+![The Overview page with updates for a mod and a DLL add-on, and a mod older than the game's last patch](docs/images/p-overview.png)
+
+The first thing to open each day. It counts your mods, lists every update waiting (mods **and** DLL add-ons), and has a card for mods that are **older than the game's last patch** - the most common reason for a crash at start-up, so it tells you before you find out the hard way. Under *Your mods* a filter - *All mods / Needs attention / Has an update / Older than the game patch* - narrows the table or the cards to the ones that need a look.
+
+![The Update all summary: two mods updated, one skipped, with Undo](docs/images/p-updateall.png)
 
 ### Finding things
 
@@ -251,6 +263,8 @@ Open **Tools → This program → Appearance...** and pick a theme. Each one is 
 ![The Appearance window with twelve themes to choose from](docs/images/p-appearance.png)
 
 Click a theme and the whole manager changes straight away - **Cancel** puts everything back, **Save** keeps it.
+
+**Interface size** scales *everything* - text, buttons, pictures and spacing, not just the lettering - from 80% up to what your screen can hold, and it changes the moment you press Save (no restart). Pop-up windows and menus wear a cool slate-and-arcane-blue look, whatever theme the main window has, so you always know which window you are in; warnings stay amber, problems red and good news green.
 
 ![The manager in each of the twelve themes](docs/images/themes.png)
 
@@ -337,22 +351,22 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 
 ### When something goes wrong
 
-- A warning when a mod is older than your last game patch; health check, profile check, **Fix problems** (undoable), **Why won't it start?**, last-launch report, **Doctor**, a requirements card for known mods, conflict check and file verification.
+- A warning when a mod is older than your last game patch - on the mod, and as a card and a filter on the Overview; health check, profile check, **Fix problems** (undoable), **Why won't it start?**, last-launch report, **Doctor**, a requirements card for known mods, conflict check and file verification.
 - Reads Windows crash records and offers to switch off the DLL to blame; **Find the cause** narrows a crash down by switching halves off.
-- **Copy report** for help requests (personal paths removed); an error log with a *Copy details* dialog; *Report a problem* opens a pre-filled GitHub issue.
+- **Copy report** and **Save report as zip...** for help requests (personal paths removed); an error log with a *Copy details* dialog; *Report a problem* opens a pre-filled GitHub issue.
 - **Go back to an earlier version** of Roundtable if an update misbehaves.
 
 ### Updates
 
 - Mod updates from GitHub or Nexus with preview, backups and undo; patch-aware; the author's README steps are shown first; **Update from file...** for anything else.
-- Add-on updates, me3 updates, game-patch awareness, and signed Roundtable updates (checked before anything is unpacked).
+- DLL add-on updates (shown on the Overview, with **Update...** and a Premium one-click install, and **Link to Nexus...** for add-ons without a page), **Update all** with a restore point and undo, me3 updates, game-patch awareness, and signed Roundtable updates (checked before anything is unpacked).
 - A daily background check you can turn off.
 
 ### Co-op
 
 - **Play with friends** checklist and invite; **Compare setups**; **Share my setup / Install a friend's setup** (a code, file or link); **Friends' setups** with a ready light per friend and a **Room** view.
 - **Passwords and save files** in one window; **Seamless versions** sync; **Add Seamless Co-op** to any mod with its own save ending; change a save-file extension with the existing save copied across.
-- **DLL presets** (and recommended sets) that never load a DLL twice; optional Discord posts that you approve first.
+- **DLL presets** (and recommended sets) that never load a DLL twice and can be exported and imported as one file; optional Discord posts that you approve first.
 
 ### Saves
 
@@ -370,7 +384,7 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 ### Look and feel
 
 - Works from the keyboard (Tab, Enter, Escape, a visible focus outline) and names every setting for screen readers.
-- Twelve themes, a light theme, text size, fonts, corner style, motion levels, high contrast and colour-blind status colours; a first-run tour and a *Getting started* checklist; **Ctrl+K**, **Ctrl+F**, **Ctrl+N**, **Ctrl+Enter** and **F1**.
+- Twelve themes, a light theme, **interface size** (everything scales, live), text size, fonts, corner style, motion levels (a first run follows Windows' own *show animations* setting), high contrast and colour-blind status colours; a first-run tour and a *Getting started* checklist; **Ctrl+K**, **Ctrl+F**, **Ctrl+N**, **Ctrl+Enter** and **F1**.
 
 ### Safety
 
