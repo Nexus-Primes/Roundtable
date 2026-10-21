@@ -1,0 +1,617 @@
+{
+ "format": 1,
+ "version": 1,
+ "published": "2026-10-21",
+ "min_app": "0.86.0",
+ "base_rev": 1,
+ "recipes": [
+  {
+   "game": "eldenring",
+   "match": "convergence",
+   "hands_off": true,
+   "clean_game_folder": true,
+   "save_extension": "cnc",
+   "notes": [
+    "Convergence installs, updates and launches itself through its own launcher - use that, and its own repair options.",
+    "It needs a clean game folder, so ReShade and mod-loader files are moved aside while it runs and put back afterwards."
+   ],
+   "nexus_id": 3419,
+   "title": "The Convergence",
+   "game_build": "1.17",
+   "requires": [
+    "dlc",
+    "me3",
+    "not_game_folder",
+    "game_build"
+   ],
+   "launch": "Start_Convergence.bat (or the Convergence Launcher). It uses its own save location.",
+   "steps": [
+    "Shadow of the Erdtree is required.",
+    "Don't download the launcher from Nexus (it was removed there) - follow the install guide on the mod page, or use the Convergence Launcher from its Discord/site.",
+    "Put it somewhere other than the game folder (about 10 GB).",
+    "Start it with Start_Convergence.bat. It keeps its characters in a separate save location, so your vanilla characters won't be there."
+   ],
+   "update": [
+    "Convergence is updated through its own launcher (Nexus only carries the full ~10 GB file) - let the launcher update it rather than overwriting files by hand."
+   ],
+   "warnings": [
+    "If the Nexus file is in quarantine, use the launcher.",
+    "Playing a vanilla character with it causes bugs - use a new character."
+   ]
+  },
+  {
+   "game": "eldenring",
+   "match": "eldenvins",
+   "default_profile": "^elden vins$",
+   "bad_dlls": [
+    "ERSkeletonMan_*"
+   ],
+   "notes": [
+    "Run the mod's one-time install script (OPEN-THIS-TO-INSTALL-MOD.bat) before the first launch.",
+    "Start the plain 'ELDEN VINS' profile. The SeamlessCoop variants need Seamless Co-op installed separately.",
+    "The ERSkeletonMan DLLs in its mod folder are developer builds and can't load on a normal PC - leave them off."
+   ],
+   "nexus_id": 4709,
+   "setup": [
+    {
+     "file": "^open-this-to-install-mod\\.bat$",
+     "name": "Install ELDEN VINS (one-time setup)",
+     "note": "Unpacks the mod's files. A window opens - press a key when it asks, and wait until it says it is done."
+    }
+   ],
+   "title": "ELDEN VINS",
+   "game_build": "1.17",
+   "requires": [
+    "me3",
+    "no_rt",
+    "borderless",
+    "game_build"
+   ],
+   "launch": "'ELDEN VINS.me3' (the manager's PLAY).",
+   "steps": [
+    "Put the 'ELDEN VINS' folder in a clean new folder on the same drive as Elden Ring.",
+    "Extract 'extract these files in game folder.zip' into the game folder (where eldenring.exe is).",
+    "Run OPEN-THIS-TO-INSTALL-MOD.bat once and let it finish.",
+    "Install me3, then start 'ELDEN VINS.me3'. Ray tracing off, screen mode Borderless. Don't run eldenring.exe as administrator."
+   ],
+   "update": [
+    "Each release is a full download into a fresh folder. Small optional fixes (like the 'invisible body' fix) are a folder you copy into the mod folder and replace - the manager treats them as an update of the same mod.",
+    "After updating, run OPEN-THIS-TO-INSTALL-MOD.bat again if the notes say so; starting a new game is recommended for new item drops."
+   ],
+   "warnings": [
+    "Play in English or Spanish for the new item names."
+   ]
+  },
+  {
+   "game": "eldenring",
+   "match": "randomizer",
+   "notes": [
+    "Run the randomizer first and close it - the manager then loads the files it generated.",
+    "Don't use the randomizer's own 'Launch Elden Ring' button; that starts the game without your other mods."
+   ]
+  },
+  {
+   "game": "eldenring",
+   "match": "reforged",
+   "notes": [
+    "Reforged starts through its own launcher script and rebuilds its profile on every launch.",
+    "Keep it out of your game folder, Downloads, Desktop and any OneDrive/Dropbox folder - its own readme says it breaks there.",
+    "For Seamless Co-op use the 'Offline (Windows)' launcher, not 'Online' (Online is Reforged's own multiplayer). Only ersc.dll and the locale folder go in its dll/offline folder."
+   ],
+   "nexus_id": 541,
+   "title": "ELDEN RING Reforged (ERR)",
+   "game_build": "1.17",
+   "requires": [
+    "me3",
+    "not_game_folder",
+    "game_build"
+   ],
+   "launch": "Its own launcher scripts in the version folder (use 'Offline or Seamless' for Seamless Co-op); the manager also keeps a profile.",
+   "steps": [
+    "Unzip the mod anywhere that is not the game folder, Downloads, Desktop or a synced (OneDrive/Dropbox) folder.",
+    "Read the 'README' files that come with it.",
+    "Start it with the launcher script 2 (Offline or Seamless) - or the manager's PLAY."
+   ],
+   "update": [
+    "Reforged publishes a SMALL PATCH for the previous version (for example 'ERRv2.3.5.0 To ERRv2.3.6.3 Patch Files', about 10% of the full size) as well as the full download.",
+    "The manager picks the patch when it was made for the version you have, builds the new version folder from your current one, and keeps the old folder.",
+    "Its README says there is no special procedure: unpack over the same place and overwrite everything, or unpack to a new folder. Your saves are stored separately (.err)."
+   ],
+   "warnings": [
+    "Compatibility with other mods is very low - don't merge it with other overhauls.",
+    "A new Elden Ring patch usually needs a new Reforged release the same week; wait for it."
+   ],
+   "after_game_patch": [
+    "Wait for the Reforged release that says it is compatible with the new game version, then update (patch if one exists)."
+   ]
+  },
+  {
+   "game": "eldenring",
+   "match": "reborn",
+   "notes": [
+    "Don't put Reborn in the game folder. Run the 'Setup UI Images' shortcut in its 'Mod Files' folder once, or its description pictures stay blank.",
+    "Steam must be open and the game must be a legitimate copy, or Reborn won't start.",
+    "For Seamless Co-op its readme says to drop the SeamlessCoop folder into 'Mod Files' (the ersc launcher isn't needed) and set the password in ersc_settings.ini."
+   ],
+   "nexus_id": 2202,
+   "setup": [
+    {
+     "file": "^setup ui images.*\\.(lnk|bat|cmd|exe)$",
+     "name": "Set up Reborn's UI images (one-time)",
+     "note": "Makes the item and spell pictures in Reborn's descriptions show instead of staying blank."
+    }
+   ],
+   "title": "Elden Ring Reborn",
+   "game_build": "1.17",
+   "requires": [
+    "me3",
+    "dlc_optional",
+    "not_game_folder",
+    "game_build"
+   ],
+   "launch": "The manager's PLAY (a me3 profile) - read the instructions in the mod's main folder.",
+   "steps": [
+    "Unzip anywhere on your PC except the game folder; instructions are in the main folder.",
+    "Run the 'Setup UI Images' shortcut in its Mod Files folder once.",
+    "Steam must be open."
+   ],
+   "update": [
+    "Each release is a complete download (the manager keeps old version folders and points the profile at the new one). Optional extras (larger HUD, standalone animations) are separate files - they are not updates."
+   ],
+   "warnings": [
+    "Compatibility with other mods is very limited - avoid merging.",
+    "The Shadow of the Erdtree DLC is recommended."
+   ]
+  },
+  {
+   "game": "eldenring",
+   "match": "seamless",
+   "save_extension": "co2",
+   "notes": [
+    "Everyone in the session needs exactly the same Seamless Co-op version and the same password."
+   ],
+   "nexus_id": 510,
+   "title": "Seamless Co-op (Elden Ring)",
+   "warnings": [
+    "The mod has no built-in compatibility with other mods, especially overhauls - the author can't fix a clash.",
+    "It uses its own save files, so characters can't be moved between it and the normal game. Never rename a Seamless save back to the vanilla .sl2 - that can get you banned.",
+    "It runs the game with Easy Anti-Cheat off and never connects to FromSoftware's matchmaking."
+   ]
+  },
+  {
+   "game": "eldenring",
+   "match": "graceborne",
+   "nexus_id": 5207,
+   "title": "GRACEBORNE (Bloodborne-inspired overhaul)",
+   "game_build": "1.17",
+   "requires": [
+    "me3",
+    "english",
+    "no_rt",
+    "reshade",
+    "not_game_folder",
+    "game_build",
+    "keep_game_version"
+   ],
+   "launch": "launch.me3 in the Graceborne folder (the manager's PLAY).",
+   "steps": [
+    "Install Mod Engine 3.",
+    "Put the Graceborne folder anywhere EXCEPT the game folder.",
+    "Install ReShade (reshade.me): select eldenring.exe, DirectX 10/11/12, then pick 'Graceborne a0.2.ini' from the mod folder as the preset.",
+    "Game language English and ray tracing OFF, then start launch.me3."
+   ],
+   "update": [
+    "The Nexus 'UPDATE' file is ONLY an update: it needs the MAIN download already installed. The manager puts it on top of your Graceborne folder and replaces the files (backed up first)."
+   ],
+   "warnings": [
+    "Only works with Elden Ring 1.17 - set Steam to update the game only when you launch it, and don't update Elden Ring until Graceborne does."
+   ],
+   "after_game_patch": [
+    "Don't let Steam update Elden Ring past the version Graceborne supports (Steam -> Properties -> Updates -> 'Only update this game when I launch it')."
+   ],
+   "notes": []
+  },
+  {
+   "game": "eldenring",
+   "match": "bossarena",
+   "nexus_id": 5645,
+   "title": "Boss Arena",
+   "game_build": "1.17",
+   "requires": [
+    "me3",
+    "game_build"
+   ],
+   "launch": "'Launch Boss Arena Sandbox/Progression' .me3 file.",
+   "steps": [
+    "Install me3, extract the zip, run the .me3 launcher file.",
+    "Use a dedicated character slot for each mode."
+   ],
+   "update": [
+    "Sandbox and Progression are two separate downloads - update the one you use (the manager matches it to what is installed). Each is a full file."
+   ],
+   "warnings": [
+    "Don't switch between Sandbox and Progression on the same character.",
+    "Needs regulation 1.17.1; it forces a separate save file."
+   ],
+   "notes": []
+  },
+  {
+   "game": "eldenring",
+   "match": "ascended",
+   "nexus_id": 1019,
+   "title": "Elden Ring Ascended",
+   "game_build": "1.17",
+   "requires": [
+    "dlc",
+    "me3",
+    "game_build"
+   ],
+   "launch": "The manager's PLAY (it converts the Mod Engine 2 setup to me3).",
+   "steps": [
+    "Shadow of the Erdtree is required and you must play OFFLINE.",
+    "Put the 'mod' folder from the download where the manager keeps it."
+   ],
+   "update": [
+    "After a FromSoftware game patch: update the game (or verify files in Steam), run the normal game once without mods and create a new character in a different slot, quit, then install the latest Ascended update."
+   ],
+   "warnings": [
+    "Playing online with it will get you banned.",
+    "Its Mod Engine 2 instructions are old - the manager runs it through me3."
+   ],
+   "after_game_patch": [
+    "Update the game, run vanilla once with a new character in another slot, then install the latest Ascended update."
+   ],
+   "notes": []
+  },
+  {
+   "game": "eldenring",
+   "match": "carian",
+   "nexus_id": 5607,
+   "title": "Carian Combo Warriors",
+   "game_build": "1.17",
+   "requires": [
+    "me3",
+    "game_build"
+   ],
+   "launch": "The 'Mod Engine3 Profile for 1.17' file (a .me3) from the download list; the manager's PLAY uses it.",
+   "steps": [
+    "Download the main mod AND the small 'Mod Engine3 Profile' file (it is listed as a second main file).",
+    "Start a NEW save - it isn't balanced for existing characters."
+   ],
+   "update": [
+    "Full download each release plus the matching profile file. The 'Idle Animations' and older-version files are optional extras."
+   ],
+   "notes": []
+  },
+  {
+   "game": "eldenring",
+   "match": "clever",
+   "nexus_id": 1928,
+   "title": "Clever's Moveset Modpack",
+   "game_build": "1.17",
+   "requires": [
+    "me3",
+    "game_build"
+   ],
+   "launch": "The manager's PLAY.",
+   "steps": [
+    "Extract the folders and the regulation file into the mod folder.",
+    "Turn ray tracing off in the game settings (buggy shadows otherwise)."
+   ],
+   "update": [
+    "Each release is the whole pack (about 640 MB). Individual movesets merge poorly with other mods."
+   ],
+   "warnings": [
+    "Newer movesets are very hard to merge with other overhauls."
+   ],
+   "notes": []
+  },
+  {
+   "game": "eldenring",
+   "match": "swordheart",
+   "nexus_id": 7764,
+   "title": "Sword Heart Shura",
+   "game_build": "1.17",
+   "requires": [
+    "dlc",
+    "me3",
+    "game_build"
+   ],
+   "launch": "The manager's PLAY.",
+   "steps": [
+    "Shadow of the Erdtree is required.",
+    "It needs the 'Elden Ring Alt Saves' DLL (the manager keeps a separate save for it)."
+   ],
+   "update": [
+    "The newest main file (0.4.6) is a complete download; the older 0.4.1 is kept on Nexus for reference."
+   ],
+   "warnings": [
+    "Don't play your vanilla characters with it."
+   ],
+   "notes": []
+  },
+  {
+   "game": "eldenring",
+   "match": "foggaterandomizer",
+   "nexus_id": 3295,
+   "title": "Fog Gate Randomizer",
+   "requires": [
+    "dotnet"
+   ],
+   "launch": "Its own program (it generates files, then you launch through the manager).",
+   "steps": [
+    "Install the .NET 6 Desktop Runtime first.",
+    "It is a generator: run it, then play the files it wrote."
+   ],
+   "update": [
+    "A new release means running the generator again with the new version."
+   ],
+   "warnings": [
+    "May not match the newest Item and Enemy Randomizer; read its page."
+   ],
+   "notes": []
+  },
+  {
+   "game": "eldenring",
+   "match": "mapforgoblins",
+   "nexus_id": 10062,
+   "title": "Map for Goblins (DLL)",
+   "requires": [
+    "me3"
+   ],
+   "steps": [
+    "Download the build made for YOUR overhaul (Vanilla/Randomizer, ERR, Convergence 3.x, ERTE, Golden Age, Reborn, Elden Vins, Graceborne, Dark Moon Throne) - the wrong one won't work."
+   ],
+   "update": [
+    "Every build is updated together; take the build with the same name as before."
+   ],
+   "notes": []
+  },
+  {
+   "game": "eldenring",
+   "match": "frzn's merge",
+   "nexus_id": 10469,
+   "title": "FRZN's Merge Modpack (Clever's, McKenyu's, DMN, Gamma's, Rusty's and more)",
+   "game_build": "1.17",
+   "requires": [
+    "me3",
+    "dlc",
+    "no_rt",
+    "not_game_folder",
+    "game_build"
+   ],
+   "launch": "'FRZN Merge <version>.me3' in the pack folder (the manager's PLAY) - ME3 only; Mod Engine 2 can corrupt your save.",
+   "steps": [
+    "Install me3 with its Windows installer.",
+    "Download the five source mods the merge builds on (the manager lists them, with the exact files) and the FRZN Merge itself.",
+    "Inside the merge folder are four things - the .me3, a folder named like the merge, an empty 'Drag Files Into Here' folder and 'natives'. Keep them together and don't rename anything.",
+    "Layer the source mods into 'Drag Files Into Here' IN THIS ORDER: Ancient Blade of Order, Army of Summons (Spirit Ash Color), McKenyu 1.3.11, Gamma's Magic Rescribed, Clever's Moveset Modpack - replacing files when asked.",
+    "Move everything inside the merge's own inner folder into 'Drag Files Into Here' (replace when asked), then start the .me3. The manager does the layering for you."
+   ],
+   "update": [
+    "Already on the previous version? The 'FRZN Merge Update' file (about 5 MB) updates your existing folder - its README has the steps, and the manager shows them before changing anything.",
+    "To switch versions or reinstall, extract the new download to a NEW folder and start again - each version lives in its own folder (switching versions is save-safe)."
+   ],
+   "warnings": [
+    "Use McKenyu's 1.3.11 - NOT 1.3.13 and NOT 1.4. It is in McKenyu's 'old versions' on Nexus; the manager picks that exact file and will never update it.",
+    "Do NOT run 'Setup UI Images (MagicRescribed)' from Gamma's Magic Rescribed - it ruins the pack's icons. The manager never suggests or runs it.",
+    "Turn ray tracing off. Play offline or with Easy Anti-Cheat disabled; back up your save first.",
+    "Seamless Co-op: if you add ersc.dll as a native, it goes ABOVE Nightreign Movement (which, with its sound loader, stays last).",
+    "A few leftovers from the source mods (.smithbox, project.json, menu/deploy, a Setup UI Images shortcut, .bak files, regbinmeme.dll) end up in the folder - they do nothing, leave them."
+   ],
+   "layer_dir": "Drag Files Into Here",
+   "layer_merge": "^frzn merge.*$",
+   "never_run": [
+    "setup ui images"
+   ],
+   "layers": [
+    {
+     "name": "Ancient Blade of Order",
+     "nexus_id": 10730,
+     "file_id": 49680,
+     "version": "2",
+     "subpath": "mod",
+     "hint": "ancient blade",
+     "size_mb": 329,
+     "note": "Everything inside its 'mod' folder."
+    },
+    {
+     "name": "Elden Lords Army of Summons (Spirit Ash Color)",
+     "nexus_id": 1302,
+     "file_id": 32984,
+     "version": "1.4.9",
+     "subpath": "mod",
+     "hint": "spirit ash color",
+     "size_mb": 915,
+     "note": "The OPTIONAL 'Spirit Ash Color' file, not the main one. Everything inside its 'mod' folder, replacing when asked."
+    },
+    {
+     "name": "McKenyu's Moveset Modpack 1.3.11",
+     "nexus_id": 8762,
+     "file_id": 46258,
+     "version": "1.3.11",
+     "subpath": "McKenyu Modpack/mckenyu_mod",
+     "hint": "mckenyu",
+     "size_mb": 540,
+     "note": "Exactly 1.3.11 (an old version on Nexus) - NOT 1.3.13 and NOT 1.4. Everything inside McKenyu Modpack/mckenyu_mod."
+    },
+    {
+     "name": "Gamma's Magic Rescribed",
+     "nexus_id": 9852,
+     "file_id": 46424,
+     "version": "1.01",
+     "subpath": "Gamma's Magic Rescribed",
+     "hint": "magic rescribed",
+     "size_mb": 314,
+     "note": "Everything inside its 'Gamma's Magic Rescribed' folder. Do NOT run its 'Setup UI Images' shortcut."
+    },
+    {
+     "name": "Clever's Moveset Modpack 26.2",
+     "nexus_id": 1928,
+     "file_id": 49812,
+     "version": "26.2",
+     "subpath": "",
+     "hint": "moveset",
+     "size_mb": 637,
+     "note": "Everything in the extracted download (its folders and regulation file)."
+    }
+   ],
+   "notes": []
+  },
+  {
+   "game": "nightreign",
+   "match": "eldenvinsnightreign",
+   "nexus_id": 287,
+   "title": "ELDEN VINS NIGHTREIGN",
+   "requires": [
+    "me3",
+    "not_game_folder"
+   ],
+   "launch": "Its own .me3 profile (the manager's PLAY). The optional 'SeamlessCooop launch file' is for Seamless Co-op.",
+   "steps": [
+    "Install me3 (ModEngine 3), then download the main file - about 6 GB.",
+    "Extract it somewhere that is not the game folder, Downloads, Desktop or a synced (OneDrive) folder."
+   ],
+   "update": [
+    "Files marked 'UPDATE FILES ONLY' (the hotfixes) go on top of the main download; they don't work on their own.",
+    "Take them in order if there are several."
+   ],
+   "warnings": [
+    "The author switched the 'Trials of Ascension' feature off after the DLC update broke it.",
+    "The frame-rate limit and field of view are set in mod/dll/NightreignFPSFOV/config.ini."
+   ],
+   "notes": []
+  },
+  {
+   "game": "nightreign",
+   "match": "moremapvariations",
+   "nexus_id": 578,
+   "title": "More Map Variations",
+   "requires": [
+    "me3",
+    "not_game_folder"
+   ],
+   "launch": "Open 'More Map Variations.me3' - it starts Nightreign in offline mode with the mod active.",
+   "steps": [
+    "The Forsaken Hollows DLC is absolutely required.",
+    "Install me3, extract the mod (about 4 GB), then open 'More Map Variations.me3'."
+   ],
+   "update": [
+    "The page also offers a 'More Map Variations and Weapons Mod Merge' file; take the one you started with."
+   ],
+   "warnings": [
+    "The authors say mod managers and auto-mergers don't work with this mod and don't recommend them. Roundtable only starts the mod's own .me3 profile and never merges files, but if anything misbehaves, open the .me3 file directly to rule the manager out.",
+    "Seamless Co-op is no longer supported with this mod; the authors ask you to use their Server Redirector instead.",
+    "Don't report bugs while playing with Seamless or an unofficial merge - the authors won't support that."
+   ],
+   "notes": []
+  },
+  {
+   "game": "nightreign",
+   "match": "bossarena",
+   "nexus_id": 449,
+   "title": "Boss Arena (Nightreign)",
+   "requires": [
+    "me3",
+    "not_game_folder"
+   ],
+   "launch": "The mod's own 'Launch NR Boss Arena' .me3 profiles - the authors say these are the only supported way to play it.",
+   "steps": [
+    "Install the latest me3, extract the mod anywhere (not the game folder), and make sure Steam is running with the game owned there."
+   ],
+   "warnings": [
+    "Each mode uses its own save file when launched through the included profiles; Progression Mode copies your vanilla save the first time you run it, and it does not start from your Sandbox Mode save.",
+    "Don't disable the anti-cheat by hand - me3 does that already, and tampering can cause problems.",
+    "me3 is new, so some antivirus programs flag it by mistake."
+   ],
+   "notes": []
+  },
+  {
+   "game": "nightreign",
+   "match": "nightreignseamless",
+   "nexus_id": 3,
+   "title": "Seamless Co-op (Nightreign)",
+   "warnings": [
+    "You must be signed into Steam and not in offline mode.",
+    "You and your party need the same mod version and the same game version.",
+    "It uses its own save files, separate from the normal game's.",
+    "The Everdark-boss workaround needs Seamless Co-op to reach GitHub."
+   ],
+   "notes": []
+  },
+  {
+   "game": "eldenring",
+   "match": "armyofsummons",
+   "nexus_id": 1302,
+   "title": "Elden Lords Army Of Summons",
+   "steps": [
+    "The 'Spirit Ash Color' file is an optional extra for the main file."
+   ],
+   "warnings": [
+    "Steam must be open to load the game.",
+    "After every FromSoftware game update, the author says to start the game once normally without mods, load a save and quit through the menu, then start the mod.",
+    "If you used UXM, remove what you copied into the game folder and verify the game files in Steam to get a clean regulation.bin."
+   ],
+   "notes": []
+  },
+  {
+   "game": "eldenring",
+   "match": "transmogrifyarmor",
+   "nexus_id": 3596,
+   "title": "Transmogrify Armor (DLL)",
+   "warnings": [
+    "Playing online with transmogrified armor won't work and might get you banned.",
+    "It doesn't affect Seamless Co-op matchmaking, so friends don't need it.",
+    "Berserker Armor and Dragon Slayer requires this mod."
+   ],
+   "notes": []
+  },
+  {
+   "game": "eldenring",
+   "match": "berserkerarmor",
+   "nexus_id": 729,
+   "title": "Berserker Armor and Dragon Slayer",
+   "steps": [
+    "It needs Transmogrify Armor. Take the 'Regulation Ver.' file for your game version and the main file."
+   ],
+   "warnings": [
+    "If you already use another regulation.bin mod, the author says to merge with Smithbox using the .csv files provided.",
+    "A missing face or arms, or items missing from the Twin Maidens shop, mean the game isn't loading regulation.bin or it is out of date after a patch."
+   ],
+   "notes": []
+  },
+  {
+   "game": "eldenring",
+   "match": "detaileditemdescriptions",
+   "nexus_id": 1356,
+   "title": "Detailed Item Descriptions",
+   "warnings": [
+    "The newest version was made for game version 1.12.3 and doesn't reflect balance changes since 1.09.0.",
+    "The optional 'Regulation.bin Merge Files' are only needed if you already use a mod that changes regulation.bin."
+   ],
+   "notes": []
+  },
+  {
+   "game": "eldenring",
+   "match": "textureimprovement",
+   "nexus_id": 2431,
+   "title": "Texture Improvement",
+   "warnings": [
+    "The files are very large (the Flora file alone is about 7.7 GB) - install the game on an SSD.",
+    "Higher resolutions, especially widescreen, need more video memory."
+   ],
+   "notes": []
+  },
+  {
+   "game": "eldenring",
+   "match": "swordsmanship",
+   "nexus_id": 557,
+   "title": "Swordsmanship",
+   "warnings": [
+    "The author warns not to play online with it - you could be banned.",
+    "Its newest version is from April 2022, before the DLC."
+   ],
+   "notes": []
+  }
+ ]
+}
