@@ -27,6 +27,8 @@ If you've ever unzipped a mod, wondered which folder it goes in, and then watche
 | **Stay up to date** | Tells you when a mod, a DLL add-on, me3 or the manager itself has a new version - and updates without you leaving the app, one at a time or all at once with a restore point. |
 | **Tidy up** | Shows which old downloads can go, and clears them only when you say so. |
 | **Undo mistakes** | Almost everything it does is backed up and can be undone. |
+| **Make mods** | Checks a mod folder before you publish it, packs it for Nexus, and writes the Requirements text for the page. |
+| **Script it** | A command line (`Roundtable-cli.exe`) for checks, backups and launching from a script or a scheduled task. |
 
 ![Animated tour: picking mods, switching tabs, spotting an update and a problem](docs/images/clip-tour.png)
 
@@ -149,6 +151,7 @@ Start with the buttons on the mod's **Overview** tab:
 - **Doctor** checks your whole PC: game folder, me3, the Visual C++ runtime, Steam, OneDrive and disk space.
 - **Fix problems...** scans the mod and offers repairs you tick one by one - re-linking moved files, copying in a missing shared DLL, switching off files that can't work. Everything is backed up and **Undo last fix** reverses it.
 - **Find the cause** (for a crashing game) switches half of a mod's DLLs and folders off, asks you whether it still crashes, and narrows it down to the one that matters. If Windows has recorded which DLL crashed, the manager offers to switch that one off for you.
+- **Timeline** (*More → Timeline...* on a mod's page) is for "it worked yesterday - what changed?". It lists everything recorded about the mod, newest first - each launch and whether it worked, updates, repairs, DLL add-ons, and any game crash Windows recorded afterwards - and at the top shows what happened *since the last launch that worked*: the DLLs switched on or off since then, and a button to put the switches back as they were.
 
 ![A mod whose health check reports a missing DLL, with Why won't it start, Doctor and Fix problems buttons](docs/images/p-health.png)
 
@@ -157,6 +160,8 @@ Start with the buttons on the mod's **Overview** tab:
 ![The Fix problems window with a repair to tick](docs/images/p-fix.png)
 
 ![The Find the cause window with the mod's DLLs ticked](docs/images/p-bisect.png)
+
+![The Timeline window: what changed since the last launch that worked, then every launch, update and crash](docs/images/p-timeline.png)
 
 **Copy report** gathers everything for a help request, with personal paths removed. **Save report as zip...** (in *Why won't it start?*) makes one zip for a mod author or a helper: the findings, the versions, the mod's profile files, a list of its files and the tail of the logs - text only, with your Windows user name removed, and no saves, settings or Nexus key.
 
@@ -222,6 +227,7 @@ The **Characters** page (top of the list) shows every save file and the characte
 - **The author's instructions are read.** If an update comes with a README that explains how to apply it, the manager shows those steps before changing anything. *Update from file...* applies a download you made yourself.
 - **me3:** the manager checks about once a day and tells you when a newer one is out - *Tools → This program → Update me3...*.
 - **The game:** the manager remembers your `eldenring.exe` version. When a patch changes it you're told, and mods whose logs show they don't support it are marked.
+- **What the manager knows about particular mods stays current.** The notes, requirements and layering recipes for the big overhauls (Reforged, Convergence, Reborn, Elden Vins, FRZN's pack and the rest) also arrive as a small **signed** file that the manager fetches about once a day, so a correction doesn't wait for a new release. It is checked against the same key that signs releases; a file that is unsigned, altered, older than the one it has, or meant for a newer manager is refused, and nothing in it is ever run - it is text and settings shown to you. Your own *Known mods list* still wins. *Tools → Health and storage → Known mods list* shows its version and has **Check for new notes now**; *Settings → Online* turns it off.
 - **The manager itself:** when a new version is published, a banner appears in the sidebar. Click it and the manager downloads the update, checks its signature, restarts, and keeps all your settings and backups. If a new version ever misbehaves, **Tools → This program → Go back to an earlier version...** returns to the one you had before.
 
 ### The Overview page
@@ -231,6 +237,12 @@ The **Characters** page (top of the list) shows every save file and the characte
 The first thing to open each day. It counts your mods, lists every update waiting (mods **and** DLL add-ons), and has a card for mods that are **older than the game's last patch** - the most common reason for a crash at start-up, so it tells you before you find out the hard way. Under *Your mods* a filter - *All mods / Needs attention / Has an update / Older than the game patch* - narrows the table or the cards to the ones that need a look.
 
 ![The Update all summary: two mods updated, one skipped, with Undo](docs/images/p-updateall.png)
+
+### Quietly in the background (optional)
+
+Turn on *Settings → Updates and safety → In the background* and closing the window hides it next to the clock instead of quitting. The manager keeps running, so its checks go on - mod, DLL add-on and Roundtable updates once a day, the game's version every half hour - and a **Windows notification** appears when one finds something, or when a friend you follow by link changes their shared setup. A notification shows only when the window is hidden or isn't the one you're using, never twice in a day for the same news, and clicking it opens the window. Right-click the icon for **Open**, **Check for updates now** and **Quit**; starting Roundtable again brings the hidden window back instead of opening a second one. Playtime is still counted. It is off until you turn it on.
+
+![The Updates and safety tab of Settings, with the option to keep Roundtable in the tray and the automatic setup backup](docs/images/p-settings-updates.png)
 
 ### Finding things
 
@@ -325,6 +337,37 @@ Prefer to mix your own? Choose **Custom mix** and pick any accent colour (or you
 
 ---
 
+## If you make mods
+
+Open your mod in the manager and choose **More → For mod authors...** before you publish it:
+
+- **It checks the folder** for what makes a mod fail on someone else's PC: paths that only exist on yours (`C:/Users/you/...`), a path spelled with different letters than the file (fine on Windows, broken elsewhere), paths that climb out of the folder, a profile with no `profileVersion` or no game, parts left switched off, a DLL that is damaged or needs the developer's debug runtime, logs and backup files that shouldn't ship, and a missing readme. Each finding says what it means and what to do.
+- **It packs the zip** for Nexus: everything inside one tidy folder named after the mod and its version, with the leftovers (logs, `.bak`, `.git` and the like) left out unless you tick them in. The zip is made beside your mod, never inside it, and nothing in your mod's folder is changed.
+- **It writes the Requirements text** for the Nexus page - the game and its version, Mod Engine 3, the Visual C++ runtime if one of your DLLs needs it, the DLLs and the profile to start - in the formatting Nexus understands (**Copy the Requirements text** puts it on the clipboard; it is also saved beside the zip).
+
+![The For mod authors window: checks on a mod folder, then the options for packing it for Nexus](docs/images/p-authors.png)
+
+---
+
+## On the command line
+
+`Roundtable-cli.exe` sits next to `Roundtable.exe`. It is for scripts, scheduled tasks and "run this and paste what it says" support. It uses the same code as the window, never opens the window, and changes nothing of yours unless you ask (`launch`, the backups and `package` write files).
+
+| Command | What it does |
+|---|---|
+| `status` | The game and its version, Mod Engine 3, the mods folder, and which mods need attention. |
+| `list` | Every mod with its health, version and DLLs. |
+| `check [mod]` | The PC check, plus that mod's checks. `--anonymize` hides your user name and folders, so it is safe to paste into a help request. |
+| `launch <mod>` | Starts a mod like its desktop shortcut does (`vanilla` starts the unmodded game). |
+| `backup-saves` · `backup-setup [file]` | Back up your saves now, or the manager's own setup (never your Nexus key) to a zip. |
+| `timeline <mod>` | Launches, updates, repairs and crashes of one mod. |
+| `lint <mod>` · `package <mod> <zip>` | The mod-author checks, and the Nexus zip. |
+| `feed [--refresh]` | The signed list of known mods the manager downloads once a day. |
+
+Add `--json` for output a program can read and `--game <id>` (`eldenring`, `nightreign`, `darksouls3`, `sekiro`, `armoredcore6`) for another game; part of a mod's name is enough. **Exit codes:** `0` fine, `1` problems found (`check`, `lint`, `status`), `2` wrong usage, `3` couldn't do it - so a scheduled `Roundtable-cli.exe check` can fail a job when something is wrong. `Roundtable.exe --cli ...` and `python -m er_mod_manager --cli ...` work too, but only `Roundtable-cli.exe` is a program a terminal waits for and gets an exit code from.
+
+---
+
 ## Everything it can do
 
 A complete list, by topic. Most items are in the **Tools** menu or on a mod's page - and **Ctrl+K** finds any of them by name.
@@ -353,6 +396,7 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 
 - A warning when a mod is older than your last game patch - on the mod, and as a card and a filter on the Overview; health check, profile check, **Fix problems** (undoable), **Why won't it start?**, last-launch report, **Doctor**, a requirements card for known mods, conflict check and file verification.
 - Reads Windows crash records and offers to switch off the DLL to blame; **Find the cause** narrows a crash down by switching halves off.
+- **Timeline** for each mod: every launch (did it work?), update, repair, add-on and crash in one list, and *what changed since the last launch that worked*.
 - **Copy report** and **Save report as zip...** for help requests (personal paths removed); an error log with a *Copy details* dialog; *Report a problem* opens a pre-filled GitHub issue.
 - **Go back to an earlier version** of Roundtable if an update misbehaves.
 
@@ -360,11 +404,12 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 
 - Mod updates from GitHub or Nexus with preview, backups and undo; patch-aware; the author's README steps are shown first; **Update from file...** for anything else.
 - DLL add-on updates (shown on the Overview, with **Update...** and a Premium one-click install, and **Link to Nexus...** for add-ons without a page), **Update all** with a restore point and undo, me3 updates, game-patch awareness, and signed Roundtable updates (checked before anything is unpacked).
-- A daily background check you can turn off.
+- A daily background check you can turn off, and an optional **tray mode** that keeps checking with the window closed and tells you with a Windows notification.
+- What the manager knows about particular mods arrives between releases as a **signed** file (corrections, new overhauls); it can be turned off.
 
 ### Co-op
 
-- **Play with friends** checklist and invite; **Compare setups**; **Share my setup / Install a friend's setup** (a code, file or link); **Friends' setups** with a ready light per friend and a **Room** view.
+- **Play with friends** checklist and invite (with an optional "When are you playing?" line at the top); **Compare setups**; **Share my setup / Install a friend's setup** (a code, file or link); **Friends' setups** with a ready light per friend and a **Room** view.
 - **Passwords and save files** in one window; **Seamless versions** sync; **Add Seamless Co-op** to any mod with its own save ending; change a save-file extension with the existing save copied across.
 - **DLL presets** (and recommended sets) that never load a DLL twice and can be exported and imported as one file; optional Discord posts that you approve first.
 
@@ -376,6 +421,12 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 
 - Components and load order, **Loadouts**, a tidy **Configuration** editor, favourites, tags and notes, **Organize DLL mods** (every mod gets its own copy, fully undoable), a **Known mods** list you can edit and share, setup backup and restore, and **Delete** that moves a mod aside (*Tools → Deleted mods* restores it).
 - **Storage** and **Clean up downloads** with optional automatic limits.
+- **My tools** (*Tools → Mods → My tools...*): register Smithbox, a hex editor, Blender or any program, and open a mod's folder in it from the mod's **More** menu.
+- **Automatic setup backup** (every 7 days by default, never your Nexus key) and restore from *Tools → Backups and undo*.
+
+### For mod makers and scripts
+
+- **For mod authors...** checks a mod folder, packs it for Nexus and writes the Requirements text. **`Roundtable-cli.exe`** runs the checks, backups, timeline and launch from a script, with `--json` and exit codes.
 
 ### More games
 
@@ -447,7 +498,7 @@ Modded **online** play can get an account banned. The manager never switches onl
 
 - Your Nexus key and Discord webhook stay on your PC, stored **encrypted with Windows' own protection**, and are only sent to nexusmods.com / discord.com.
 - **Updates are signed.** The manager refuses an update whose signature doesn't check out.
-- The manager contacts GitHub (to check for its own updates and for me3), Nexus Mods, Microsoft (only if you ask it to install the Visual C++ runtime) and - only if you set one up - the Discord webhook you choose. It does not send your files or saves anywhere.
+- The manager contacts GitHub (to check for its own updates and for me3, and once a day for the small signed file of mod notes - two public files, nothing about you is sent; *Settings → Online* turns it off), Nexus Mods, Microsoft (only if you ask it to install the Visual C++ runtime) and - only if you set one up - the Discord webhook you choose. It does not send your files or saves anywhere. The command line and tray notifications use the same checks as the window; notifications are made by Windows on your PC.
 - Mods are always downloaded from the author's own page. This project never hosts or re-shares mod files.
 - Nothing that touches your saves or your mods is done without a backup, and the common ones can be undone from inside the app.
 
