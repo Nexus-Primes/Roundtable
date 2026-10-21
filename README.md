@@ -100,9 +100,13 @@ A free Nexus Mods account lets the manager search for mods, show their pictures,
 
 ### Not sure where to start?
 
-*Tools → Mods → Starter packs...* (the Overview offers it while you have no mods) lists a few ready-made places to begin: Seamless Co-op, an overhaul to try (you pick **one** - they're made to be played on their own), small DLL add-ons, and Seamless Co-op for Nightreign. Each shows what you already have, what it needs (the Shadow of the Erdtree DLC, a runtime) and the one thing most worth knowing - all taken from the manager's own mod knowledge, so nothing is written twice and a correction reaches every pack. Install the ticked ones the same way as a friend's setup, or just open their Nexus pages; nothing downloads until you say so. More packs can arrive with the signed mod notes, between releases.
+*Tools → Mods → Starter packs...* (the Overview offers it while you have no mods) starts from **what you want to do**, not from a list of mods: *Play with friends*, *Handy extras*, *A whole new game (overhauls)*, and *Tools for making and fixing mods*. A **Before you start** strip checks the PC - me3, your Mods folder, the game, your Nexus key - and puts a button next to anything missing.
 
-![A starter pack: pick one overhaul, with what you have and what each needs](docs/images/p-starters.png)
+![The Starter packs window: goals instead of topics, with a before-you-start check](docs/images/p-starters-list.png)
+
+Inside a pack every mod is a card with **its own picture, description, endorsements and downloads, read live from its Nexus page** - the manager doesn't write these itself - plus what you already have, what it needs (the Shadow of the Erdtree DLC, a runtime), and the one thing most worth knowing from the manager's own notes. A group is a clear **Pick ONE** (overhauls are made to be played on their own); everything else is **Add any of these**. **What happens next** says what the install does and what to do afterwards - for an overhaul, to try it on a copy of your save first. Nothing downloads until you press Install, and without internet the packs still show from the manager's own notes.
+
+![A starter pack: four overhauls with their own pictures and descriptions, pick one](docs/images/p-starters.png)
 
 ### Some mods need one more step
 
@@ -370,6 +374,16 @@ Open your mod in the manager and choose **More → For mod authors...** before y
 
 ---
 
+### Tools for making mods - installed from Nexus or GitHub
+
+In *Tools → Mods → My tools*, **Add a tool...** offers **Get a known tool (Nexus / GitHub)...** next to *I already have the program*. It lists the modding tools other modders use - **Smithbox**, **WitchyBND**, **Yapped Rune Bear SE**, **ER Save Editor** (and Yapped for Dark Souls III) - each with its author's own description and numbers from its Nexus or GitHub page, so there is nothing to search for.
+
+![The Get a tool window: four modding tools with Install buttons for the places each is published](docs/images/p-toolcatalog.png)
+
+**Install** downloads the newest file, unpacks it into a `Tools` folder next to your Mods folder, finds the program inside and adds it to My tools. Nothing is run - you start it yourself. A **Premium** Nexus account installs in one click; with a free account the window opens the Nexus page and installs the file the moment you press **Mod Manager Download** there (or you can **Install from GitHub** when the tool has a release there). Several programs in one download and no clear choice? You're asked. A newer version shows **Update available**, and an update keeps the old folder as `.previous`. Downloads come only from GitHub and Nexus over https, and an archive that tries to write outside its folder is refused.
+
+---
+
 ## On the command line
 
 `Roundtable-cli.exe` sits next to `Roundtable.exe`. It is for scripts, scheduled tasks and "run this and paste what it says" support. It uses the same code as the window, never opens the window, and changes nothing of yours unless you ask (`launch`, the backups and `package` write files).
@@ -388,6 +402,7 @@ Open your mod in the manager and choose **More → For mod authors...** before y
 | `sync-saves` | Compare your saves with another folder; `--apply` keeps them in step (`--prefer local\|other` settles conflicts; exit 1 if something is left to decide). |
 | `trial <mod>` | Try a mod on a copy of your save (`--start`), then go back (`--finish`, `--delete-save`). |
 | `starters [pack]` | The starter packs, and what you have of each. |
+| `tools [key]` | The installable modding tools; `tools KEY --install [--from nexus\|github]` gets one and adds it to My tools. |
 | `feed [--refresh]` | The signed list of known mods the manager downloads once a day. |
 
 Add `--json` for output a program can read and `--game <id>` (`eldenring`, `nightreign`, `darksouls3`, `sekiro`, `armoredcore6`) for another game; part of a mod's name is enough. **Exit codes:** `0` fine, `1` problems found (`check`, `lint`, `status`), `2` wrong usage, `3` couldn't do it - so a scheduled `Roundtable-cli.exe check` can fail a job when something is wrong. `Roundtable.exe --cli ...` and `python -m er_mod_manager --cli ...` work too, but only `Roundtable-cli.exe` is a program a terminal waits for and gets an exit code from.
@@ -407,7 +422,8 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 - One-time setup after install (install scripts, *Setup UI images*, a game-folder zip) is offered, never run silently.
 - Packs built from other mods (FRZN's Merge Modpack) get a guided, resumable dependency install.
 - Installs and updates me3 and the Visual C++ runtime from their official sources.
-- **Starter packs** for people who don't know where to start (what you have, what each needs, pick-one groups for overhauls).
+- **Starter packs** by goal, for people who don't know where to start: a before-you-start check, each mod's own picture and description read live from Nexus, what you have and what each needs, pick-one groups for overhauls, and what to do next.
+- **Get a known tool**: Smithbox, WitchyBND, Yapped Rune Bear SE and ER Save Editor installed from Nexus or GitHub straight into My tools, with update detection.
 
 ### Playing
 
@@ -450,7 +466,7 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 - Components and load order, **Loadouts**, a tidy **Configuration** editor, favourites, tags and notes, **Organize DLL mods** (every mod gets its own copy, fully undoable), a **Known mods** list you can edit and share, setup backup and restore, and **Delete** that moves a mod aside (*Tools → Deleted mods* restores it).
 - **Storage** and **Clean up downloads** with optional automatic limits.
 - **Game settings** (*Tools → Health and storage*): borderless window and the picture effects mods ask for, with backup and undo.
-- **My tools** (*Tools → Mods → My tools...*): register Smithbox, a hex editor, Blender or any program, and open a mod's folder in it from the mod's **More** menu.
+- **My tools** (*Tools → Mods → My tools...*): register Smithbox, a hex editor, Blender or any program - or install a known modding tool from Nexus or GitHub - and open a mod's folder in it from the mod's **More** menu.
 - **Automatic setup backup** (every 7 days by default, never your Nexus key) and restore from *Tools → Backups and undo*.
 
 ### For mod makers and scripts
@@ -527,7 +543,7 @@ Modded **online** play can get an account banned. The manager never switches onl
 
 - Your Nexus key and Discord webhook stay on your PC, stored **encrypted with Windows' own protection**, and are only sent to nexusmods.com / discord.com.
 - **Updates are signed.** The manager refuses an update whose signature doesn't check out.
-- The manager contacts GitHub (to check for its own updates and for me3, and once a day for the small signed file of mod notes - two public files, nothing about you is sent; *Settings → Online* turns it off), Nexus Mods, Microsoft (only if you ask it to install the Visual C++ runtime) and - only if you set one up - the Discord webhook you choose. It does not send your files or saves anywhere. The command line and tray notifications use the same checks as the window; notifications are made by Windows on your PC. DLL trust reads files and never uploads them (the VirusTotal link carries only a fingerprint, and only when you click it); save sync copies files only between your own folders, only when you press Sync now.
+- The manager contacts GitHub (to check for its own updates and for me3, and once a day for the small signed file of mod notes - two public files, nothing about you is sent; *Settings → Online* turns it off), Nexus Mods, Microsoft (only if you ask it to install the Visual C++ runtime) and - only if you set one up - the Discord webhook you choose. It does not send your files or saves anywhere. The command line and tray notifications use the same checks as the window; notifications are made by Windows on your PC. The tool catalog and starter packs read each mod's or tool's public page (Nexus listing, GitHub repository) to show its own description - nothing about you is sent. DLL trust reads files and never uploads them (the VirusTotal link carries only a fingerprint, and only when you click it); save sync copies files only between your own folders, only when you press Sync now.
 - Mods are always downloaded from the author's own page. This project never hosts or re-shares mod files.
 - Nothing that touches your saves or your mods is done without a backup, and the common ones can be undone from inside the app.
 
