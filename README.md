@@ -23,10 +23,11 @@ If you've ever unzipped a mod, wondered which folder it goes in, and then watche
 | **Fix what breaks** | Explains why a mod won't start, repairs what it can (with undo), and can find which DLL is crashing the game. |
 | **Set up big mod packs** | Knows what the major overhauls need, and layers in the other mods a pack like FRZN's Merge Modpack is built from. |
 | **Play with friends** | Checks your co-op setup, helps everyone use the same password and versions, and writes you an invite to send. |
-| **Keep your characters safe** | Backs up your saves automatically, can keep a second copy somewhere else, and asks twice before anything involving a save is deleted. |
+| **Keep your characters safe** | Backs up your saves automatically, can keep a second copy somewhere else, keeps two PCs in step without ever losing a character, lets you try a mod on a copy of your save, and asks twice before anything involving a save is deleted. |
 | **Stay up to date** | Tells you when a mod, a DLL add-on, me3 or the manager itself has a new version - and updates without you leaving the app, one at a time or all at once with a restore point. |
 | **Tidy up** | Shows which old downloads can go, and clears them only when you say so. |
 | **Undo mistakes** | Almost everything it does is backed up and can be undone. |
+| **Not know where to start** | Starter packs: Seamless Co-op, an overhaul to try, small DLL add-ons - with what you already have ticked off. |
 | **Make mods** | Checks a mod folder before you publish it, packs it for Nexus, and writes the Requirements text for the page. |
 | **Script it** | A command line (`Roundtable-cli.exe`) for checks, backups and launching from a script or a scheduled task. |
 
@@ -97,6 +98,12 @@ A free Nexus Mods account lets the manager search for mods, show their pictures,
 
 **Some mods are "add-ons"** (small DLL files like free-camera or UI tweaks). When you install one, the manager offers to add it to the mods you already play instead of making it a separate mod.
 
+### Not sure where to start?
+
+*Tools → Mods → Starter packs...* (the Overview offers it while you have no mods) lists a few ready-made places to begin: Seamless Co-op, an overhaul to try (you pick **one** - they're made to be played on their own), small DLL add-ons, and Seamless Co-op for Nightreign. Each shows what you already have, what it needs (the Shadow of the Erdtree DLC, a runtime) and the one thing most worth knowing - all taken from the manager's own mod knowledge, so nothing is written twice and a correction reaches every pack. Install the ticked ones the same way as a friend's setup, or just open their Nexus pages; nothing downloads until you say so. More packs can arrive with the signed mod notes, between releases.
+
+![A starter pack: pick one overhaul, with what you have and what each needs](docs/images/p-starters.png)
+
 ### Some mods need one more step
 
 If a mod's author says something must be run once before the first launch - an install `.bat`, a *Setup UI images* shortcut, a zip of DLLs meant for the game folder - the manager offers to do it right after the install. **Nothing runs until you press a button.** Each item opens in its own window, the manager waits for it to finish, checks that it worked, and lets you retry if it didn't.
@@ -151,6 +158,8 @@ Start with the buttons on the mod's **Overview** tab:
 - **Doctor** checks your whole PC: game folder, me3, the Visual C++ runtime, Steam, OneDrive and disk space.
 - **Fix problems...** scans the mod and offers repairs you tick one by one - re-linking moved files, copying in a missing shared DLL, switching off files that can't work. Everything is backed up and **Undo last fix** reverses it.
 - **Find the cause** (for a crashing game) switches half of a mod's DLLs and folders off, asks you whether it still crashes, and narrows it down to the one that matters. If Windows has recorded which DLL crashed, the manager offers to switch that one off for you.
+- **DLL trust** (*More → DLL trust...*) says what each DLL a mod loads is and can do, read from the file without running it: its size and SHA-256 fingerprint, whether it is signed (and whether Windows says the signature is intact), and whether it can use the internet, start other programs or start code inside other programs - as facts, not accusations (Seamless Co-op *has* to use the internet; most mods are unsigned, and that says nothing bad). The part that matters most: press **I'm happy with these** once you trust a mod and from then on a DLL that was swapped, added or dropped out is called out. It never says a file is "safe" - it can't - it tells you what changed. *Look one up on VirusTotal...* opens the file's page by its fingerprint; nothing is uploaded.
+- **Try on a copy of my save** (*More → Try on a copy of my save...*) is for a mod you aren't sure about. The mod is pointed at its own copy of your current save, so it plays on the copy and can never open your real characters; the mod page says **On trial** while it lasts. *More → Finish the trial...* puts the profiles back exactly as they were and keeps or deletes the copy (deleted saves go to a folder, after a snapshot). It works for plain profiles and Seamless Co-op ones.
 - **Timeline** (*More → Timeline...* on a mod's page) is for "it worked yesterday - what changed?". It lists everything recorded about the mod, newest first - each launch and whether it worked, updates, repairs, DLL add-ons, and any game crash Windows recorded afterwards - and at the top shows what happened *since the last launch that worked*: the DLLs switched on or off since then, and a button to put the switches back as they were.
 
 ![A mod whose health check reports a missing DLL, with Why won't it start, Doctor and Fix problems buttons](docs/images/p-health.png)
@@ -162,6 +171,8 @@ Start with the buttons on the mod's **Overview** tab:
 ![The Find the cause window with the mod's DLLs ticked](docs/images/p-bisect.png)
 
 ![The Timeline window: what changed since the last launch that worked, then every launch, update and crash](docs/images/p-timeline.png)
+
+![The DLL trust window: three DLLs, one swapped since the person said they were happy, one that can use the internet](docs/images/p-trust.png)
 
 **Copy report** gathers everything for a help request, with personal paths removed. **Save report as zip...** (in *Why won't it start?*) makes one zip for a mod author or a helper: the findings, the versions, the mod's profile files, a list of its files and the tail of the logs - text only, with your Windows user name removed, and no saves, settings or Nexus key.
 
@@ -204,6 +215,10 @@ Seamless refuses to start when its DLL is out of date. **Tools → Seamless Co-o
 
 ## Your saves are protected
 
+Roundtable backs up your saves before every launch, can keep a second copy somewhere else, and can **keep two PCs in step**: *Tools → Backups and undo → Sync saves with another folder...* compares your saves with a cloud-synced folder, a NAS or a USB stick and copies what changed, in both directions - and never by "newest wins", which is how characters get lost. It remembers each save's fingerprint from the last time both sides matched, so a save changed on only one side is copied across, and one changed on **both** sides is a conflict you decide, save by save. What a copy replaces is backed up first, copies are verified before they go into place, nothing happens while the game is running, and it only syncs when you press **Sync now**.
+
+![The Sync saves window: a save to copy each way and one that changed on both sides](docs/images/p-sync.png)
+
 ![The Characters page listing the characters inside each save](docs/images/p-characters.png)
 
 The **Characters** page (top of the list) shows every save file and the characters inside it.
@@ -243,6 +258,12 @@ The first thing to open each day. It counts your mods, lists every update waitin
 Turn on *Settings → Updates and safety → In the background* and closing the window hides it next to the clock instead of quitting. The manager keeps running, so its checks go on - mod, DLL add-on and Roundtable updates once a day, the game's version every half hour - and a **Windows notification** appears when one finds something, or when a friend you follow by link changes their shared setup. A notification shows only when the window is hidden or isn't the one you're using, never twice in a day for the same news, and clicking it opens the window. Right-click the icon for **Open**, **Check for updates now** and **Quit**; starting Roundtable again brings the hidden window back instead of opening a second one. Playtime is still counted. It is off until you turn it on.
 
 ![The Updates and safety tab of Settings, with the option to keep Roundtable in the tray and the automatic setup backup](docs/images/p-settings-updates.png)
+
+### The game's own settings
+
+Some mods ask for borderless window or ray tracing off, buried in the game's menus. *Tools → Health and storage → Game settings...* shows the game's graphics settings and changes just those: the screen mode, and switching off motion blur, depth of field, anti-aliasing or ray tracing. Only the one setting is replaced - the rest of the file stays byte for byte as it was - the file is backed up first, the last change can be undone, and nothing is written while the game runs. A mod that asks for borderless or ray tracing off has an **Open game settings...** button on its requirements card.
+
+![The Game settings window: screen mode, and picture effects that can be switched off](docs/images/p-gamesettings.png)
 
 ### Finding things
 
@@ -362,6 +383,11 @@ Open your mod in the manager and choose **More → For mod authors...** before y
 | `backup-saves` · `backup-setup [file]` | Back up your saves now, or the manager's own setup (never your Nexus key) to a zip. |
 | `timeline <mod>` | Launches, updates, repairs and crashes of one mod. |
 | `lint <mod>` · `package <mod> <zip>` | The mod-author checks, and the Nexus zip. |
+| `trust <mod>` | What each DLL of a mod is and can do, and whether one changed (exit 1) since you last noted them; `--remember` notes them. |
+| `game-settings` | Show or change the screen mode and picture effects (`--screen-mode borderless`, `--off ray-tracing`, `--undo`). |
+| `sync-saves` | Compare your saves with another folder; `--apply` keeps them in step (`--prefer local\|other` settles conflicts; exit 1 if something is left to decide). |
+| `trial <mod>` | Try a mod on a copy of your save (`--start`), then go back (`--finish`, `--delete-save`). |
+| `starters [pack]` | The starter packs, and what you have of each. |
 | `feed [--refresh]` | The signed list of known mods the manager downloads once a day. |
 
 Add `--json` for output a program can read and `--game <id>` (`eldenring`, `nightreign`, `darksouls3`, `sekiro`, `armoredcore6`) for another game; part of a mod's name is enough. **Exit codes:** `0` fine, `1` problems found (`check`, `lint`, `status`), `2` wrong usage, `3` couldn't do it - so a scheduled `Roundtable-cli.exe check` can fail a job when something is wrong. `Roundtable.exe --cli ...` and `python -m er_mod_manager --cli ...` work too, but only `Roundtable-cli.exe` is a program a terminal waits for and gets an exit code from.
@@ -381,6 +407,7 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 - One-time setup after install (install scripts, *Setup UI images*, a game-folder zip) is offered, never run silently.
 - Packs built from other mods (FRZN's Merge Modpack) get a guided, resumable dependency install.
 - Installs and updates me3 and the Visual C++ runtime from their official sources.
+- **Starter packs** for people who don't know where to start (what you have, what each needs, pick-one groups for overhauls).
 
 ### Playing
 
@@ -396,6 +423,7 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 
 - A warning when a mod is older than your last game patch - on the mod, and as a card and a filter on the Overview; health check, profile check, **Fix problems** (undoable), **Why won't it start?**, last-launch report, **Doctor**, a requirements card for known mods, conflict check and file verification.
 - Reads Windows crash records and offers to switch off the DLL to blame; **Find the cause** narrows a crash down by switching halves off.
+- **DLL trust** for each mod (what each DLL is and can do, and whether it is still the file you looked at) and **Try on a copy of my save** (an isolated trial that can't touch your real characters).
 - **Timeline** for each mod: every launch (did it work?), update, repair, add-on and crash in one list, and *what changed since the last launch that worked*.
 - **Copy report** and **Save report as zip...** for help requests (personal paths removed); an error log with a *Copy details* dialog; *Report a problem* opens a pre-filled GitHub issue.
 - **Go back to an earlier version** of Roundtable if an update misbehaves.
@@ -415,12 +443,13 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 
 ### Saves
 
-- Automatic backups before every launch (and optionally every few minutes while you play), a second copy on another drive, restore, guarded deletes, character copying between saves, and a handoff to a save editor you already have for appearance changes. Roundtable never edits a save itself.
+- Automatic backups before every launch (and optionally every few minutes while you play), a second copy on another drive, **two-way sync** with a cloud folder or another PC (conflicts are always your choice), restore, guarded deletes, character copying between saves, and a handoff to a save editor you already have for appearance changes. Roundtable never edits a save itself.
 
 ### Organising
 
 - Components and load order, **Loadouts**, a tidy **Configuration** editor, favourites, tags and notes, **Organize DLL mods** (every mod gets its own copy, fully undoable), a **Known mods** list you can edit and share, setup backup and restore, and **Delete** that moves a mod aside (*Tools → Deleted mods* restores it).
 - **Storage** and **Clean up downloads** with optional automatic limits.
+- **Game settings** (*Tools → Health and storage*): borderless window and the picture effects mods ask for, with backup and undo.
 - **My tools** (*Tools → Mods → My tools...*): register Smithbox, a hex editor, Blender or any program, and open a mod's folder in it from the mod's **More** menu.
 - **Automatic setup backup** (every 7 days by default, never your Nexus key) and restore from *Tools → Backups and undo*.
 
@@ -498,7 +527,7 @@ Modded **online** play can get an account banned. The manager never switches onl
 
 - Your Nexus key and Discord webhook stay on your PC, stored **encrypted with Windows' own protection**, and are only sent to nexusmods.com / discord.com.
 - **Updates are signed.** The manager refuses an update whose signature doesn't check out.
-- The manager contacts GitHub (to check for its own updates and for me3, and once a day for the small signed file of mod notes - two public files, nothing about you is sent; *Settings → Online* turns it off), Nexus Mods, Microsoft (only if you ask it to install the Visual C++ runtime) and - only if you set one up - the Discord webhook you choose. It does not send your files or saves anywhere. The command line and tray notifications use the same checks as the window; notifications are made by Windows on your PC.
+- The manager contacts GitHub (to check for its own updates and for me3, and once a day for the small signed file of mod notes - two public files, nothing about you is sent; *Settings → Online* turns it off), Nexus Mods, Microsoft (only if you ask it to install the Visual C++ runtime) and - only if you set one up - the Discord webhook you choose. It does not send your files or saves anywhere. The command line and tray notifications use the same checks as the window; notifications are made by Windows on your PC. DLL trust reads files and never uploads them (the VirusTotal link carries only a fingerprint, and only when you click it); save sync copies files only between your own folders, only when you press Sync now.
 - Mods are always downloaded from the author's own page. This project never hosts or re-shares mod files.
 - Nothing that touches your saves or your mods is done without a backup, and the common ones can be undone from inside the app.
 
