@@ -240,6 +240,7 @@ The **Characters** page (top of the list) shows every save file and the characte
 ![The Updates tab with an update available, release notes and Update, Undo and Check buttons](docs/images/p-updates.png)
 
 - **Mods:** open a mod's **Updates** tab, or use *Tools → Check all for updates*. A badge appears in the list when a new version is out, and *Update to ...* downloads and applies it safely. *Undo last update* reverses it.
+- **One button checks mods and DLL add-ons.** *Check for updates* on the Overview (and *Tools → Check all for updates*) looks at your mods and your DLL add-ons together, keeps saying *Checking...* until both are done, and ends with one line that names both - *"1 mod update and 2 DLL add-on updates available"* or *"Everything is up to date (checked 8 mods and 2 DLL add-ons)"* - so you can tell the DLLs were looked at. The Overview also shows when it last ran. It checks the game you are on, so switch games to check another game's mods. A linked mod that has no version recorded can't be compared, so the Overview lists it with the newest version on its page instead of leaving it out; enter the version you have on its **Updates** tab. The newest *file* on a Nexus page counts as well as the page's version number, because authors often upload a new file and leave the number on the page as it was. **DLLs a mod's author bundled** (Free Camera, Expanded Memory Slots and the other well-known ones from the *Main DLL Setup* list) are checked as well, even though they were never added as add-ons: by the version inside the DLL when it has one, otherwise by its file date against Nexus's newest main file. They are listed as *DLL inside <mod>* with an **Open page** button, since the manager can't swap a DLL that sits wherever the mod's author put it. A date-only match is a good guess, not a certainty. Elden Ring only.
 - **DLL add-ons are checked too.** The DLLs you attached to your mods (when they came from a Nexus page) show up on the Overview page when a newer version is out. **Update...** can download and install it for you (Nexus Premium) in every mod that carries it, or open its Nexus page, or install a file you downloaded - with a backup first. An add-on that has no Nexus page (one made by a DLL preset) has a **Link to Nexus...** button so it can be checked as well.
 - **Update all.** The Overview page's **Update all...** updates every mod that has an update in one go (Premium). It only does the safe cases - a mod that is linked to Nexus and whose new files line up with the old ones - and tells you why it left any other mod for you. Each mod is backed up, your changed settings are kept, and **Undo all of these** (or *Tools → Backups and undo → Undo last 'Update all'*) puts every one back.
 - **Patches are found and applied safely.** Some mods publish a small patch for the previous version as well as the full download. The manager tells them apart and offers the patch only when it was made for exactly the version you have.
@@ -376,11 +377,15 @@ Open your mod in the manager and choose **More → For mod authors...** before y
 
 ### Tools for making mods - installed from Nexus or GitHub
 
-In *Tools → Mods → My tools*, **Add a tool...** offers **Get a known tool (Nexus / GitHub)...** next to *I already have the program*. It lists the modding tools other modders use - **Smithbox**, **WitchyBND**, **Yapped Rune Bear SE**, **ER Save Editor** (and Yapped for Dark Souls III) - each with its author's own description and numbers from its Nexus or GitHub page, so there is nothing to search for.
+In *Tools → Mods → My tools*, **Add a tool...** offers **Get a known tool (Nexus / GitHub)...** next to *I already have the program*. It lists the modding tools other modders use - **Smithbox**, **WitchyBND**, **Nuxe**, **Yapped Rune Bear SE** and **Elden Ring Save File Manager** (and Yapped for Dark Souls III) - each with its author's own description and numbers from its Nexus or GitHub page, so there is nothing to search for. Which tools show depends on the game: Nuxe and the save file manager cover several.
 
-![The Get a tool window: four modding tools with Install buttons for the places each is published](docs/images/p-toolcatalog.png)
+![The Get a tool window: modding tools with Install buttons for the places each is published, and WitchyBND saying it goes with Nuxe](docs/images/p-toolcatalog.png)
 
 **Install** downloads the newest file, unpacks it into a `Tools` folder next to your Mods folder, finds the program inside and adds it to My tools. Nothing is run - you start it yourself. A **Premium** Nexus account installs in one click; with a free account the window opens the Nexus page and installs the file the moment you press **Mod Manager Download** there (or you can **Install from GitHub** when the tool has a release there). Several programs in one download and no clear choice? You're asked. A newer version shows **Update available**, and an update keeps the old folder as `.previous`. Downloads come only from GitHub and Nexus over https, and an archive that tries to write outside its folder is refused.
+
+**Tools that go with each other.** WitchyBND's own page lists **Nuxe** - a separate program that unpacks the game's archives - under Requirements, so its card says so and offers **Get Nuxe too**; the first time you install WitchyBND the manager also asks whether to get Nuxe. Each is its own download with its own question, and saying no installs only the one you chose.
+
+**Elden Ring Save File Manager** (by Hapfel) is the save editor on offer: when you install it, the **Characters** page finds it for its *Back up, then open the save editor* handoff, whatever its file is called. The Characters page's **Get a save editor...** button opens this list.
 
 ---
 
@@ -423,7 +428,7 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 - Packs built from other mods (FRZN's Merge Modpack) get a guided, resumable dependency install.
 - Installs and updates me3 and the Visual C++ runtime from their official sources.
 - **Starter packs** by goal, for people who don't know where to start: a before-you-start check, each mod's own picture and description read live from Nexus, what you have and what each needs, pick-one groups for overhauls, and what to do next.
-- **Get a known tool**: Smithbox, WitchyBND, Yapped Rune Bear SE and ER Save Editor installed from Nexus or GitHub straight into My tools, with update detection.
+- **Get a known tool**: Smithbox, WitchyBND, Nuxe, Yapped Rune Bear SE and Elden Ring Save File Manager installed from Nexus or GitHub straight into My tools, with update detection and companion tools offered together (WitchyBND + Nuxe).
 
 ### Playing
 
