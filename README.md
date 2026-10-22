@@ -540,7 +540,7 @@ The character is still in the old save file. In **Tools → Seamless Co-op → P
 <details>
 <summary><b>Where does the manager keep my information? How do I uninstall it?</b></summary>
 
-Your settings, Nexus key and backups are in the **`data`** folder next to `Roundtable.exe`. Nothing is uploaded. To uninstall, close the manager and delete its folder - your mods and saves are not touched. (me3 can be removed from Windows' *Installed apps*.)
+Your settings, Nexus key, save backups and undo history are in the manager's **data folder**. Nothing is uploaded. A **new** install keeps it in `%LOCALAPPDATA%\Roundtable\data` (paste that into File Explorer's address bar), so replacing or deleting the program's folder doesn't delete your backups. A copy that was already using a `data` folder next to `Roundtable.exe` keeps using it - *Tools → Storage* says where yours is and has **Move my data...**, which copies it to the new place, checks every file, fixes the paths inside the copy, restarts, and **leaves the old folder exactly as it was** (delete it yourself when you're happy; downloaded archives stay behind - they can be downloaded again). To keep everything beside the program on purpose (a copy on a USB stick), put an empty file called `portable.flag` next to `Roundtable.exe`. To uninstall, close the manager and delete its folder - and its data folder if you want that gone too; your mods and saves are not touched. (me3 can be removed from Windows' *Installed apps*.)
 </details>
 
 <details>
