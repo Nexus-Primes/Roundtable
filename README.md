@@ -21,7 +21,7 @@ If you've ever unzipped a mod, wondered which folder it goes in, and then watche
 | **Install a mod** | Searches Nexus Mods or opens the file you downloaded, shows you what's inside, installs it, and fixes the usual profile mistakes automatically. |
 | **Play it** | One **PLAY** button. It looks the mod over first and tells you in plain words if something will go wrong - then watches the game start and tells you if your mod didn't load. |
 | **Fix what breaks** | Explains why a mod won't start, repairs what it can (with undo), and can find which DLL is crashing the game. |
-| **Set up big mod packs** | Knows what the major overhauls need, and layers in the other mods a pack like FRZN's Merge Modpack is built from. |
+| **Set up big mod packs** | Knows what the major overhauls need, and layers in the other mods a merge pack is built from. |
 | **Play with friends** | Checks your co-op setup, helps everyone use the same password and versions, and writes you an invite to send. |
 | **Keep your characters safe** | Backs up your saves automatically, can keep a second copy somewhere else, keeps two PCs in step without ever losing a character, lets you try a mod on a copy of your save, and asks twice before anything involving a save is deleted. |
 | **Stay up to date** | Tells you when a mod, a DLL add-on, me3 or the manager itself has a new version - and updates without you leaving the app, one at a time or all at once with a restore point. |
@@ -102,11 +102,7 @@ A free Nexus Mods account lets the manager search for mods, show their pictures,
 
 *Tools → Mods → Starter packs...* (the Overview offers it while you have no mods) starts from **what you want to do**, not from a list of mods: *Play with friends*, *Handy extras*, *A whole new game (overhauls)*, and *Tools for making and fixing mods*. A **Before you start** strip checks the PC - me3, your Mods folder, the game, your Nexus key - and puts a button next to anything missing.
 
-![The Starter packs window: goals instead of topics, with a before-you-start check](docs/images/p-starters-list.png)
-
 Inside a pack every mod is a card with **its own picture, description, endorsements and downloads, read live from its Nexus page** - the manager doesn't write these itself - plus what you already have, what it needs (the Shadow of the Erdtree DLC, a runtime), and the one thing most worth knowing from the manager's own notes. A group is a clear **Pick ONE** (overhauls are made to be played on their own); everything else is **Add any of these**. **What happens next** says what the install does and what to do afterwards - for an overhaul, to try it on a copy of your save first. Nothing downloads until you press Install, and without internet the packs still show from the manager's own notes.
-
-![A starter pack: four overhauls with their own pictures and descriptions, pick one](docs/images/p-starters.png)
 
 ### Some mods need one more step
 
@@ -116,10 +112,10 @@ If a mod's author says something must be run once before the first launch - an i
 
 ### Packs built from other mods
 
-Some packs, like **FRZN's Merge Modpack**, are made by layering several other mods you download yourself. After you install one, the **Install the dependencies** window opens (or press the button on the pack's *What this mod needs* card):
+Some packs, like a **merge modpack**, are made by layering several other mods you download yourself. After you install one, the **Install the dependencies** window opens (or press the button on the pack's *What this mod needs* card):
 
 1. Press **Get it** on each mod. A Premium Nexus account downloads it for you; a free account opens that file's Nexus page and the *Mod Manager Download* button there hands the file back. Already downloaded it? The manager spots it in your Downloads folder.
-2. When all are ready, press **Build it**. Each is unpacked and layered in the order the author's instructions give, using the right old version where needed (FRZN needs McKenyu's 1.3.11, not the newest).
+2. When all are ready, press **Build it**. Each is unpacked and layered in the order the author's instructions give, using the right old version where needed (a pack may need a particular older version of one of them, not the newest).
 
 ![The Install the dependencies window](docs/images/p-dependencies.png)
 
@@ -249,7 +245,7 @@ The **Characters** page (top of the list) shows every save file and the characte
 - **The author's instructions are read.** If an update comes with a README that explains how to apply it, the manager shows those steps before changing anything. *Update from file...* applies a download you made yourself.
 - **me3:** the manager checks about once a day and tells you when a newer one is out - *Tools → This program → Update me3...*.
 - **The game:** the manager remembers your `eldenring.exe` version. When a patch changes it you're told, and mods whose logs show they don't support it are marked.
-- **What the manager knows about particular mods stays current.** The notes, requirements and layering recipes for the big overhauls (Reforged, Convergence, Reborn, Elden Vins, FRZN's pack and the rest) also arrive as a small **signed** file that the manager fetches about once a day, so a correction doesn't wait for a new release. It is checked against the same key that signs releases; a file that is unsigned, altered, older than the one it has, or meant for a newer manager is refused, and nothing in it is ever run - it is text and settings shown to you. Your own *Known mods list* still wins. *Tools → Health and storage → Known mods list* shows its version and has **Check for new notes now**; *Settings → Online* turns it off.
+- **What the manager knows about particular mods stays current.** The notes, requirements and layering recipes for the big overhauls (the large overhauls and merge packs) also arrive as a small **signed** file that the manager fetches about once a day, so a correction doesn't wait for a new release. It is checked against the same key that signs releases; a file that is unsigned, altered, older than the one it has, or meant for a newer manager is refused, and nothing in it is ever run - it is text and settings shown to you. Your own *Known mods list* still wins. *Tools → Health and storage → Known mods list* shows its version and has **Check for new notes now**; *Settings → Online* turns it off.
 - **The manager itself:** when a new version is published, a banner appears in the sidebar. Click it and the manager downloads the update, checks its signature, restarts, and keeps all your settings and backups. If a new version ever misbehaves, **Tools → This program → Go back to an earlier version...** returns to the one you had before.
 
 ![The Update DLLs window: a drop zone, and the DLLs Nexus has newer files for](docs/images/p-dllupdate.png)
@@ -332,7 +328,7 @@ In *Tools → Mods → My tools*, **Add a tool...** offers **Get a known tool (N
 
 **Install** downloads the newest file, unpacks it into a `Tools` folder next to your Mods folder, finds the program inside and adds it to My tools. Nothing is run - you start it yourself. A **Premium** Nexus account installs in one click; with a free account the window opens the Nexus page and installs the file the moment you press **Mod Manager Download** there (or you can **Install from GitHub** when the tool has a release there). Several programs in one download and no clear choice? You're asked. A newer version shows **Update available**, and an update keeps the old folder as `.previous`. Downloads come only from GitHub and Nexus over https, and an archive that tries to write outside its folder is refused. **A version the Roundtable maintainers have checked is pinned by its hash, and a different file is refused; a version nobody has checked yet says so and asks first** (the card shows **Checked** or **Not checked**).
 
-**Open them inside the manager.** Nuxe, Yapped Rune Bear and Smithbox open on a page of Roundtable's own (*Back to Overview*, *Open in its own window* and *Close* are at the top) instead of a separate window. It is experimental and only used at Windows display scaling of 100%; otherwise, or if you switch it off in *Settings*, they open in their own windows as before. Smithbox draws with the graphics card, so if it looks wrong or ignores the keyboard in there, switch its option off. Closing Roundtable asks before it closes a tool that is still open. The **Item & Enemy Randomizer** does the same when you press PLAY on a mod that uses it: pick your options in the page, close it, and the game starts.
+**Open them inside the manager.** Nuxe, Yapped Rune Bear and Smithbox open on a page of Roundtable's own (*Back to Overview*, *Open in its own window* and *Close* are at the top) instead of a separate window. It is experimental and only used at Windows display scaling of 100%; otherwise, or if you switch it off in *Settings*, they open in their own windows as before. Smithbox draws with the graphics card, so if it looks wrong or ignores the keyboard in there, switch its option off. Closing Roundtable asks before it closes a tool that is still open. A **randomizer** that a mod runs as its setup step does the same when you press PLAY: pick your options in the page, close it, and the game starts.
 
 **WitchyBND: unpack and repack a mod's files, safely.** On a mod's **More** menu, **Unpack or repack with WitchyBND...** (when you installed WitchyBND from this list) lets you pick files to unpack, or an unpacked folder to repack. WitchyBND is run on **copies** in a scratch folder - silently, so no console window - and you see what it made before anything goes into the mod; whatever it overwrites is backed up first, **Tools → Undo last add-on install** reverses it, and nothing happens outside the mod's own folder or while the game is running. A rebuilt file may differ from the original even when nothing was edited (some formats do, some don't), and the window says so. After a repack the manager unpacks the rebuilt file again, on another copy, and tells you if it doesn't hold the files it was built from (or can't be unpacked again) - that file is then left unticked and marked *CHECK THIS ONE*. `regulation.bin` is never unpacked or repacked here: change parameters in Smithbox or Yapped Rune Bear, which know the right definitions.
 
@@ -391,19 +387,19 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 - DLL-only mods become **add-ons** attached to the mods you play, with undo and updates.
 - **Nexus download buttons** (`nxm://`) send files here, free accounts included; **Import tracked mods** links your Nexus tracking list to your packs and can install the ones you don't have.
 - One-time setup after install (install scripts, *Setup UI images*, a game-folder zip) is offered, never run silently.
-- Packs built from other mods (FRZN's Merge Modpack) get a guided, resumable dependency install.
+- Packs built from other mods (merge modpacks) get a guided, resumable dependency install.
 - Installs and updates me3 and the Visual C++ runtime from their official sources.
 - **Starter packs** by goal, for people who don't know where to start: a before-you-start check, each mod's own picture and description read live from Nexus, what you have and what each needs, pick-one groups for overhauls, and what to do next.
 - **Get a known tool**: Smithbox, WitchyBND, Nuxe, Yapped Rune Bear SE and Elden Ring Save File Manager installed from Nexus or GitHub straight into My tools, with update detection and companion tools offered together (WitchyBND + Nuxe).
 
 ### Playing
 
-- One **PLAY** button; vanilla through Steam, mods through me3; a mod's own launcher (such as Convergence's) can be added as a target.
+- One **PLAY** button; vanilla through Steam, mods through me3; a mod's own launcher (such as an overhaul's own launcher) can be added as a target.
 - **Before you play** check: missing files, skipped DLLs, an old Seamless, a mod that refused this game version last time, a save file last used by a different mod.
 - **Watched launch**, session tracking, playtime and a launch history that can switch off whatever you changed since the last good launch.
 - **Setup steps** (a randomizer, a config tool) run before the game, on your terms; **Quick launches** start a named mod + profile + on/off combination in one click.
 - **Clean game folder**: for mods that break when ReShade or Elden Mod Loader files sit in the game folder, PLAY moves them aside and puts them back afterwards. Nothing is deleted.
-- Self-managing mods (Convergence) are left alone: no profile edits, no repairs that would fight their launcher.
+- Self-managing mods (those with their own launcher) are left alone: no profile edits, no repairs that would fight their launcher.
 - Desktop shortcuts that start a mod directly.
 
 ### When something goes wrong
