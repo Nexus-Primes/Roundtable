@@ -302,70 +302,13 @@ The box at the top of the sidebar switches between **Elden Ring**, **Elden Ring 
 
 ## Make it yours
 
-Open **Tools → This program → Appearance...** and pick a theme. Each one is a complete colour scheme named after something from the Lands Between:
+Open **Tools → This program → Appearance...**. Pick one of four **colour schemes** - **Dark**, **Midnight** (a cooler dark), **Light** or **Black** - and one of four **accent colours** (gold, blue, green or rose), or choose **Custom mix** and use any accent colour you like. The whole manager changes straight away: **Cancel** puts everything back, **Save** keeps it.
 
-![The Appearance window with twelve themes to choose from](docs/images/p-appearance.png)
+![The manager in the four colour schemes: Dark, Midnight, Light and Black](docs/images/themes.png)
 
-Click a theme and the whole manager changes straight away - **Cancel** puts everything back, **Save** keeps it.
+**Interface size** scales *everything* - text, buttons, pictures and spacing, not just the lettering - from 80% up to what your screen can hold, and it changes the moment you press Save (no restart). Pop-up windows wear the same colours as the pages. Warnings stay amber, problems red and good news green, and every combination of scheme and accent is checked so text stays easy to read.
 
-**Interface size** scales *everything* - text, buttons, pictures and spacing, not just the lettering - from 80% up to what your screen can hold, and it changes the moment you press Save (no restart). Pop-up windows and menus wear a cool slate-and-arcane-blue look, whatever theme the main window has, so you always know which window you are in; warnings stay amber, problems red and good news green.
-
-![The manager in each of the twelve themes](docs/images/themes.png)
-
-<details>
-<summary><b>See every theme at full size</b></summary>
-
-**Erdtree**
-
-[![Erdtree theme](docs/images/theme-erdtree.png)](docs/images/theme-erdtree-full.png)
-
-**Tree Sentinel**
-
-[![Tree Sentinel theme](docs/images/theme-tree_sentinel.png)](docs/images/theme-tree_sentinel-full.png)
-
-**Night's Cavalry**
-
-[![Night's Cavalry theme](docs/images/theme-nights_cavalry.png)](docs/images/theme-nights_cavalry-full.png)
-
-**Carian Knight**
-
-[![Carian Knight theme](docs/images/theme-carian_knight.png)](docs/images/theme-carian_knight-full.png)
-
-**Black Knife Assassin**
-
-[![Black Knife Assassin theme](docs/images/theme-black_knife.png)](docs/images/theme-black_knife-full.png)
-
-**Crucible Knight**
-
-[![Crucible Knight theme](docs/images/theme-crucible_knight.png)](docs/images/theme-crucible_knight-full.png)
-
-**Starscourge Radahn**
-
-[![Starscourge Radahn theme](docs/images/theme-radahn.png)](docs/images/theme-radahn-full.png)
-
-**Dark Moon Ranni**
-
-[![Dark Moon Ranni theme](docs/images/theme-ranni.png)](docs/images/theme-ranni-full.png)
-
-**Lord of Blood**
-
-[![Lord of Blood theme](docs/images/theme-mohg.png)](docs/images/theme-mohg-full.png)
-
-**Scarlet Rot**
-
-[![Scarlet Rot theme](docs/images/theme-scarlet_rot.png)](docs/images/theme-scarlet_rot-full.png)
-
-**Haligtree**
-
-[![Haligtree theme](docs/images/theme-haligtree.png)](docs/images/theme-haligtree-full.png)
-
-**St. Trina's Lily**
-
-[![St. Trina's Lily theme](docs/images/theme-trina.png)](docs/images/theme-trina-full.png)
-
-</details>
-
-Prefer to mix your own? Choose **Custom mix** and pick any accent colour (or your own) and one of four colour schemes. You can also change the **text size**, the **font**, how **rounded** the corners are, the **width of the mod list**, how much **animation** you want (Off, Calm, Fluid, Lavish), switch on a **high-contrast** mode, or use **colour-blind friendly status colours** (blue / yellow / orange instead of green / amber / red).
+You can also change the **text size**, the **font**, how **rounded** the corners are, the **width of the mod list**, how much **animation** you want (Off, Calm, Fluid, Lavish), switch on a **high-contrast** mode (it also switches on by itself when Windows' own high-contrast mode is on), or use **colour-blind friendly status colours** (blue / yellow / orange instead of green / amber / red).
 
 ---
 
@@ -506,7 +449,7 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 ### Look and feel
 
 - Works from the keyboard (Tab, Enter, Escape, a visible focus outline) and names every setting for screen readers.
-- Twelve themes, a light theme, **interface size** (everything scales, live), text size, fonts, corner style, motion levels (a first run follows Windows' own *show animations* setting), high contrast and colour-blind status colours; a first-run tour and a *Getting started* checklist; **Ctrl+K**, **Ctrl+F**, **Ctrl+N**, **Ctrl+Enter** and **F1**.
+- Four colour schemes (dark, midnight, light, black) with four accents, **interface size** (everything scales, live), text size, fonts, corner style, motion levels (a first run follows Windows' own *show animations* setting), high contrast and colour-blind status colours; a first-run tour and a *Getting started* checklist; **Ctrl+K**, **Ctrl+F**, **Ctrl+N**, **Ctrl+Enter** and **F1**.
 
 ### Safety
 
