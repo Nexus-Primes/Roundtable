@@ -225,12 +225,13 @@ Roundtable backs up your saves before every launch, can keep a second copy somew
 
 ![The Characters page listing the characters inside each save](docs/images/p-characters.png)
 
-The **Characters** page (top of the list) shows every save file and the characters inside it.
+The **Characters** page (top of the list) shows every save file and the characters inside it. It is laid out as three tabs so nothing needs scrolling at the normal window size: **Characters** (your save files and the characters in them), **Backups**, and **Appearance and editing** (the save-editor handoff).
 
 - **Backups happen automatically** before you launch, and before anything that touches a save. Unchanged saves share space, so keeping many costs little. **Back up now** takes one on demand, and the manager can also back up every few minutes while the game runs (*Settings*).
 - **A second copy** can be sent to another drive, a NAS or a cloud-synced folder (*Backups → Second copy*).
 - **Copy a character** from one save to another - for example from your normal game into your co-op save - with *Copy this character to another save...*. It only works between saves from the same Steam account, checks everything first, and makes a backup first.
 - **Deleting is guarded.** Deleting a character or a whole save file makes a protected backup first, shows you exactly what will go, and makes you **type the name** before it does anything. Deleted save files are moved aside, not erased, and *Backups → Restore* brings them back.
+- **Save tools** (on the Characters page, *Appearance and editing* tab): *Appearance presets...* shows your 15 mirror presets with colours and, if you like, a screenshot of each look, and lets you copy, edit, export, import and delete them; *Community presets...* browses about 125 looks other players shared (search, pictures, download them all to use offline) and puts one in a slot; *Inspect saves...* lists every character with its level, stats and anything wrong, read-only. Every change is tried on a copy first, only that one preset's bytes may differ, and all your saves are backed up before the real file is replaced. **Close Elden Ring first.** *Credit:* these read saves with code from [Hapfel's Elden Ring Save Manager](https://github.com/Hapfel1/er-save-manager), used with his permission; the community looks come from his [er-character-presets](https://github.com/Hapfel1/er-character-presets) library (MIT). His editor itself is not part of Roundtable - get it from the tool list (*Get a save editor...*).
 - Please **play offline** with copied or edited characters. Online play with mods can get an account banned, and the manager never turns online mode on by itself.
 
 ---
@@ -400,6 +401,13 @@ In *Tools → Mods → My tools*, **Add a tool...** offers **Get a known tool (N
 
 **Elden Ring Save File Manager** (by Hapfel) is the save editor on offer: when you install it, the **Characters** page finds it for its *Back up, then open the save editor* handoff, whatever its file is called. The Characters page's **Get a save editor...** button opens this list.
 
+**The save editor, inside Roundtable (experimental).** For Elden Ring Save File Manager, *Back up and open* shows the editor's own window **inside Roundtable** - on its own **Save editor** page - instead of as a second program on your taskbar. It is still Hapfel's program running as it always does (nothing of it is copied or changed; Roundtable only gives it a frame), so everything in it works as before. Your saves are backed up first, exactly as when it opens separately. Things worth knowing:
+- It keeps running when you go to another page - **Show the save editor** on the Characters page brings you back to it. **Close editor** (or closing Roundtable) closes it, and asks first, because anything you haven't saved inside the editor is lost. Roundtable asks it to close the way its own close button would and only ends it if it doesn't.
+- **The game isn't started from Roundtable while the editor is open**, because the game and the editor would both be writing your save.
+- **Open in its own window** hands it back to the desktop at any time without closing it or losing anything in it.
+- It is only used on a **100% Windows display scale**: that editor doesn't follow other scales, so at 125% or more it opens in its own window as before and the message says why. Other save editors always open in their own window. It can be switched off in *Settings → Updates and safety → Save editor*.
+- Tried here with the mouse, typing, its dropdown menus, its file chooser and extra windows, and closing. **Not tried:** a display scale other than 100%, and the editor's actual character editing - the page doesn't change what the editor does, so the editor's own warnings (play offline, back up) still apply.
+
 ---
 
 ## On the command line
@@ -477,7 +485,7 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 
 ### Saves
 
-- Automatic backups before every launch (and optionally every few minutes while you play), a second copy on another drive, **two-way sync** with a cloud folder or another PC (conflicts are always your choice), restore, guarded deletes, character copying between saves, and a handoff to a save editor you already have for appearance changes. Roundtable never edits a save itself.
+- Automatic backups before every launch (and optionally every few minutes while you play), a second copy on another drive, **two-way sync** with a cloud folder or another PC (conflicts are always your choice), restore, guarded deletes, character copying between saves, and a handoff to a save editor you already have for appearance changes (shown inside Roundtable for Elden Ring Save File Manager, experimental). Roundtable never edits a save itself.
 
 ### Organising
 
