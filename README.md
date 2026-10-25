@@ -2,7 +2,9 @@
 
 # Roundtable
 
-**A friendly way to install, organise and play Elden Ring mods - and to play co-op with your friends - without digging through folders.**
+**A friendly way to install, organise and play Elden Ring mods - and to play co-op with your friends - without digging through folders.
+
+**Guides:** [Convergence](docs/CONVERGENCE.md) &nbsp;·&nbsp; [Item & Enemy Randomizer](docs/RANDOMIZER.md) &nbsp;·&nbsp; [Save editor & characters](docs/SAVE-EDITOR.md) &nbsp;·&nbsp; [Smithbox](docs/SMITHBOX.md)**
 
 ![The manager showing a mod, with a big PLAY button](docs/images/p-modpage.png)
 
