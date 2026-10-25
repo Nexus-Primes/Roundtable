@@ -21,6 +21,7 @@ If you've ever unzipped a mod, wondered which folder it goes in, and then watche
 | **Install a mod** | Searches Nexus Mods or opens the file you downloaded, shows you what's inside, installs it, and fixes the usual profile mistakes automatically. |
 | **Play it** | One **PLAY** button. It looks the mod over first and tells you in plain words if something will go wrong - then watches the game start and tells you if your mod didn't load. |
 | **Fix what breaks** | Explains why a mod won't start, repairs what it can (with undo), and can find which DLL is crashing the game. |
+| **Use your other tools in one place** | Opens the save editor, Smithbox, Nuxe, Yapped, the Item & Enemy Randomizer and a mod's own launcher (Convergence's) on pages inside the manager, with the right backups and setup steps around them. See [the guides](#guides-for-the-tools-and-mods-it-works-with). |
 | **Set up big mod packs** | Knows what the major overhauls need, and layers in the other mods a merge pack is built from. |
 | **Play with friends** | Checks your co-op setup, helps everyone use the same password and versions, and writes you an invite to send. |
 | **Keep your characters safe** | Backs up your saves automatically, can keep a second copy somewhere else, keeps two PCs in step without ever losing a character, lets you try a mod on a copy of your save, and asks twice before anything involving a save is deleted. |
@@ -88,11 +89,13 @@ A free Nexus Mods account lets the manager search for mods, show their pictures,
 ## Installing and playing your first mod
 
 1. Press **＋ Install a mod** (bottom-left).
-2. Either **search Nexus** and pick a mod, or choose a `.zip`, `.7z` or `.rar` you already downloaded (or just drag it onto the window).
+2. Either **search Nexus** and pick a mod, or choose a `.zip`, `.7z`, `.rar` or self-extracting `.exe` you already downloaded (or just drag it onto the window).
 3. Look over what the manager found, press **Install**. It repairs common problems for you and says what it did.
 4. Click the mod in the list on the left and press **PLAY**.
 
 ![The Install a mod window on its From a file or folder tab](docs/images/p-install.png)
+
+**Got an `.exe` that is a mod's own installer or downloader?** Choose it in the same window. If it is really an archive it is unpacked like any other. If it is a plain program, Roundtable says so and offers **Run it**, **Show it in its folder** or **Cancel** - it never runs one on its own. After you run it, Roundtable watches your Mods folder and rescans it by itself once the install has finished.
 
 **Tip - the "Mod Manager Download" button.** In **Settings**, turn on **Nexus download buttons**. After that, the *Mod Manager Download* button on a Nexus mod page sends the file straight here. This works with free Nexus accounts, too.
 
@@ -185,7 +188,7 @@ Co-op only works when **everyone has the same mod versions, the same Seamless Co
 ![The Play with friends window with a green checklist and an invite](docs/images/p-friends.png)
 
 - **Play with friends → Ready to play?** on a mod's page shows a checklist (Seamless version, password, your own save file, me3, game version) and a ready-to-send **invite** you can copy or post to Discord.
-- **Add Seamless Co-op...** (on the mod's *Components* tab) puts Seamless into a mod for you, with its own save file so characters never get mixed up.
+- **Add Seamless Co-op...** (on the mod's *Components* tab) puts Seamless into a mod for you, with its own save file so characters never get mixed up. It asks for the session password Seamless needs, copies only what Seamless needs, and also works for a mod that manages itself when that mod's own co-op profile is waiting for the folder ([Convergence](docs/CONVERGENCE.md)).
 - Friends who have the manager can use **Tools → Mods → Install a friend's setup** - paste the setup (or a link to it) you made with **Share my setup** and it downloads the same mod versions, adds your add-on DLLs, sets up Seamless Co-op, and switches the same DLLs on in the same order. The co-op password and settings files are only included if you tick them.
   Before it changes anything, the friend sees a plain list of what will change and can go back; **Tools → Backups and undo → Undo last friend's setup** reverses it. Tip: put your setup in a GitHub gist and send friends the link - when you change your setup you update the gist, and they just open *Install a friend's setup* and press *Read it* again.
 - **Play with friends → Compare setups** finds out exactly *why* two people can't connect.
@@ -274,7 +277,7 @@ Some mods ask for borderless window or ray tracing off, buried in the game's men
 
 ### Finding things
 
-Press **Ctrl+K** and type a few letters to jump to any mod or tool; **F1** lists the keyboard shortcuts. **All tools...** lists every tool and setting on tabs, with a search box.
+Press **Ctrl+K** and type a few letters to jump to any mod or tool; **F1** lists the keyboard shortcuts. **Alt+Down** and **Alt+Up** step to the next or previous page in the list from anywhere, and **Ctrl+1 / 2 / 3** jump to the Overview, Characters and the game page. **All tools...** lists every tool and setting on tabs, with a search box.
 
 ![Animated: typing a few letters in the Go to window finds a tool](docs/images/clip-search.png)
 
@@ -328,7 +331,7 @@ In *Tools → Mods → My tools*, **Add a tool...** offers **Get a known tool (N
 
 **Install** downloads the newest file, unpacks it into a `Tools` folder next to your Mods folder, finds the program inside and adds it to My tools. Nothing is run - you start it yourself. A **Premium** Nexus account installs in one click; with a free account the window opens the Nexus page and installs the file the moment you press **Mod Manager Download** there (or you can **Install from GitHub** when the tool has a release there). Several programs in one download and no clear choice? You're asked. A newer version shows **Update available**, and an update keeps the old folder as `.previous`. Downloads come only from GitHub and Nexus over https, and an archive that tries to write outside its folder is refused. **A version the Roundtable maintainers have checked is pinned by its hash, and a different file is refused; a version nobody has checked yet says so and asks first** (the card shows **Checked** or **Not checked**).
 
-**Open them inside the manager.** Nuxe, Yapped Rune Bear and Smithbox open on a page of Roundtable's own (*Back to Overview*, *Open in its own window* and *Close* are at the top) instead of a separate window. It is experimental and only used at Windows display scaling of 100%; otherwise, or if you switch it off in *Settings*, they open in their own windows as before. Smithbox draws with the graphics card, so if it looks wrong or ignores the keyboard in there, switch its option off. Closing Roundtable asks before it closes a tool that is still open. A **randomizer** that a mod runs as its setup step does the same when you press PLAY: pick your options in the page, close it, and the game starts. A mod's own **launcher** (for example an overhaul's) opens the same way when you pick its own-window entry as the way to PLAY.
+**Open them inside the manager** (more in the [Smithbox guide](docs/SMITHBOX.md)). Nuxe, Yapped Rune Bear and Smithbox open on a page of Roundtable's own (*Back to Overview*, *Open in its own window* and *Close* are at the top) instead of a separate window. It is experimental and only used at Windows display scaling of 100%; otherwise, or if you switch it off in *Settings*, they open in their own windows as before. Smithbox draws with the graphics card, so if it looks wrong or ignores the keyboard in there, switch its option off. Closing Roundtable asks before it closes a tool that is still open. A **randomizer** that a mod runs as its setup step does the same when you press PLAY: pick your options in the page, close it, and the game starts ([the randomizer guide](docs/RANDOMIZER.md)). A mod's own **launcher** (for example Convergence's) opens the same way when you pick its own-window entry as the way to PLAY - and is the default for a mod that updates itself ([the Convergence guide](docs/CONVERGENCE.md)).
 
 **WitchyBND: unpack and repack a mod's files, safely.** On a mod's **More** menu, **Unpack or repack with WitchyBND...** (when you installed WitchyBND from this list) lets you pick files to unpack, or an unpacked folder to repack. WitchyBND is run on **copies** in a scratch folder - silently, so no console window - and you see what it made before anything goes into the mod; whatever it overwrites is backed up first, **Tools → Undo last add-on install** reverses it, and nothing happens outside the mod's own folder or while the game is running. A rebuilt file may differ from the original even when nothing was edited (some formats do, some don't), and the window says so. After a repack the manager unpacks the rebuilt file again, on another copy, and tells you if it doesn't hold the files it was built from (or can't be unpacked again) - that file is then left unticked and marked *CHECK THIS ONE*. `regulation.bin` is never unpacked or repacked here: change parameters in Smithbox or Yapped Rune Bear, which know the right definitions.
 
@@ -348,6 +351,21 @@ In *Tools → Mods → My tools*, **Add a tool...** offers **Get a known tool (N
 - **Open in its own window** hands it back to the desktop at any time without closing it or losing anything in it.
 - It is only used on a **100% Windows display scale**: that editor doesn't follow other scales, so at 125% or more it opens in its own window as before and the message says why. Other save editors always open in their own window. It can be switched off in *Settings → Updates and safety → Save editor*.
 - Tried here with the mouse, typing, its dropdown menus, its file chooser and extra windows, and closing. **Not tried:** a display scale other than 100%, and the editor's actual character editing - the page doesn't change what the editor does, so the editor's own warnings (play offline, back up) still apply.
+
+---
+
+## Guides for the tools and mods it works with
+
+Some programs and mods need more than a button. Each has its own page with the setup, what it is good for, what to do when something goes wrong, and an honest note on what has and hasn't been tested.
+
+| Guide | Use it for |
+|---|---|
+| **[Convergence](docs/CONVERGENCE.md)** | An overhaul that installs and updates itself through its own launcher. PLAY opens the launcher on a page inside Roundtable; DLL presets and **Add Seamless Co-op** for it; what to do when it crashes or is installed twice. |
+| **[The Item & Enemy Randomizer](docs/RANDOMIZER.md)** | Run the randomizer as a step before the game, load the seed it made with your other mods and DLLs, replay the last seed, and fix a seed that doesn't load. |
+| **[The save editor and your characters](docs/SAVE-EDITOR.md)** | Open a save editor with a backup first, manage your 15 appearance presets with pictures (even **grabbed from the game**), browse community looks, and inspect saves. Built on [Hapfel's Elden Ring Save Manager](https://github.com/Hapfel1/er-save-manager), with his permission. |
+| **[Smithbox](docs/SMITHBOX.md)** | Install Smithbox from inside the manager, open it with your mod's project ready, and (very experimentally) use it on a page of Roundtable's own. |
+
+These programs are shown inside Roundtable only when Windows' display scaling is 100%; otherwise, or if you switch it off in **Settings**, they open in their own windows as before. All four are experimental, and every guide says what was and wasn't tested.
 
 ---
 
@@ -382,7 +400,7 @@ A complete list, by topic. Most items are in the **Tools** menu or on a mod's pa
 
 ### Installing
 
-- Search Nexus Mods (no key needed) with pictures, tags, descriptions, comments and bug reports; install from a `.zip` / `.7z` / `.rar` or a folder; drag a mod onto the window.
+- Search Nexus Mods (no key needed) with pictures, tags, descriptions, comments and bug reports; install from a `.zip` / `.7z` / `.rar`, a self-extracting `.exe` or a folder; drag a mod onto the window. A plain installer `.exe` is run only if you say so, and the Mods folder is rescanned by itself afterwards.
 - Every install is previewed first and can be undone; profiles are repaired as a mod installs (moved paths, Mod Engine 2 / debug DLLs, missing files).
 - DLL-only mods become **add-ons** attached to the mods you play, with undo and updates.
 - **Nexus download buttons** (`nxm://`) send files here, free accounts included; **Import tracked mods** links your Nexus tracking list to your packs and can install the ones you don't have.
