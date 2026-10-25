@@ -12,6 +12,10 @@ Convergence is an overhaul that **installs, updates and repairs itself through i
 - **Add Seamless Co-op** for Convergence: puts exactly what Seamless needs in exactly the place the mod looks for it, with its own save file.
 - A **clean game folder** guard: ReShade and mod-loader files are moved aside while Convergence runs and put back afterwards.
 
+![A mod made like Convergence: its launcher is on the Setup steps card and PLAY is set to open it; the health check shows the co-op profile waiting for Seamless](images/g-conv-overview.png)
+
+*A made-up mod set up the way Convergence is: the launcher listed under Setup steps, PLAY set to open it, and the health check pointing out the co-op profile that is waiting for the Seamless folder.*
+
 ---
 
 ## 1. Install it
@@ -65,6 +69,8 @@ Convergence's profiles accept extra DLLs, so your saved DLL preset can be added 
 
 ## 5. Co-op with Seamless Co-op
 
+![The Components tab with Add Seamless Co-op and Add DLL preset](images/g-conv-components.png)
+
 Convergence has its own co-op profile (`convergence - seamless`), but Seamless itself is a separate download that you must supply.
 
 1. If that profile exists and its Seamless folder doesn't, the mod's **Health check** shows *Missing native: ./../SeamlessCoop/ersc.dll*, and the **Components** tab shows **Add Seamless Co-op...**.
@@ -72,6 +78,8 @@ Convergence has its own co-op profile (`convergence - seamless`), but Seamless i
 3. Enter a **session password** (Seamless refuses to start without one; friends need the same). It is pre-filled if your Seamless copy has one.
 4. The **save ending** is worked out from the mod: Convergence plays solo on `ER0000.cnv`, so its co-op saves use `cnv.co2`. They never mix with your normal co-op saves.
 5. **Tools → Undo last Seamless Co-op add** reverses it.
+
+![The Add Seamless Co-op window with the save ending and the session password filled in](images/g-conv-addseamless.png)
 
 Use **Play with friends** on the mod's page for the checklist and invite, as for any other mod.
 
