@@ -24,6 +24,8 @@ Already have Smithbox? Use **I already have the program** and choose it.
 
 ## 2. Open it on a mod, project ready
 
+![A mod's More menu with Open in Smithbox (project ready)](images/g-smithbox-menu.png)
+
 1. Open the mod's page, press **More**, then **Open in Smithbox (project ready)...** (shown when Smithbox is installed from the tool list and the game is one Smithbox supports).
 2. If the mod has more than one folder of game files, you pick which. If there is no Smithbox project for it yet, Roundtable asks first, because it **adds one small file** to Smithbox's folder (delete that file to remove the project). The project points at the mod's game files and the game's folder.
 3. Smithbox starts. **Pick the project in its list.**
@@ -41,6 +43,8 @@ By default, Smithbox opens on a page of Roundtable's own instead of a separate w
 - It keeps running if you go to another page.
 - Only used at **Windows display scaling of 100%**; otherwise it opens in its own window.
 - Turn it off in **Settings → Show Smithbox inside Roundtable (very experimental)**.
+
+![Smithbox drawn on a page inside Roundtable, with Back to Overview, Open in its own window and Close Smithbox above it](images/g-smithbox-inside.png)
 
 **Limits, honestly:** Smithbox draws with your graphics card (OpenGL), which is why this is marked *very experimental*.
 
