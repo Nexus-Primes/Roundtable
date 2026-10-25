@@ -11,6 +11,10 @@ The Item & Enemy Randomizer generates randomized game files, then you play them 
 - The game starts **through me3 with your other mods and DLLs**, using the files your seed made.
 - A one-click fix that makes sure the **right files are loaded** for your seed.
 
+![The mod's Overview: the randomizer is listed under Setup steps, set to ask each time, with a Run now button](images/g-rando-step.png)
+
+*The randomizer is added as a Setup step by itself. "Ask me each time" is the default; "Run now" runs it without pressing PLAY.*
+
 ---
 
 ## 1. Install it
@@ -21,7 +25,12 @@ The Item & Enemy Randomizer generates randomized game files, then you play them 
 ## 2. Play with a new seed
 
 1. Press **PLAY**. Roundtable asks: **Run it, then launch**, **Skip this time**, or **Cancel**. The note shows what to do: pick your options and click *Randomize items and enemies*, then close the randomizer.
+![The question PLAY asks: Run it then launch, Skip this time, or Cancel](images/g-rando-play.png)
+
 2. Choose **Run it, then launch**. The randomizer appears on a page inside Roundtable.
+
+![The randomizer drawn on a page inside Roundtable, with the three steps above it](images/g-rando-inside.png)
+
 3. Set your options. The randomizer shows "Game exe not provided" until you tell it where `eldenring.exe` is (its **Select game exe** button).
 4. Click **Randomize items and enemies**. Wait for it to finish.
 5. Close it (the **Close randomizer** button, or its own close button). The game starts straight after, with your other mods.
@@ -41,6 +50,10 @@ After a run, the randomizer's generated files (`regulation.bin`, `map`, `msg`, `
 - After you close the randomizer, Roundtable offers the profile changes that make the game use them (**"Randomizer's generated files"**). Accept it, or press **Fix problems...** on the mod's page at any time.
 - The same fix **switches off the randomizer's bundled vanilla files** (`diste/Vanilla`). They are the unmodified game's `regulation.bin` and text; if they are loaded they replace your seed. (The randomizer's own launcher never loads them.)
 - Every fix is backed up and can be undone.
+
+![Fix problems offering the randomizer's generated files and switching off its bundled vanilla files](images/g-rando-fix.png)
+
+*The mod's health check can say "No problems found" and still offer these two: they aren't mistakes in the profile, they are what makes your seed load.*
 
 ## 5. Your DLLs
 
