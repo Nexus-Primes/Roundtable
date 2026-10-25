@@ -14,7 +14,7 @@ Roundtable looks after your saves (backups, copies, restores) and works with a *
 - **Inspect saves**: every character with its level, stats and anything wrong, read-only.
 - Safety around all of it: a copy is tried first, only the bytes of the one thing you changed may differ, and every save is backed up before a real file is replaced.
 
-![The Characters page listing the characters inside each save](images/p-characters.png)
+![The Characters page, Appearance and editing tab: choose or get a save editor, open it, and the save tools underneath](images/g-save-editing.png)
 
 ---
 
@@ -69,6 +69,10 @@ Notes:
 - Close the game afterwards before you edit presets (Roundtable asks you to close Elden Ring first).
 
 ## 4. Community presets
+
+![The Community presets window: a list of shared looks, with the picture of the selected one](images/g-save-community.png)
+
+*The looks and their pictures come from Hapfel's er-character-presets library (MIT).*
 
 **Community presets...** lists looks shared by other players - NPC lookalikes, cosplays and originals - with search and pictures. You can download them all to use offline, and put one into a preset slot. The preset is tried on a copy first, and your save is backed up before the real file changes.
 
