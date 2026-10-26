@@ -1,7 +1,7 @@
 {
  "format": 1,
- "version": 1,
- "published": "2026-10-21",
+ "version": 2,
+ "published": "2026-10-26",
  "min_app": "0.86.0",
  "base_rev": 1,
  "recipes": [
@@ -612,6 +612,113 @@
     "Its newest version is from April 2022, before the DLC."
    ],
    "notes": []
+  }
+ ],
+ "tool_catalog": [
+  {
+   "key": "nuxe",
+   "name": "Nuxe",
+   "what": "Unpacks a game's archives so the files inside can be opened and edited - the files WitchyBND works on.",
+   "games": [
+    "eldenring",
+    "nightreign",
+    "darksouls3",
+    "sekiro",
+    "armoredcore6",
+    "darksouls",
+    "darksouls2",
+    "darksouls2og"
+   ],
+   "github": "JKAnderson/Nuxe",
+   "where": "game",
+   "hashes": {
+    "1.2.1": {
+     "Nuxe.1.2.1.zip": "023d3c2a349b6667a7267f98eb6b1a6a2b37a0a0b820cf6dfd5cb1375a78267a"
+    }
+   }
+  },
+  {
+   "key": "yapped-ds3",
+   "name": "Yapped",
+   "what": "An editor for Dark Souls III game params.",
+   "games": [
+    "darksouls3"
+   ],
+   "nexus": {
+    "darksouls3": 306
+   },
+   "github": "JKAnderson/Yapped",
+   "where": "game",
+   "hashes": {
+    "1.1.1": {
+     "Yapped.1.1.1.zip": "4805e8d885d18eb29125509d237c6a76d9b0c9ddd59226851e0016fc5df13fd4"
+    }
+   }
+  },
+  {
+   "key": "witchybnd",
+   "name": "WitchyBND",
+   "what": "Unpacks and repacks FromSoftware archive formats and serializes FromSoftware data formats.",
+   "games": [
+    "eldenring"
+   ],
+   "nexus": {
+    "eldenring": 3862
+   },
+   "github": "ividyon/WitchyBND",
+   "where": "game",
+   "needs": [
+    "nuxe"
+   ],
+   "needs_note": "WitchyBND works on files unpacked from the game's archives, and its own page lists Nuxe under Requirements for that.",
+   "hashes": {
+    "3.0.1.0": {
+     "WitchyBND-3.0.1.0-win-x64.zip": "a3e6b2a0f7eac13f5e83b6602a1149322439c0662baa140ecdd84be28af50364"
+    }
+   }
+  },
+  {
+   "key": "er-save-manager",
+   "name": "Elden Ring Save File Manager",
+   "what": "A save file editor, backup manager and corruption fixer for Elden Ring, Dark Souls Remastered, Dark Souls II, Dark Souls III and Nightreign saves.",
+   "games": [
+    "eldenring",
+    "nightreign",
+    "darksouls3",
+    "darksoulsremastered",
+    "darksouls2"
+   ],
+   "nexus": {
+    "eldenring": 9271
+   },
+   "github": "Hapfel1/er-save-manager",
+   "asset_hint": "windows",
+   "where": "game",
+   "role": "save-editor",
+   "hashes": {
+    "2.3.0": {
+     "er-save-manager_2.3.0_Windows.zip": "c6baeac997564d7bdae04cebd47a60cab28c3c484ce8edfcb1d546547bf133cb"
+    }
+   }
+  },
+  {
+   "key": "smithbox",
+   "name": "Smithbox",
+   "what": "A modding tool for Elden Ring, Armored Core VI, Sekiro, Dark Souls 3 and other FromSoftware games.",
+   "games": [
+    "eldenring",
+    "nightreign",
+    "armoredcore6",
+    "sekiro",
+    "darksouls3"
+   ],
+   "github": "vawser/Smithbox",
+   "where": "game",
+   "hashes": {
+    "2.2.6": {
+     "Smithbox_2_2_6_2026_09_20_b.zip": "9a147c319dccad4b6dd2a5adcc6f2ba3a5c11c40b079520c05260cb19994b3d7"
+    }
+   }
   }
  ]
 }
