@@ -27,6 +27,7 @@ If you've ever unzipped a mod, wondered which folder it goes in, and then watche
 | **Set up big mod packs** | Knows what the major overhauls need, and layers in the other mods a merge pack is built from. |
 | **Play with friends** | Checks your co-op setup, helps everyone use the same password and versions, and writes you an invite to send. |
 | **Keep your characters safe** | Backs up your saves automatically, can keep a second copy somewhere else, keeps two PCs in step without ever losing a character, lets you try a mod on a copy of your save, and asks twice before anything involving a save is deleted. |
+| **Go back** | **Restore points** remember your settings, mod files, profiles and saves in one click (Overview, or the tray menu), and are made automatically before an update-all, a reinstall or a game update. Restoring shows what would change first and can itself be undone. |
 | **Stay up to date** | Tells you when a mod, a DLL add-on, me3 or the manager itself has a new version - and updates without you leaving the app, one at a time or all at once with a restore point. |
 | **Tidy up** | Shows which old downloads can go, and clears them only when you say so. |
 | **Undo mistakes** | Almost everything it does is backed up and can be undone. |
