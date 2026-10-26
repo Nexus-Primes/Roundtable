@@ -52,6 +52,32 @@ The program accepts a feed signed by **any** key in `feed.PUBKEYS` (today one ke
 
 The release key stays offline and is only used for `release.py`.
 
+## Are the tool pins current?
+
+```
+python packaging/pin_status.py            # a table; exit 1 when a tool is unpinned or behind
+python packaging/pin_status.py --markdown # the text for a GitHub issue (nothing when all is well)
+python packaging/check_feed.py --dir feed --require-pins   # also fails when a catalog tool has no pin
+```
+
+A tool is **ok** (its newest release is pinned), **behind** (upstream has a newer release than the newest pin), **unpinned** (nothing pinned, so an install shows "Not checked"),
+**manual** (Nexus-only: nothing can read its newest file without a Premium key, so look at its page) or **unknown** (the release list couldn't be read; not counted as a failure).
+Nothing pins by itself: a pin is a statement that a maintainer opened the release page and checked the file. `publish_feed.py` lists unpinned tools when it publishes and refuses with `--require-pins`.
+`feed/PUBLIC_KEY.txt` (published with the feed) is the public key the feed is signed with; `check_feed.py --pubkey-file feed/PUBLIC_KEY.txt` checks the signature against it and that the program accepts it.
+
+## Release channels
+
+A release is **Stable** or **Beta**. Beta is a GitHub *pre-release*: copies set to the Beta channel (Settings > Online) are offered it, everyone else only the "latest" stable release.
+The channel is only a choice of *which* release is offered; trust comes from the signature on the zip, which is checked for both exactly the same way.
+
+```
+python packaging/release.py --yes --beta        # publish the current version as a beta
+python packaging/release.py --promote 0.103.0   # dry run: how long has it been out?
+python packaging/release.py --promote 0.103.0 --yes   # make it the stable release (refuses before 7 days unless --force)
+```
+
+The rule: a version goes to Beta first and is promoted after a week without a regression report. Promotion changes no file; the same signed zip is offered to everyone.
+
 ## Checking what is published
 
 ```
